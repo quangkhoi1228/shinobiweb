@@ -1,0 +1,77 @@
+<div id="newOrderPlacingModal" class="modal order-placing-modal"
+    order-type="buy">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Đặt lệnh</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="buttons order-placing-button-type-container">
+                <a class="button is-buy-color" order-type="buy">Mua</a>
+                <a class="button is-sell-color" order-type="sell">Bán</a>
+            </div>
+            #{{/fragment/fragmentorderplacingcontent}}
+        </section>
+    </div>
+</div>
+
+<div id="quickOrderPlacingModal" class="modal order-placing-modal"
+    order-type="buy">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Đặt lệnh</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Giao dịch</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <div class="show-when-buy has-text-weight-bold">MUA
+                            </div>
+                            <div class="show-when-sell has-text-weight-bold">BÁN
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            #{{/fragment/fragmentorderplacingcontent}}
+        </section>
+    </div>
+</div>
+<!-- 
+<div id="brokerOrderPlacingModal" class="modal order-placing-modal"
+    order-type="buy">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Tư vấn viên đặt lệnh</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="field is-horizontal">
+                <div class="field-label">
+                    <label class="label">Mã KH</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control">
+                            <input type="text" class="input" snb-key="price">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons order-placing-button-type-container">
+                <a class="button is-buy-color" order-type="buy">Mua</a>
+                <a class="button is-sell-color" order-type="sell">Bán</a>
+            </div>
+            #{{/fragment/fragmentorderplacingcontent}}
+        </section>
+    </div>
+</div> -->

@@ -1,0 +1,48 @@
+<div class="table-pagination">
+	<div class="columns is-mobile">
+		<div class="column select-record-per-page-container">
+			<span class="table-pagination-label"> Hiện</span>
+			<div class="select is-primary is-small">
+				<select class="shinobi-recordperpage" snb-key="recordPerPage">
+					<option value="10">10</option>
+					<!-- <option value="10">10</option> -->
+					<option value="20">20</option>
+					<option value="30">30</option>
+				</select>
+			</div>
+			<span class="table-pagination-label"><span
+					class="label-desktop">trong số</span><span
+					class="label-mobile">/</span></span>
+			<span class="table-pagination-row-total"
+				snb-key="rowTotal">0</span>
+		</div>
+		<div class="column select-page-container">
+			<span class="table-pagination-label">Trang</span>
+			<div class="field has-addons">
+				<p class="control">
+					<a
+						class="button is-primary is-small shinobi-pagination-prev"><span
+							class="icon"><i
+								class="fa fa-chevron-left"></i></span> </a>
+				</p>
+				<p class="control">
+					<input
+						class="input is-primary is-small shinobi-pagination-curpage"
+						snb-key="currentpage" value="1" />
+				</p>
+				<p class="control">
+					<a
+						class="button is-primary is-small shinobi-pagination-next">
+						<span class="icon"><i
+								class="fa fa-chevron-right"></i></span>
+					</a>
+				</p>
+			</div>
+			<span class="table-pagination-label"><span
+					class="label-desktop">trong</span><span
+					class="label-mobile">/</span></span>
+			<span class="table-pagination-page-total" snb-key="pageTotal"
+				snb-format="true">1</span>
+		</div>
+	</div>
+</div>

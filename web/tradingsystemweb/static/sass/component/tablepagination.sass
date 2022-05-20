@@ -1,0 +1,50 @@
+@charset "utf-8"
+
+=table-pagination-item-container
+    display: flex
+    padding: 0
+    margin-left: 2rem
+=label-line-height
+    line-height: 1.75
+.table-pagination
+    margin-top: 0.75rem
+    margin-bottom: 0.75rem
+    padding: 0.75rem
+
+    display: flex
+    justify-content: flex-end
+.select-record-per-page-container, .select-page-container
+    +table-pagination-item-container
+.select-page-container
+    +table-pagination-item-container
+.table-pagination-row-total, .table-pagination-page-total, .shinobi-pagination-curpage, .shinobi-recordperpage
+    font-weight: $weight-bold
+.table-pagination-row-total, .table-pagination-page-total, .shinobi-pagination-curpage
+    +label-line-height
+.table-pagination-label
+    margin-left: 0.5rem
+    margin-right: 0.5rem
+    +label-line-height
+    &:last-child
+        margin-right: 0
+    &:first-child
+        margin-left: 0
+.shinobi-pagination-prev, .shinobi-pagination-next
+    min-width: 2rem
+.shinobi-pagination-curpage
+    width: 3rem
+    text-align: center
+.field
+    margin-bottom: 0
+.label-mobile
+    display: block
+.label-mobile
+    display: none
++mobile
+    .label-desktop
+        display: none
+    .label-mobile
+        display: block
+.table-pagination-small
+    &.select-record-per-page-container
+        display: none

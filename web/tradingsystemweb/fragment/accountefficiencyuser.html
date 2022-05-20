@@ -1,0 +1,38 @@
+<div class="table-container  has-box-shadow-light has-background-white p-5 has-border-radius-6px">
+    <!-- ACCOUNT EFFIENCY -->
+    <table id="tableaccountefficiency" class="table is-fullwidth is-bordered order-detail-table">
+        <thead>
+            <tr>
+                <th snb-colname="manager">
+                    <p class="has-text-centered">PM quản lý</p>
+                </th>
+                <th snb-colname="openTradingProfitPercent" snb-render="renderProfitpercent100Table">
+                    <p class="has-text-centered">Lời lỗ đang mở (%)</p>
+                </th>
+                <th snb-colname="openTradingProfit" snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Lời lỗ đang mở (VNĐ)</p>
+                </th>
+                <th snb-colname="closedTradingProfitPercent" snb-render="renderProfitpercent100Table">
+                    <p class="has-text-centered">Lời lỗ đã chốt(%)</p>
+                </th>
+                <th snb-colname="closedTradingProfit" snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Lời lỗ đã chốt(VNĐ)</p>
+                </th>
+                <th snb-colname="totalTradingProfitPercent" snb-render="renderProfitpercent100Table">
+                    <p class="has-text-centered">Tổng lời lỗ(%)</p>
+                </th>
+                <th snb-colname="totalTradingProfit" snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Tổng lời lỗ(VNĐ)</p>
+                </th>
+                <th snb-colname="serviceFeeBasis" snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Lời lỗ tính phí dịch vụ</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div record-num="10">
+        #{{/fragment/tablepagination}}
+    </div>
+</div>

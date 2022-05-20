@@ -1,0 +1,19 @@
+<div id="confirmDownloadExcelFileModal" class="modal is-medium">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Xác nhận tải file</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body is-size-4">
+            Bạn xác nhận tải file: <b snb-key="linkfile"
+                snb-render="shinobi.render.getFileName"></b>
+        </section>
+        <footer class="modal-card-foot">
+            <a modal-parent="confirmDownloadExcelFileModal" snb-key="linkfile"
+                snb-render="shinobi.render.renderDownloadFile" download
+                class="button is-success">Xác nhận</a>
+            <button class="button">Hủy</button>
+        </footer>
+    </div>
+</div>

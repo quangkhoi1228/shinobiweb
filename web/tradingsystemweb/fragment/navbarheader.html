@@ -1,0 +1,62 @@
+<nav class="navbar is-init is-spaced is-fixed-top is-header-background has-shadow has-shadow-secondary"
+    role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <div class="navbar-item  logo">
+            <a href="/private/tradingsystem"><img src="/static/image/aladin.svg"></a>
+            <div class="navbar-label has-text-weight-bold is-hidden-desktop ">
+            </div>
+        </div>
+        #{{/fragment/fragmentmobileheadernavigatornavbar}}
+
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu has-label">
+        <div class="navbar-start">
+            <div class="navbar-item is-block">
+                <div class="title is-5 header-title has-text-primary">A.Trading
+                </div>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item is-block is-hidden-touch ">
+                <div class="buttons">
+                    <a class="button head-navbar-button  is-developing">
+                        <i class="fal fa-dollar-sign"></i></a>
+                    <a class="button head-navbar-button  is-developing">
+                        <i class="fal fa-file-alt"></i></a>
+                    <a class="button head-navbar-button  is-developing">
+                        <i class="fal fa-users"></i></a>
+                    <a class="button head-navbar-button  is-developing">
+                        <i class="fal fa-tools"></i></a>
+                    <a class="button head-navbar-button  is-developing">
+                        <i class="fal fa-headset"></i></a>
+                    <a class="button  head-navbar-button  is-developing">
+                        <span class="badge">20+</span>
+                        <i class="fal fa-bell"></i>
+                    </a>
+
+                    <a class="button navbar-logined-user is-flex is-borderless has-background-transparent">
+                        <div class="text-container">
+                            <div class=" font-weight-bold" snb-key="name"></div>
+                            <div class="has-text-secondary has-text-right is-size-7" snb-key="username">
+                            </div>
+                        </div>
+                        <div>
+                            <figure class="image">
+                                <img class="is-small is-rounded" src="http://cdn.onlinewebfonts.com/svg/img_568656.png">
+                            </figure>
+                        </div>
+                    </a>
+                    <a class="button has-tooltip-bottom has-tooltip-multiline has-tooltip-secondary"
+                        data-tooltip="Đăng xuất" href="/logout">
+                        <span class="icon">
+                            <i class="fal fa-sign-out-alt"></i>
+                        </span>
+                    </a>
+                    <a class="button is-primary is-signup-button is-hidden" href="/page/signup"> Mở tài khoản</a>
+                    <a class="button is-primary is-login-button is-hidden" href="/page/login">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

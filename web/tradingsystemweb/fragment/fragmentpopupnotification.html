@@ -1,0 +1,118 @@
+<div id="confirmPanel" class="modal is-medium confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Cảnh báo!</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">Bạn chắc chắn?</section>
+        <footer class="modal-card-foot">
+            <button class="button is-primary yes">Xác nhận</button>
+            <button class="button cancel">Hủy</button>
+        </footer>
+    </div>
+</div>
+<div id="confirmWithDrawGoldPanel" class="modal is-full-screen confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Thông tin phí rút vàng</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <div id="productinfo" class="has-text-centered has-margin-bottom-1-rem">
+                        <span>Sản phẩm: </span><b class="is-size-5" snb-key="productid" snb-render="shinobi.userorderplacinghistoryrender.renderProductNameDataList"></b>
+                        <span>Khối lượng: </span><b class="is-size-5" snb-key="amount" snb-render="shinobi.render.renderFormatNumber"></b><span>&nbsp;Lượng</span>
+                    </div>
+                    <div class="columns is-marginless" snb-key="listgoldwidthdrawalfeeinfo" snb-render="shinobi.adminwithdrawofflinerender.renderlistModel">
+                        <div class="column has-padding-bottom-0-rem">
+                            <table id="listfeewithdraw" class="table is-striped has-padding-bottom-0_5-rem is-bordered">
+                                <thead>
+                                    <tr>
+                                        <th snb-colname="storageid">Mã kho chứa</th>
+                                        <th snb-colname="moveindate">Ngày nhập kho</th>
+                                        <th snb-colname="moveoutdate">Ngày Xuất kho</th>
+                                        <th snb-colname="amount" snb-render="shinobi.render.renderFormatNumberTable">Số lượng vàng rút (Lượng)</th>
+                                        <th snb-colname="goldnightover" snb-render="shinobi.render.renderFormatNumberTable">Số đêm giữ vàng</th>
+                                        <th snb-colname="totalovernightfee" snb-render="shinobi.render.renderFormatNumberTable">Tổng phí giữ vàng qua đêm (VND)</th>
+                                        <th snb-colname="totalwidthdrawalfee" snb-render="shinobi.render.renderFormatNumberTable">Tổng phí rút vàng (VND)</th>
+                                        <th snb-colname="totalfee" snb-render="shinobi.render.renderFormatNumberTable">Tổng tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                            </table>
+                            <div class="is-hidden" record-num="10">
+                                #{{/fragment/tablepagination}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note columns" snb-key="listgoldwidthdrawalfeeinfo" snb-render="shinobi.adminwithdrawofflinerender.renderNoteConfirm">
+                        <div class="column has-padding-left-1_5-rem">
+                            <h3><b><i><u> Ghi chú:</u></i></b></h3>
+                            <div class="has-padding-left-1-rem">
+                                <ul>
+                                    <li>
+                                        <p><i>- Phí giữ vàng qua đêm : <b snb-key="overnightfee" snb-render="shinobi.render.renderFormatNumber"></b> (VND/Đêm)</i> </p>
+                                    </li>
+                                    <li>
+                                        <p><i>- Tổng phí giữ vàng qua đêm = Phí giữ vàng qua đêm <b>x</b> Số lượng vàng rút <b>x</b>  Số đêm giữ vàng    </i> </p>
+                                    </li>
+                                    <li>
+                                        <p><i>- Phí rút vàng : <b snb-key="widthdrawalfee" snb-render="shinobi.render.renderFormatNumber"></b> (VND/Lượng)</i> </p>
+                                    </li>
+                                    <li>
+                                        <p><i>- Tổng phí rút vàng = Phí giữ vàng qua đêm  <b>x</b> Số đêm giữ vàng</i> </p>
+                                    </li>
+                                    <li>
+                                        <p><i>- Tổng tiền  = Tổng phí giữ vàng qua đêm  <b>+</b> Tổng phí rút vàng</i> </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="level has-border-top-grey-light">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <span class="font-weight-bold">Tổng thanh toán: </span>
+                            </div>
+                        </div>
+                        <div class="level-right">
+                            <div class="level-item">
+                                <b class="is-size-4" snb-key="totalfee" snb-render="shinobi.render.renderFormatNumber"></b>
+                                <span>&nbsp; VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <span snb-key="enoughmoney" snb-render="shinobi.adminwithdrawofflinerender.renderEnoughMoney"></span>
+            <button class="button is-primary yes">Xác nhận</button>
+            <button class="button cancel">Hủy</button>
+        </footer>
+    </div>
+</div>
+
+<div id="infoModal" class="modal is-small">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title  is-marginless has-text-centered has-text-primary">
+                Thông tin</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body"></section>
+        <footer class="modal-card-foot">
+        </footer>
+    </div>
+</div>
+
+<div id="shinobinotification" class="notification  shinobinotification">
+    <button class="delete"></button>
+    <div class=notificationcontent></div>
+</div>

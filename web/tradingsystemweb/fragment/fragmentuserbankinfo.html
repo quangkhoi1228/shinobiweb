@@ -1,0 +1,67 @@
+<p class="title section-title is-4">Thông tin ngân hàng</p>
+<section id="userBankInfoSection">
+    <form autocomplete="off">
+        <div class="columns is-multiline form-container">
+            <div class="column is-6">
+                <div class="field ">
+                    <label class="label">Số tài khoản</label>
+                    <div class="control ">
+                        <input class="input bank-account-id-input" type="number"
+                            placeholder="Số tài khoản" snb-key="bankaccountid">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field ">
+                    <label class="label">Chủ tài khoản</label>
+                    <div class="control ">
+                        <input class="input bank-account-holder-input"
+                            type="text" placeholder="Chủ tài khoản"
+                            snb-key="bankaccountholder">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field ">
+                    <label class="label">Ngân hàng</label>
+                    <div class="control ">
+                        <!-- <div class="select is-fullwidth">
+							#{{/fragment/fragmentbankselect}}
+						</div> -->
+                        <input class="input bank-name-input" type="text"
+                            placeholder="Ngân hàng" snb-key="bankname">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+
+                <div class="field ">
+                    <label class="label">Chi nhánh</label>
+                    <div class="control ">
+                        <input class="input bank-branch-input" type="text"
+                            placeholder="Chi nhánh" snb-key="bankbranch">
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="field ">
+                    <label class="label">Thành phố/Tỉnh</label>
+                    <div class="control ">
+                        <input class="input bank-location-input" type="text"
+                            placeholder="Thành phố/Tỉnh" snb-key="banklocation">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-12">
+                <div class="field">
+                    <div class="control   has-text-centered-mobile ">
+                        <a
+                            class="submit-button button is-primary is-rounded is-hidden"><span>GỬI
+                                YÊU CẦU</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

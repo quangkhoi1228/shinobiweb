@@ -1,0 +1,88 @@
+$custom-width: 50rem
+.autocomplete
+  &[data-loading=true]
+    &:after
+      content: ""
+      border: 3px solid #1a15151f
+      border-right-color: rgba(0,0,0,.48)
+      border-radius: 100%
+      width: 20px
+      height: 20px
+      position: absolute
+      right: 12px
+      top: 50%
+      transform: translateY(-50%)
+      animation: rotate 1s linear infinite
+.autocomplete-input
+  border: 1px solid #b5b5b5
+  // border-radius: 8px
+  width: 100%
+  padding: 12px 12px 12px 12px
+  box-sizing: border-box
+  position: relative
+  font-size: 1rem
+  line-height: 1.5
+  flex: 1
+  &:focus, &[aria-expanded=true]
+    background-color: #fff
+    border-color: rgba(0, 0, 0, .12)
+    outline: none
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .16)
+  &[aria-expanded=true]
+    border-bottom-color: transparent
+    border-radius: 8px 8px 0 0
+    [data-position=below] &
+      border-bottom-color: transparent
+      border-radius: 8px 8px 0 0
+    [data-position=above] &
+      border-top-color: transparent
+      border-radius: 0 0 8px 8px
+      z-index: 2
+    &:after
+      content: ""
+      border: 3px solid rgba(0, 0, 0, .12)
+      border-right-color: rgba(0, 0, 0, .48)
+      border-radius: 100%
+      width: 20px
+      height: 20px
+      position: absolute
+      right: 12px
+      top: 50%
+      transform: translateY(-50%)
+      animation: rotate 1s linear infinite
+
+.autocomplete-result-list
+  margin: 0
+  border: 1px solid rgba(0, 0, 0, .12)
+  padding: 0
+  box-sizing: border-box
+  max-height: 296px
+  overflow-y: auto
+  background: #fff
+  list-style: none
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .16)
+  width: 100% !important
+  z-index: 100 !important
+  [data-position=below] &
+    margin-top: -1px
+    border-top-color: transparent
+    border-radius: 0 0 8px 8px
+    padding-bottom: 8px
+  [data-position=above] &
+    margin-bottom: -1px
+    border-bottom-color: transparent
+    border-radius: 8px 8px 0 0
+    padding-top: 8px
+    &.custom-width
+      width: $custom-width !important
+.autocomplete-result
+  cursor: default
+  padding: 0.5rem
+  width: 100%
+  &:hover, &[aria-selected=true]
+    background-color: rgba(0, 0, 0, .06)
+@keyframes rotate
+  0%
+    transform: translateY(-50%) rotate(0deg)
+  100%
+    transform: translateY(-50%) rotate(359deg)

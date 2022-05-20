@@ -1,0 +1,183 @@
+<div class="searching-bar is-flex is-justify-content-right">
+    <div class="has-text-grey" style="margin-block: auto;">Cập nhật 11:47 ngày 16/02/2022</div>
+    <input id="autocomplete" class="input has-bsd" placeholder="Tìm kiếm">
+    <!-- <div id="autocomplete" class="autocomplete is-marginless">
+        <div class="field">
+            <p class="control has-icons-right">
+                <input class="input autocomplete-input has-bsd" placeholder="Tìm kiếm">
+                <span class="icon is-small is-right">
+                    <i class="fas fa-search"></i>
+                </span>
+            </p>
+        </div>
+        <ul class="autocomplete-result-list"></ul>
+    </div> -->
+    <div class="button has-background-secondary has-text-white has-text-weight-bold has-box-shadow-light is-borderless"
+        id="addAccountButton">Thêm tài khoản</div>
+</div>
+
+<div id="addAccountModal" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Thêm tài khoản PM</p>
+            <div class="is-flex">
+                <!-- <div class="field switch-container">
+                    <input id="switchModeUser" type="checkbox" name="switchModeUser"
+                        class="switch is-rounded is-primary is-rtl">
+                    <label class="has-text-weight-bold has-text-white" for="switchModeUser">Chế độ chỉnh sửa</label>
+                </div> -->
+                <div style="margin-block: auto;">
+                    <button class="delete" aria-label="close"></button>
+                </div>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Email/Tên đăng nhập: <span class="has-text-danger">*</span></div>
+                <div>
+                    <input type="text" class="input" placeholder="Email" snb-key="email">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu đăng nhập: <span class="has-text-danger">*</span></div>
+                <div class="field has-addons" id="loginPassword">
+                    <div class="control is-expanded">
+                        <input class="input" type="password" placeholder="Mật khẩu đăng nhập" snb-key="password"
+                            snb-preprocess="shinobi.pmmanagementrender.shaPassword">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Họ :</div>
+                <div>
+                    <input type="text" class="input" placeholder="Họ " snb-key="firstname">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tên :</div>
+                <div>
+                    <input type="text" class="input" placeholder="Tên" snb-key="lastname">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">CCCD/CMND :</div>
+                <div>
+                    <input type="text" class="input" placeholder="CCCD/CMND" snb-key="identitynumber">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Số điện thoại :</div>
+                <div>
+                    <input type="text" class="input" placeholder="Số điện thoại " snb-key="phonenumber">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Người giới thiệu:</div>
+                <div>
+                    <input type="text" class="input disable-checkempty" placeholder="Người giới thiệu:"
+                        snb-key="invitedby">
+                </div>
+            </div>
+            <!-- <div class="content-modal-cotainer">
+                <div class="content-title">Ngày đầu tư:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="01/01/2022" snb-key="investdate">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Ngày tất toán:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="31/12/2022" snb-key="enddate">
+                </div>
+            </div> -->
+            <!-- <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ phân bổ (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="dealpercent">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ đi lệnh (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="orderpercent">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ phân bổ lợi nhuận (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="dealprofitpercent">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">TK uỷ thác:</div>
+                <div class="select is-fullwidth">
+                    <select snb-key="pmdeal">
+                        <option value="admin">KHÔNG CÓ</option>
+                        <option value="deal1">PM 1</option>
+                        <option value="deal2">PM 2</option>
+                    </select>
+                </div>
+            </div> -->
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="saveModal">Lưu</button>
+            <button class="button is-success" id="createModal">Thêm</button>
+            <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button>
+        </footer>
+    </div>
+</div>
+
+<div id="changePasswordPMModal" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Chỉnh sửa mật khẩu PM</p>
+            <div class="is-flex">
+                <div style="margin-block: auto;">
+                    <button class="delete" aria-label="close"></button>
+                </div>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu cũ: <span class="has-text-danger">*</span></div>
+                <div class="field has-addons" id="loginOldPassword">
+                    <div class="control is-expanded">
+                        <input class="input" type="password" placeholder="Mật khẩu đăng nhập" snb-key="oldPassword"
+                            snb-preprocess="shinobi.pmmanagementrender.shaPassword">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu mới: <span class="has-text-danger">*</span></div>
+                <div class="field has-addons" id="loginNewPassword">
+                    <div class="control is-expanded">
+                        <input class="input" type="password" placeholder="Mật khẩu đăng nhập" snb-key="newPassword"
+                            snb-preprocess="shinobi.pmmanagementrender.shaPassword">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="changePassword">Xác nhận</button>
+        </footer>
+    </div>
+</div>

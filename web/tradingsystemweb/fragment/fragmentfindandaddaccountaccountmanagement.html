@@ -1,0 +1,287 @@
+<div id="addAccountModal" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Thêm
+                tài khoản Khách hàng</p>
+            <div class="is-flex">
+                <!-- <div class="field switch-container">
+                    <input id="switchModeUser" type="checkbox" name="switchModeUser"
+                        class="switch is-rounded is-primary is-rtl">
+                    <label class="has-text-weight-bold has-text-white" for="switchModeUser">Chế độ chỉnh sửa</label>
+                </div> -->
+                <div style="margin-block: auto;">
+                    <button class="delete" aria-label="close"></button>
+                </div>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tên đăng nhập / Số tài khoản: <span class="has-text-danger">*</span></div>
+                <div>
+                    <input type="text" class="input" placeholder="Tên đăng nhập / Số tài khoản"
+                        snb-key="usernameaccount">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu đăng nhập: <span class="has-text-danger">*</span></div>
+                <div class="field has-addons" id="loginPassword">
+                    <div class="control is-expanded">
+                        <input class="input" type="password" placeholder="Mật khẩu đăng nhập" snb-key="password">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu đặt lệnh: </div>
+                <div class="field has-addons" id="orderPassword">
+                    <div class="control is-expanded">
+                        <input class="input disable-checkempty" type="password" placeholder="Mật khẩu đặt lệnh"
+                            snb-key="pincode">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Công ty chứng khoán:</div>
+                <div class="select is-fullwidth">
+                    <select snb-key="stockcom" id="companyName" snb-datalist-node="companyName">
+                        <option snb-datalist-parent="companyName" snb-key="shortname" snb-key-value="shortname"
+                            snb-render="shinobi.selfemployedaccountrender.renderFullname">
+                        </option>
+                    </select>
+                    <div class="is-hidden" record-num="20">
+                        #{{/fragment/tablepagination}}</div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer is-hidden">
+                <div class="content-title">Người giới thiệu:</div>
+                <div>
+                    <input type="text" class="input disable-checkempty" placeholder="Mã giới thiệu (Nếu có)">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Ngày đầu tư:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="01/01/2022" snb-key="startdate">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Ngày kết thúc:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="31/12/2022" snb-key="enddate">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ thoả thuận lợi nhuận với KH
+                    (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="profitcommisionratio">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tài khoản PM:</div>
+                <div class="select is-fullwidth">
+                    <select snb-key="pmusername" id="listpmusername" snb-datalist-node="listpmusername">
+                        <option snb-datalist-parent="listpmusername" snb-key="username"
+                            snb-render="shinobi.fragmentfindandaddaccountmanagementrender.renderFullnameAllocation">
+                        </option>
+                    </select>
+                    <div class=" is-hidden" record-num="100">
+                        #{{/fragment/tablepagination}}</div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Họ và tên KH :</div>
+                <div>
+                    <input type="text" class="input" snb-key="name">
+                </div>
+            </div>
+
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ Theo PM (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="allocationratio">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Phí quản lý TK:</div>
+                <div>
+                    <input type="text" class="input" snb-key="managementfeeratio">
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="saveModal">Lưu</button>
+            <button class="button is-success" id="createModal">Thêm</button>
+            <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button>
+        </footer>
+    </div>
+</div>
+<div id="addAccountUserModal" class="modal has-modal-title-background ">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Thêm
+                TK Khách hàng</p>
+            <div class="is-flex">
+
+                <div style="margin-block: auto;">
+                    <button class="delete" aria-label="close"></button>
+                </div>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tên đăng nhập / Số tài khoản: <span class="has-text-danger">*</span></div>
+                <div>
+                    <input type="text" class="input" placeholder="Tên đăng nhập / Số tài khoản"
+                        snb-key="usernameaccount">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu đăng nhập: <span class="has-text-danger">*</span></div>
+                <div class="field has-addons" id="loginPassword">
+                    <div class="control is-expanded">
+                        <input class="input" type="password" placeholder="Mật khẩu đăng nhập" snb-key="password">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Công ty chứng khoán:</div>
+                <div class="select is-fullwidth">
+                    <select snb-key="stockcom" id="companyNameaccount" snb-datalist-node="companyName">
+                        <option snb-datalist-parent="companyName" snb-key="shortname" snb-key-value="shortname"
+                            snb-render="shinobi.selfemployedaccountrender.renderFullname">
+                        </option>
+                    </select>
+                    <div class="is-hidden" record-num="20">
+                        #{{/fragment/tablepagination}}</div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mật khẩu đặt lệnh: </div>
+                <div class="field has-addons" id="orderPassword">
+                    <div class="control is-expanded">
+                        <input class="input disable-checkempty" type="password" placeholder="Mật khẩu đặt lệnh"
+                            snb-key="pincode">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Họ và tên KH <span class=" is-italic">(Tên được đặt trên hệ thống A. Trading) </span>:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Họ và tên" snb-key="name">
+                </div>
+            </div>
+            <!--    <div class="content-modal-cotainer">
+                <div class="content-title">CCCD/CMND :</div>
+                <div>
+                    <input type="text" class="input" placeholder="CCCD/CMND" snb-key="identitynumber">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Email :</div>
+                <div>
+                    <input type="text" class="input" snb-key="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Số điện thoại :</div>
+                <div>
+                    <input type="text" class="input" snb-key="phonenumber" placeholder="Số điện thoại">
+                </div>
+            </div> -->
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success create">Tạo</button>
+            <button class="button has-background-grey-lighter">Huỷ</button>
+        </footer>
+    </div>
+</div>
+<div id="addAccountAllocationModal" class="modal has-modal-title-background ">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Thêm
+                phân bổ TK Khách hàng</p>
+            <div class="is-flex is-hidden">
+
+                <div style="margin-block: auto;">
+                    <button class="delete" aria-label="close"></button>
+                </div>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Ngày đầu tư:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="01/01/2022" snb-key="startdate">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Ngày kết thúc:</div>
+                <div>
+                    <input type="date" class="input is-init-bulma-false" placeholder="31/12/2022" snb-key="enddate">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ thoả thuận lợi nhuận với KH
+                    (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="profitcommisionratio">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tài khoản PM:</div>
+                <div class="select is-fullwidth">
+                    <select snb-key="pmusername" id="listpmusernameallocation"
+                        snb-datalist-node="listpmusernameallocation">
+                        <option snb-datalist-parent="listpmusernameallocation" snb-key="username"
+                            snb-render="shinobi.fragmentfindandaddaccountmanagementrender.renderFullnameAllocation">
+                        </option>
+                    </select>
+                    <div class=" is-hidden" record-num="100">
+                        #{{/fragment/tablepagination}}</div>
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Tỷ lệ Theo PM (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="allocationratio">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Phí quản lý TK (%):</div>
+                <div>
+                    <input type="text" class="input" snb-key="managementfeeratio">
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success create ">Lưu</button>
+            <button class="button has-background-grey-lighter cancel is-hidden">Huỷ</button>
+        </footer>
+    </div>
+</div>

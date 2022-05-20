@@ -1,0 +1,53 @@
+<div id="modalWithDrawGoldPanel" class="modal is-full-screen confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Chi tiết lịch sử nợ đã thu hồi user</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <table id="listfeewithdrawmodal" class="table is-fullwidth is-striped has-padding-bottom-0_5-rem is-bordered">
+                        <thead>
+                            <tr>
+                                <!-- <th snb-colname="customerfullname" snb-header-control="1,2">
+                                    Tên người dùng</th> -->
+                                <th snb-colname="createddate">
+                                    Ngày phát sinh nợ</th>
+                                <th snb-colname="settlementdate">
+                                    Ngày thanh toán nợ</th>
+                                <th snb-colname="lastmodifieduser">
+                                    Người thanh toán nợ cho user</th>
+                                <th snb-colname="settlementamount" snb-render="shinobi.render.renderFormatNumberTable">Số tiền thanh toán nợ
+                                </th>
+
+                                <!-- <th snb-colname="enddate" snb-header-control="1">
+                                    Ngày kết thúc </th>
+                                <th snb-colname="note">
+                                    Ghi chú</th> -->
+                                <!-- <th snb-colname="customeremail">
+                                    Email</th>
+                                <th snb-colname="customerphone">
+                                    Số điện thoại</th>
+                                <th snb-colname="customeraddress">
+                                    Địa chỉ</th>
+                                <th snb-colname="brokerid">
+                                    Tư vấn viên</th> -->
+                                <!-- <th snb-colname="feedescription" snb-header-control="1,2 ">
+                                    Diễn giải</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                    </table>
+                    <div class="" record-num="10">
+                        #{{/fragment/tablepagination}}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

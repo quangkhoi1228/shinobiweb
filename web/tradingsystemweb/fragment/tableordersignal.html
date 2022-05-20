@@ -1,0 +1,44 @@
+<div class="table-container  has-box-shadow-light has-background-white p-5 has-border-radius-6px">
+    <!-- TABLE ORDER SIGNAL -->
+    <table id="tableordersignal" class="table is-fullwidth is-bordered order-detail-table">
+        <thead>
+            <tr>
+                <th snb-colname="placedby" snb-render="shinobi.tableordersignalrender.formatFullname">
+                    <p class="has-text-centered">PM</p>
+                </th>
+                <th snb-colname="createddate" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                    <p class="has-text-centered">TG tín hiệu</p>
+                </th>
+                <th snb-colname="originalsignalid">
+                    <p class="has-text-centered">Mã tín hiệu</p>
+                </th>
+                <!-- <th snb-colname="allocationaccount" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                    <p class="has-text-centered">Tài khoản</p>
+                </th> -->
+                <!-- <th snb-colname="allocationratio" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                    <p class="has-text-centered">TG đặt</p>
+                </th> -->
+                <th snb-colname="stockcode" snb-render="shinobi.roottemplate.renderCellTextBoldCentered">
+                    <p class="has-text-centered">Mã</p>
+                </th>
+                <th snb-colname="price"  snb-render="shinobi.roottemplate.renderCellTextRight">
+                    <p class="has-text-centered">Giá</p>
+                </th>
+                <th snb-colname="volume" snb-render="shinobi.roottemplate.renderCellTextRight">
+                    <p class="has-text-centered">KL</p>
+                </th>
+                <th snb-colname="status" snb-render="shinobi.tableordersignalrender.renderStatusChildSetting">
+                    <p class="has-text-centered">Trạng thái</p>
+                </th>
+                <th snb-colname="description" snb-render="shinobi.tableordersignalrender.formatDescription">
+                    <p class="has-text-centered">Ghi chú</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="is-hidden" record-num="10">
+        #{{/fragment/tablepagination}}
+    </div>
+</div>

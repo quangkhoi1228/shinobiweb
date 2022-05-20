@@ -1,0 +1,59 @@
+<div class="field is-horizontal">
+    <div class="field-label">
+        <label class="label">Vàng</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select snb-key="productid">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field is-horizontal">
+    <div class="field-label">
+        <label class="label">Giá (VNĐ/Lượng)</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <input type="text" class="input"
+                    snb-preprocess="shinobi.render.getNumberCleaveInput"
+                    snb-key="orderprice">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field is-horizontal">
+    <div class="field-label">
+        <label class="label">KL (Lượng)</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <input type="text" class="input"
+                    snb-preprocess="shinobi.render.getNumberCleaveInput"
+                    snb-key="orderquantity">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field">
+    <div class="control">
+        <label class="checkbox">
+            <input type="checkbox" snb-key="isallnone">
+            Giao dịch hết khối lượng <span class="icon has-tooltip-multiline"
+                data-tooltip="khi tick vào checkbox này, thì lệnh MUA hoặc BÁN khi khớp lệnh bắt buộc phải thực hiện khớp lệnh khối lượng hết ngay trong lần khớp đầu tiên (không chẻ ra thành nhiều lệnh khớp từng phần)
+            "><i class="far fa-question-circle"></i></span>
+        </label>
+    </div>
+</div>
+<div class="buttons order-placing-button-command-container">
+    <a class="button is-buy-color show-when-buy" order-type="buy">Đặt lệnh
+        mua</a>
+    <a class="button is-sell-color show-when-sell" order-type="sell">Đặt lệnh
+        bán</a>
+</div>

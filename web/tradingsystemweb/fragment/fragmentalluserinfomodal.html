@@ -1,0 +1,62 @@
+<div id="alluserinfoModal" class="modal is-medium">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Chi tiết</p>
+			<button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			#{{/fragment/fragmentuserinfo}}
+			#{{/fragment/fragmentuserbankinfo}}
+			<p class="title section-title is-4">Thông tin nạp rút</p>
+			<section class="userMoneySection">
+				<form autocomplete="off">
+					<div class="columns is-multiline form-container">
+						<div class="column is-6">
+							<div class="field ">
+								<label class="label">Tổng tiền nạp</label>
+								<div class="control ">
+									<input class="input bank-account-id-input" type="text" placeholder="Tổng tiền nạp"
+										snb-key="totaldepositvalue" snb-render="shinobi.render.renderFormatNumber">
+								</div>
+							</div>
+						</div>
+						<div class="column is-6">
+							<div class="field ">
+								<label class="label">Số lần nạp</label>
+								<div class="control ">
+									<input class="input bank-account-holder-input" type="text"
+										placeholder="Số lần nạp" snb-key="deposittimes"
+										snb-render="shinobi.render.renderFormatNumber">
+								</div>
+							</div>
+						</div>
+						<div class="column is-6">
+							<div class="field ">
+								<label class="label">Tổng tiền rút</label>
+								<div class="control ">
+									<input class="input bank-account-holder-input" type="text"
+										placeholder="Tổng tiền rút" snb-key="totalwithdrawalvalue"
+										snb-render="shinobi.render.renderFormatNumber">
+								</div>
+							</div>
+						</div>
+						<div class="column is-6">
+							<div class="field ">
+								<label class="label">Số lần rút</label>
+								<div class="control ">
+									<input class="input bank-account-holder-input" type="text"
+										placeholder="Số lần rút" snb-key="withdrawaltimes"
+										snb-render="shinobi.render.renderFormatNumber">
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</section>
+		</section>
+		<footer class="modal-card-foot is-hidden">
+			<button class="button">Đóng</button>
+		</footer>
+	</div>
+</div>

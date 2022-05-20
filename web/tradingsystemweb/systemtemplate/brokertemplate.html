@@ -1,0 +1,24 @@
+template=systemtemplate/systemmoduletemplate.html
+<!-- -->
+${{admin_content}}
+<!--  -->
+@{{admin_content}}
+<!--  -->
+<!--  -->
+${{footer_script}}
+<!--  -->
+@{{footer_script}}
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var interval = setInterval(function () {
+			var list = document.querySelectorAll('.navbar-notification-badge-item');
+			list.forEach(function (element) {
+				element.style.display = 'none';
+			});
+			if (list.length > 0) {
+				clearInterval(interval);
+			}
+		}, 1000);
+
+	});
+</script>

@@ -1,0 +1,61 @@
+<div id="FreezeHistory" class="modal is-full-screen confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p
+                class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Lịch sử đóng băng</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <table id="FreezeHistoryContainer"
+                        class="table is-fullwidth is-hoverable is-striped is-bordered">
+                        <thead>
+                            <tr>
+                                <th snb-colname="dealid"
+                                    snb-header-control="1,2"
+                                    snb-render="shinobi.reportmatchingrender.renderTextCenterTable">
+                                    Mã
+                                    lệnh khớp
+                                </th>
+                                <th snb-colname="wrongsettlementstatus"
+                                    snb-render="shinobi.listtransectionsettlerender.renderDealStatusTable"
+                                    snb-header-control="1">
+                                    Trạng thái giao dịch sai</th>
+                                <th snb-colname="wrongsetllementstart"
+                                    snb-header-control="1">
+                                    Thời điểm thanh toán bắt đầu sai</th>
+                                <th snb-colname="freezetime"
+                                    snb-header-control="1">Thời
+                                    gian đóng băng</th>
+                                <th snb-colname="createduser"
+                                    snb-header-control="1">
+                                    Người đóng băng</th>
+                                <th snb-colname="lastmodifieddate"
+                                    snb-header-control="1">Thời
+                                    gian thay đổi trạng thái</th>
+                                <th snb-colname="lastmodifieduser"
+                                    snb-header-control="1">
+                                    Người thay đổi trạng thái</th>
+
+                                <th snb-colname="freezestatus"
+                                    snb-render="shinobi.adminfreezemanagementrender.translateStatus"
+                                    snb-header-control="1">
+                                    Trạng thái</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div record-num="10">#{{/fragment/tablepagination}}</div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

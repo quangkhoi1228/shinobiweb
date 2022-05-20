@@ -1,0 +1,245 @@
+.text-center
+  text-align: center
+
+.has-background-transparent
+  background: transparent !important
+.has-text-transparent
+  color: transparent
+.sign-up-rule-content
+  max-height: 15rem
+  height: 15rem
+  overflow-y: auto
+  border-radius: 4px
+  padding: 1rem
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  background: whitesmoke
+
+.modal-card-40
+  width: 40rem
+
+.is-word-break
+  word-break: break-all
+
+.max-width-upload-file
+  max-width: 11rem
+
+.navbar-start--centered
+  flex-grow: 1
+  justify-content: center
+
+.header-title
+  letter-spacing: 3px
+
+.logged-user-template,.shinobi-admin-container
+  .left-asign
+    background: $light
+    border-radius: $radius-large
+  .table
+    font-size: 0.75rem
+    thead
+      tr
+        th,td
+          &[snb-colname][snb-header-control],&[snb-colname][snb-header-cell]
+            min-width: 8em
+          // &[snb-colname$="date"],&[snb-colname$="status"]
+          //   min-width: 8em
+          &[snb-colname="productid"], &[snb-colname$="type"]
+            min-width: 8rem
+          &[snb-colname]:not([snb-header-control])
+            padding-right: 0.75em
+          &[snb-colname][snb-header-control="1"]
+            padding-right: 1.25em
+
+    +mobile
+      // font-size: 0.75rem
+      thead
+        td,th
+          font-weight: 500
+  .table-pagination
+    +mobile
+      .select-record-per-page-container
+        display: none !important
+
+.pmmanagement, .accountmanagement, .tablebelowcontainer
+  padding: 0.75rem 0px 0px 0px
+  & .container
+    & .searching-bar
+      padding-top: 1rem
+      padding-bottom: 2rem
+      & input
+        padding: 12px !important
+        border: 0.1rem solid #364183
+        background-color: #e6e8f4
+        font-size: 1rem
+        border-radius: 4px
+      & div
+        margin-left: 1rem
+
+.has-box-shadow-light
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px !important
+
+.tabs-portfolio, .has-tab-active
+  & li a
+    background-color: #f2f3f8 !important
+  & li.is-active a
+    background-color: #ffffff !important
+    font-weight: bold
+    color: #002366 !important
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px !important
+
+.has-modal-title-background
+  & header
+    background-image: linear-gradient(to right, #00a5bb , #00bba7)
+    & .switch-container
+      margin: 0 2rem 0 0
+  & section
+    & .content-modal-cotainer
+      margin-bottom: 1.5rem
+      & .content-title
+        margin-bottom: 0.25rem
+      & input
+        background-color: #f5f8fa
+      & section
+        background-color: #f5f8fa
+  & footer
+    background-color: #f5f8fa
+
+#navbarBasicExample
+  & .navbar-end
+    & a.button
+      margin-left: 1rem
+      background-color: #e7e8ed
+      border: none
+      & .navbar-logined-user
+        margin-right: 0.5rem !important
+        margin-left: 2.5rem !important
+        padding-left: 0
+        padding-right: 0
+      & .text-container
+        line-height: 1.2rem
+      & img
+        margin-left: 0.75rem
+        width: 2.5rem
+
+#searchinghistory
+  margin-block: auto
+  div
+    margin-block: auto
+    &::before
+      content: none
+
+.head-navbar-button
+  width: 3rem
+
+.has-border-radius-6px
+  border-radius: 6px
+
+.is-full-height
+  height: 100%
+
+.has-margin-block-auto
+  margin-block: auto
+
+.user-table-container
+  & .table-container.has-background-white.has-box-shadow-light
+    min-height: 20rem
+    margin-bottom: 2rem
+
+.has-filter-grayscale
+  filter: grayscale(1)
+
+.has-width-20rem
+  width: 20rem
+
+.has-text-no-wrap
+  white-space: nowrap
+
+.has-width-12rem
+  width: 12rem !important
+
+.child-container
+  background: #d3d3d34f
+
+#linkedpmaccounttable
+  tbody
+    tr.is-active
+      td:nth-child(1)
+        border-left: 0.1rem solid blue
+      td:last-child
+        border-right: 0.1rem solid blue
+    tr.child-container
+      td:nth-child(1)
+        border-left: 0.1rem solid orange
+      td:last-child
+        border-right: 0.1rem solid orange
+
+  .order-command-notice
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+    width: 10rem !important
+    &:hover
+      -webkit-line-clamp: unset
+      white-space: break-spaces
+
+.operationsmanagement
+  .datalist-container
+    padding: 2rem !important
+    background: white
+    border-radius: 15px
+    #childValueContainer
+      .child-value-container
+        border-top: 0.1rem solid black
+      .child-value-container:nth-child(1)
+        border-top: 0.1rem solid transparent
+
+.modal.is-small
+  .modal-card
+    width: 30rem
+
+.modal.is-medium
+  .modal-card
+    width: 50rem
+
+.modal.is-large
+  .modal-card
+    width: 80rem
+
+.modal.is-fullscreen
+  .modal-card
+    width: 100rem
+
+.has-padding-left-2rem
+  padding-left: 2rem
+.has-width-small
+  width: 15rem
+.min-width-table
+  min-width: 25rem !important
+.button-eye-fixed
+  position: relative
+  padding-right: 1.5rem
+  & .dropdown
+    position: absolute
+    right: 0
+    bottom: -15px
+    & .dropdown-menu
+      left: -12rem
+  & .button
+    border: none !important
+    outline: none
+    background: transparent
+    color: #3e46c4
+    &:focus
+      border: none !important
+      box-shadow: none
+    &:hover
+      background: transparent
+      font-weight: bold
+      transform: 1s
+      color: #f16631

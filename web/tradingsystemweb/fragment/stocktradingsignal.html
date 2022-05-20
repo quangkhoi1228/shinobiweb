@@ -1,0 +1,232 @@
+<section class="hero is-active-buy border-hero" id="containertrading">
+    <div
+        class="hero-body is-marginless py-5 px-5 box has-background-transparent">
+        <div class="columns" style="
+        margin-bottom: -0.75rem;
+    ">
+            <div id="containerselectcompytrade"
+                class="column is-2 is-paddingless pr-4 custom-column-width-large is-hidden">
+                <div class="field">
+                    <label class="label  m-0" for="">Theo lệnh</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select snb-key="signaltype" id="selecttypeorder">
+                                <option value="DIRECT">Chỉ TK được chọn</option>
+                                <option value="COPYTRADE">Tất cả TK theo lệnh
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="column is-2 is-paddingless pr-4 custom-column-width-small">
+                <div class="field">
+                    <label class="label has-text-transparent m-0"
+                        for="">TK</label>
+                    <div class="control">
+                        <div id="searchstocsympol" class="autocomplete">
+                            <input snb-key="stocksymbol" type="text"
+                                class="input has-border-black has-background-transparent has-text-primary font-weight-bold"
+                                placeholder="Mã CK">
+                            <ul class="autocomplete-result-list custom-width">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="column is-2 is-paddingless pr-4 custom-column-width-large">
+                <div class=" field ">
+                    <label class="label is-marginless" for="">TK</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select snb-key="account"
+                                class=" has-background-transparent  has-text-primary font-weight-bold">
+                                <option value="NORMAL">TK thường</option>
+                                <option value="MARGIN">TK Ký quỹ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-1 is-paddingless custom-column-width-medium">
+                <div class=" field has-text-centered">
+                    <label class="label" for="">Sức mua</label>
+                    <div class="control">
+                        <p id="couldbuy"
+                            class="font-weight-bold is-size-5  has-text-primary"
+                            snb-key="couldbuy">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="column is-1 is-paddingless ">
+                <div class=" field has-text-centered">
+                    <label class="label" for="">TK</label>
+                    <div class="control">
+                        <p class="font-weight-bold is-size-5  has-text-primary" snb-key="tk">0%</p>
+                    </div>
+                </div>
+            </div> -->
+            <div id="setprice" class="column py-0 is-2 ">
+                <div class="field">
+                    <label class=" m-0 label"> Giá</label>
+                    <div class="control">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a
+                                    class="button has-border-black has-background-transparent  step-pre-button">
+                                    <span class="icon"><i
+                                            class="fa fa-minus"></i></span>
+                                </a>
+                            </p>
+
+                            <p class="control ">
+                                <input
+                                    class="input has-text-centered has-background-transparent  font-weight-bold  has-text-primary current-value "
+                                    snb-key="currentprice" id="orderPriceTab" />
+                            </p>
+                            <p class="control">
+                                <a
+                                    class="button has-border-black has-background-transparent   font-weight-bold step-next-button">
+                                    <span class="icon"><i
+                                            class="fa fa-plus"></i></span>
+                                </a>
+                            </p>
+
+                            <div class="control ">
+                                <div class="dropdown is-right ">
+                                    <div class="dropdown-trigger">
+                                        <button class="button is-secondary"
+                                            aria-haspopup="true"
+                                            aria-controls="dropdown-menu">
+                                            <span class="icon  ">
+                                                <i class="fa fa-angle-down"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu has-text-centered"
+                                        id="dropdown-menu" role="menu">
+                                        <div class="dropdown-content">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="setvolume"
+                class="column is-2 py-0 custom-column-width-large">
+                <div class="field ">
+                    <label class="label m-0 has-text-nowrap" for=""> KL tối
+                        đa:
+                        <span id="orderVolumeTab"></span>
+                    </label>
+                    <div class="control">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <a
+                                    class="button has-border-black has-background-transparent font-weight-bold step-pre-button">
+                                    <span class="icon"><i
+                                            class="fa fa-minus"></i></span>
+
+                                </a>
+                            </div>
+                            <div class="control">
+                                <input id="currentweight" type="text"
+                                    class="input  has-text-primary font-weight-bold current-value has-text-centered"
+                                    snb-key="currentweight"
+                                    snb-preprocess="shinobi.render.getNumberCleaveInput">
+                            </div>
+                            <div class="control">
+                                <a
+                                    class="button has-border-black has-background-transparent font-weight-bold step-next-button">
+                                    <span class="icon"><i
+                                            class="fa fa-plus"></i></span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="column is-1">
+                <div class="field">
+                    <label class=" label has-text-transparent is-marginless"
+                        for="">a</label>
+                    <div class="control button-relative-top">
+                        <a id="buttontrading"
+                            class="button buy px-5 font-weight-bold has-bsd has-text-white is-borderless">ĐẶT
+                            LỆNH
+                            MUA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="infostocsympol" class="is-flex is-hidden ">
+            <span class=" is-hidden" snb-key="matchprice"
+                snb-render="shinobi.tradingsystemrender.setCurrentPrice"></span>
+            <div class="item-stock pr-5">
+                <span class=" "> Thị giá:</span>
+                <span class="value"><span snb-key="matchprice"
+                        snb-render="shinobi.tradingsystemrender.formatPrice"></span>
+                    (<span snb-key="change"></span>
+                    /
+                    <span snb-key="perchange"></span>
+                    % )
+                </span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> Tổng KLGD:</span>
+                <span snb-key="totalvolume" class="  font-weight-bold "></span>
+            </div>
+            <!-- <div class="item-stock pr-5">
+                <span class=" "> Room CL:</span>
+                <span snb-key="roomcl" class=" font-weight-bold "></span>
+            </div> -->
+            <div class="item-stock pr-5">
+                <span class=" ">Trần:</span>
+                <span class="ceiling-value value" snb-key="ceiling"></span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> Sàn:</span>
+                <span class="floor-value value " snb-key="floor"> </span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> TC:</span>
+                <span class="reference-value value "
+                    snb-key="priorcloseprice"></span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> Cao:</span>
+                <span class=" value ">
+                    <span snb-key="highest"
+                        snb-render="shinobi.tradingsystemrender.formatPrice"></span>
+                </span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> Thấp:</span>
+                <span class=" value ">
+                    <span snb-key="lowest"
+                        snb-render="shinobi.tradingsystemrender.formatPrice"></span>
+
+                </span>
+            </div>
+            <div class="item-stock pr-5">
+                <span class=" "> Mở cửa:</span>
+                <span class=" value ">
+                    <span snb-key="openprice"
+                        snb-render="shinobi.tradingsystemrender.formatPrice"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>

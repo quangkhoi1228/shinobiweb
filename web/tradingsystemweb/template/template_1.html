@@ -1,0 +1,16 @@
+template=template/roottemplate.html
+
+<!--  -->
+${{content}}
+
+<!--  -->
+@{{content}}
+
+${{script}}
+<!--  -->
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		shinobi.template_1.init();
+	});
+</script>
+@{{script}}

@@ -1,0 +1,37 @@
+template=systemtemplate/systemroottemplate.html
+
+<!--  -->
+${{template_content}}
+<div id="quickviewDefault" class="quickview">
+	<header class="quickview-header">
+		<p class="title">Quickview title</p>
+		<span class="delete" data-dismiss="quickview"></span>
+	</header>
+
+	<div class="quickview-body">
+		<div class="quickview-block">#{{/systemfragment/adminmenu}}</div>
+	</div>
+
+	<footer class="quickview-footer"> </footer>
+</div>
+<div class="columns ">
+
+
+	<article class="column  ">@{{content}}</article>
+
+</div>
+
+${{footer_script}}
+<!--  -->
+<script>
+	document.addEventListener("DOMContentLoaded", function(event) {
+
+		shinobi.menumodule
+				.activeCurrentTab(document.getElementById('menuLeft'));
+
+	});
+</script>
+<!--  -->
+@{{script}}
+
+

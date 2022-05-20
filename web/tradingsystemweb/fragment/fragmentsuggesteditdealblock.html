@@ -1,0 +1,144 @@
+<div class="box change-block">
+    <div class="field is-grouped is-grouped-multiline  header-table-filter">
+        <div class="control">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label has-width-7-rem">Người
+                        dùng</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control">
+                            <input class="input" snb-key="username" type="text"
+                                placeholder="Người dùng">
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                    <label class="label has-width-7-rem">Sản
+                        phẩm</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control">
+                        <div class="select is-afterless has-background-white">
+                            <select snb-key="productid"
+                                class=" has-background-white" disabled style="
+                                color: black;
+                                border: none;
+                                font-weight: bold;
+                            ">
+
+                            </select>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="control">
+            <a class="button search-history-deal-button is-link">Tìm</a>
+        </div> -->
+    </div>
+    <div class="columns">
+        <div class="column is-6">
+            <div
+                class="subtitle has-margin-bottom-0_5-rem has-margin-top-1-rem is-5">
+                Thông tin thay đổi tiền(VND)</div>
+            <div class="table-container ">
+                <table snb-key="cashupdateinfo"
+                    snb-render="shinobi.adminsuggesteditdealmanagementrender.renderCashGoldChangeInfo"
+                    snb-preprocess="shinobi.adminsuggesteditdealmanagementrender.getCashGoldChangeInfo"
+                    class="table is-bordered is-hoverable" style="
+                    border: 1px solid #ddd;
+                ">
+                    <thead>
+                        <tr>
+                            <th snb-colname="dealstatus" snb-datatype="text">
+                                Ngăn
+                            </th>
+                            <th snb-colname="lastmodifieduser">Giá trị
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Số dư tiền</td>
+                            <td><input snb-key="currentcash" type="text"
+                                    class="input is-small"></td>
+                        </tr>
+                        <tr>
+                            <td>Số tiền cần thanh toán</td>
+                            <td><input snb-key="debtcash" type="text"
+                                    class="input is-small"></td>
+                        </tr>
+                        <tr>
+                            <td>Tiền ký quỹ</td>
+                            <td><input snb-key="lockedcash" type="text"
+                                    class="input is-small"></td>
+                        </tr>
+                        <tr>
+                            <td>Số tiền nợ</td>
+                            <td><input snb-key="widthdrawaldebtcash" type="text"
+                                    class="input is-small">
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div
+                class="subtitle has-margin-bottom-0_5-rem has-margin-top-1-rem is-5">
+                Thông tin thay đổi vàng(Lượng)</div>
+            <div class="table-container ">
+                <table id="dataContainer1" snb-key="goldupdateinfo"
+                    snb-render="shinobi.adminsuggesteditdealmanagementrender.renderCashGoldChangeInfo"
+                    snb-preprocess="shinobi.adminsuggesteditdealmanagementrender.getCashGoldChangeInfo"
+                    class="table is-bordered is-hoverable" style="
+                    border: 1px solid #ddd;
+                ">
+                    <thead>
+                        <tr>
+                            <th snb-colname="dealstatus" snb-datatype="text">
+                                Ngăn
+                            </th>
+                            <th snb-colname="lastmodifieduser">Giá trị
+                            </th>
+                            <!-- <th snb-colname="lastmodifieduser">Mã kho
+                                chứa
+                            </th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vàng ký quỹ</td>
+                            <td><input snb-key="currentamount" type="text"
+                                    class="input is-small">
+                            </td>
+                            <!-- <td></td> -->
+                        </tr>
+                        <tr>
+                            <td>Vàng cần thanh toán</td>
+                            <td><input snb-key="debtamount" type="text"
+                                    class="input is-small"></td>
+                            <!-- <td></td> -->
+                        </tr>
+                        <tr>
+                            <td>Vàng giữ để thanh toán</td>
+                            <td><input snb-key="lockedamount" type="text"
+                                    class="input is-small"></td>
+                            <!-- <td></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

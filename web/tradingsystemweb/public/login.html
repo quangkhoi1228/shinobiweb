@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>#{{/fragment/header}}
+</head>
+
+<body style="background-image: url('/static/image/atradingbackgroundlogin.png'); background-size:cover;">
+    <!--  -->
+    #{{/fragment/fragmentloginindex}}
+    <!--  -->
+    <script defer src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.pageloader-aladin').classList.add('animate__animated', 'animate__fadeOut', 'animate__faster');
+            setTimeout(function () {
+                document.querySelector('.pageloader-aladin').classList.add('is-hidden');
+            }, 500);
+
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            shinobi.logintemplate.build();
+        });
+    </script>
+</body>
+
+</html>

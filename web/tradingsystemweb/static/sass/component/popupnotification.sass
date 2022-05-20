@@ -1,0 +1,50 @@
+@charset "utf-8"
+// @import "../theme/default-theme-all"
+@import "../../sassbulma/bulma/sass/base/_all"
+
+$popup-notification-width: 20rem
+$popup-notification-zindex: 100
+$popup-notification-offset-top: 5rem
+$popup-notification-offset-right: 1rem
+$popup-notification-info-background: #3465a4
+$popup-notification-error-background: #ff3860
+$popup-notification-color: white
+
+@mixin hidden
+  opacity: 0
+  display: none
+@mixin show
+  opacity: 0.8
+  display: block
+
+.shinobinotification
+  @include hidden
+  right: 2rem
+  color: $popup-notification-color
+  width: $popup-notification-width
+  position: fixed !important
+  z-index: $popup-notification-zindex
+  top: $popup-notification-offset-top
+  box-shadow: 0 2px 4px rgba(15, 14, 14, 0.1), 0 0 0 1px rgba(13, 13, 13, 0.1)
+  transition: opacity 1s, backgorund 1s ease-in-out
+  background-color: $popup-notification-info-background
+  &.info-message
+    @include show
+    background-color: $popup-notification-info-background
+  &.error-message
+    @include show
+    background-color: $popup-notification-error-background
+  &.loading-message
+    @include show
+    background-color: $popup-notification-info-background
+    max-width: 10em
+    padding-right: 0.5rem
+  .columns
+    display: flex
+    .is-loading
+      max-width: 3rem
+.notificationcontent
+  width: 100%
+  word-wrap: break-word
+.confirm-panel, #confirmPanel
+  z-index: 100

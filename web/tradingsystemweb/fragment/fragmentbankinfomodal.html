@@ -1,0 +1,45 @@
+<div id="userbankinfoModal" class="modal is-large">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Chi tiết</p>
+			<button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			#{{/fragment/fragmentuserbankinfo}}</section>
+		<footer class="modal-card-foot is-hidden">
+
+			<button class="button">Đóng</button>
+		</footer>
+	</div>
+</div>
+
+<div id="userbankinfomodifyModal" class="modal is-large">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Chi tiết</p>
+			<button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			<div class="columns">
+				<div class="column old-data">
+					#{{/fragment/fragmentuserbankinfo}}</div>
+				<div class="is-divider-vertical"></div>
+				<div class="column new-data">
+					#{{/fragment/fragmentuserbankinfo}}</div>
+				<div class="is-divider-vertical"></div>
+				<div class="column user-data">#{{/fragment/fragmentuserinfo}}
+				</div>
+			</div>
+		</section>
+		<footer class="modal-card-foot is-hidden">
+			<a class="button is-success" snb-key="requestid"
+				snb-render="shinobi.adminbankinfomodifyhistoryrender.renderAcceptButton">Đồng
+				ý</a><a class="button is-danger" snb-key="requestid"
+				snb-render="shinobi.adminbankinfomodifyhistoryrender.renderRejectButton">Từ
+				chối</a>
+			<button class="button">Đóng</button>
+		</footer>
+	</div>
+</div>

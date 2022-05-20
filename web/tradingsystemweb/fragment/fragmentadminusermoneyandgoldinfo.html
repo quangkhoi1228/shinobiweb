@@ -1,0 +1,111 @@
+<div class="is-divider is-marginless has-margin-bottom-0_5-rem"></div>
+<div class="columns is-vcentered has-margin-bottom-0-rem">
+    <div class="column is-3">
+        <div><span snb-key="fullname"></span>
+        </div>
+    </div>
+    <div class="column">
+        <div class="user-home-section">
+            <div
+                class="columns user-home-statistic-container has-margin-bottom-0-rem">
+                <div class="column">
+                    <div class=" box   has-background-success-opacity">
+                        <div class="content-container">
+                            <p class="title is-4">Số dư tiền</p>
+                            <p class="subtitle is-4">
+                                <span snb-key="currentcash"
+                                    snb-render="shinobi.render.renderFormatNumber">0</span>
+                                VND
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class=" box  has-background-success-dark">
+                        <div class="content-container">
+                            <p class="title is-4">Số tiền cần thanh toán</p>
+                            <p class="subtitle is-4">
+                                <span snb-key="debtcash"
+                                    snb-render="shinobi.render.renderFormatNumber">0</span>
+                                VND
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class=" box  has-background-danger">
+                        <div class="content-container">
+                            <p class="title is-4">Tiền ký quỹ <span
+                                    data-tooltip="Tiền kí quỹ bao gồm tiền cọc trong giao dịch + phí giao dịch"
+                                    class="icon has-tooltip-multiline has-tooltip-left">
+                                    <i
+                                        class="fal fa-xs fa-info-circle"></i></span>
+                            </p>
+                            <p class="subtitle is-4">
+                                <span snb-key="lockedcash"
+                                    snb-render="shinobi.render.renderFormatNumber">0</span>
+                                VND
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class=" box  has-background-grey-light">
+                        <div class="content-container">
+                            <p class="title is-4">Số tiền nợ</p>
+                            <p class="subtitle is-4">
+                                <span snb-key="widthdrawaldebt"
+                                    snb-render="shinobi.render.renderFormatNumber">0</span>
+                                VND
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-variable is-2">
+                <div id="balancegold" class=" column">
+                    <div class=" box has-background-gold-table gold-balance-container has-button is-shadowless has-padding-0_5-rem"
+                        snb-key="username"
+                        snb-render="shinobi.admininfototalmoneyrender.renderGoldBalance">
+                        <a class="button is-prev">
+                            <span class="icon "><i
+                                    class="fa fa-caret-left"></i></span></a>
+                        <a class="button is-next"> <span class="icon is-next"><i
+                                    class="fa fa-caret-right"></i></span></a>
+                        <div class="content-container">
+                            <p class="  title-gold-trasection">Số
+                                vàng ký quỹ (Lượng)
+                                <span
+                                    data-tooltip="Vàng kí quỹ là số dư vàng hiện có "
+                                    class="icon has-tooltip-multiline has-tooltip-left"><i
+                                        class="fal fa-xs fa-info-circle"></i></span>
+                            </p>
+                            <div class="columns is-mobile is-variable is-0">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="lockcashgold" class=" column">
+                    <div class=" box has-background-gold-table gold-lock-cash-container has-button is-shadowless  has-padding-0_5-rem"
+                        snb-key="username"
+                        snb-render="shinobi.admininfototalmoneyrender.renderGoldLockCash">
+                        <a class="button is-prev">
+                            <span class="icon "><i
+                                    class="fa fa-caret-left"></i></span></a>
+                        <a class="button is-next"> <span class="icon is-next"><i
+                                    class="fa fa-caret-right"></i></span></a>
+                        <div class="content-container">
+                            <p class=" title-gold-trasection">Vàng
+                                cần thanh toán (Lượng)</p>
+
+                            <div class="columns is-mobile is-variable is-0">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

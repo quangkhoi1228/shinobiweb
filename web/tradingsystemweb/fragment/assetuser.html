@@ -1,0 +1,129 @@
+<div
+    class="table-container  has-box-shadow-light has-background-white p-5 has-border-radius-6px">
+    <div class="level">
+
+        <div class="level-left">
+            <div class="columns" id="assetvalue">
+                <div class="column is-flex is-narrow">
+                    <p>Giá trị tài sản ròng:&nbsp;</p>
+                    <p class="has-text-primary has-text-weight-bold"><span
+                            snb-key="nav"
+                            snb-render="shinobi.render.renderFormatNumber"></span>
+                        VNĐ</p>
+                </div>
+                <div class="column is-flex is-narrow pr-6">
+                    <p>Tổng giá trị chứng khoán:&nbsp;</p>
+                    <p class="has-text-primary has-text-weight-bold"><span
+                            snb-key="stockvalue"
+                            snb-render="shinobi.render.renderFormatNumber"></span>
+                        VNĐ</p>
+                </div>
+                <div class="column is-flex is-narrow">
+                    <p>Tiền mặt:&nbsp;</p>
+                    <p class="has-text-primary has-text-weight-bold"><span
+                            snb-key="cash"
+                            snb-render="shinobi.render.renderFormatNumber"></span>
+                        VNĐ</p>
+                </div>
+                <div class="column is-flex is-narrow">
+                    <p>Nợ:&nbsp;</p>
+                    <p class="has-text-primary has-text-weight-bold"><span
+                            snb-key="debt"
+                            snb-render="shinobi.render.renderFormatNumber"></span>
+                        VNĐ</p>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <a id="updateAllocationAccountAssetButton"
+                class="button is-primary is-small has-bsd"><span class="icon"><i
+                        class="fal fa-redo"></i></span><span>Cập nhật tài
+                    sản</span></a>
+        </div>
+    </div>
+    <!-- ASSET -->
+    <table id="tableassetorder" class="table is-fullwidth is-bordered">
+        <thead>
+            <tr>
+                <th snb-colname="stockcode">
+                    <p class="has-text-centered">Mã CK</p>
+                </th>
+                <th snb-colname="totalamount"
+                    snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Khối lượng</p>
+                </th>
+                <th snb-colname="waitamount"
+                    snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Chờ về</p>
+                </th>
+                <th snb-colname="currentamount"
+                    snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Giao dịch</p>
+                </th>
+                <th snb-colname="avgprice"
+                    snb-render="shinobi.render.renderTextRightTable">
+                    <p class="has-text-centered">Giá vốn</p>
+                </th>
+                <th snb-colname="marketprice"
+                    snb-render="shinobi.render.renderTextRightTable">
+                    <p class="has-text-centered">Giá hiện tại</p>
+                </th>
+                <th snb-colname="maketvalue"
+                    snb-render="shinobi.render.renderFormatNumberTable">
+                    <p class="has-text-centered">Giá trị</p>
+                </th>
+                <th snb-colname="percentchange"
+                    snb-render="renderProfitpercent100Table">
+                    <p class="has-text-centered">% (+/-)</p>
+                </th>
+                <th snb-colname="proportion"
+                    snb-render="shinobi.roottemplate.renderProfitPercent">
+                    <p class="has-text-centered">Tỷ trọng</p>
+                </th>
+                <th snb-colname="account"
+                    snb-render="shinobi.assetuserrender.snbRenderButton">
+                    <p class="has-text-centered"></p>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <td>
+                <p class="has-text-centered">DPR</p>
+            </td>
+            <td>
+                <p class="has-text-right">10,800</p>
+            </td>
+            <td>
+                <p class="has-text-right">0</p>
+            </td>
+            <td>
+                <p class="has-text-right">10,800</p>
+            </td>
+            <td>
+                <p class="has-text-right">79,176</p>
+            </td>
+            <td>
+                <p class="has-text-right">70,200</p>
+            </td>
+            <td>
+                <p class="has-text-right">758,160,000</p>
+            </td>
+            <td>
+                <p class="has-text-right">-11.34%</p>
+            </td>
+            <td>
+                <p class="has-text-right">15,99%</p>
+            </td>
+            <td>
+                <div class="has-text-centered">
+                    <div class="buttons are-small is-centered">
+                        <div class="button is-danger has-bsd">Bán</div>
+                    </div>
+                </div>
+            </td> -->
+        </tbody>
+    </table>
+    <div class="is-hidden" record-num="10">
+        #{{/fragment/tablepagination}}
+    </div>
+</div>

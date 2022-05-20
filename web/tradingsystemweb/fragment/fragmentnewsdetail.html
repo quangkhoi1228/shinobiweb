@@ -1,0 +1,74 @@
+<section class="hero">
+    <section class="hero-body">
+        <div class="container detail-page-max-width has-text-justified">
+            <div class="columns is-variable is-5">
+                <div class="column is-two-third news-post">
+
+                    <div class="text-grey-underline has-border-bottom-primary has-margin-bottom-1-rem">
+                        <p snb-key="posttitle" class="has-text-primary is-size-3"></p>
+                        <p snb-key="createddate" class="has-text-primary text-inline is-size-6"></p>
+                    </div>
+                    <div class="">
+                        <div snb-key="postcontent" snb-render="shinobi.util.renderUnEscap" class="">
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-third">
+                    <div class="padding-top-2rem ">
+                        <table class="table is-fullwidth is-striped is-hoverable gold-table">
+                            <thead class="has-background-primary">
+                                <tr class="">
+                                    <th class="has-text-white is-size-4 font-weight-bold has-border-top-left-radius-0_5-rem has-border-top-right-radius-0_5-rem"
+                                        snb-lang="PAGECODE_NEWS_RELEVANT" language="VN">TIN GẦN NHẤT</th>
+                                </tr>
+                            </thead>
+                            <tbody id="newsRelevant" snb-datalist-node="newsRelevant" class="">
+                                <tr snb-datalist-parent="newsRelevant" class="" rowid="0">
+                                    <td>
+                                        <a snb-key="posturl" snb-key-href="posturl">
+                                            <div class="has-text-black" snb-key="posttitle">Tin hoạt động</div>
+                                            <div class="has-text-grey is-size-6" snb-key="createddate">2020-09-04 11:02
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>
+                                        <div class="" record-num="6">
+                                            #{{/fragment/tablepaginationmin}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class=" columns">
+                        <div id="ads" snb-datalist-node="ads" class="column">
+                            <div class="has-padding-top-1-rem" snb-datalist-parent="ads">
+                                <div snb-key="description" snb-key-title="description">
+                                    <a snb-key="targetlink" snb-key-href="targetlink">
+                                        <figure class="image is-fullwidth"> <img snb-key="desktop"
+                                                snb-key-src="desktop"> </figure>
+                                    </a>
+                                    <!-- <a snb-key="targetlink" snb-key-href="targetlink">
+                                    <figure class="image is-3by1"> <img snb-key="desktop" snb-key-src="desktop"> </figure>
+                                </a> -->
+                                    <p class="is-hidden text-grey-underline padding-top-05rem"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div record-num="100" class="is-hidden">
+                            #{{/fragment/tablepagination}}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

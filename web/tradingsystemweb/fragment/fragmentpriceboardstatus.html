@@ -1,0 +1,80 @@
+<section id="indexPriceBoardStatusContainer"
+    class=" has-border-bottom-gold  has-padding-bottom-5-px has-margin-bottom-2-rem">
+    <div class="is-desktop ">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <p class="  has-text-gold has-margin-right-1-rem"
+                        snb-key="date">
+                    </p>
+                </div>
+                <div class="level-item">
+                    <p
+                        class=" gold-spot-container has-text-gold has-margin-right-1-rem">
+                        Gold spot (USD/Oz): <span snb-key="price"></span>
+                        <span class="has-margin-left-0_5-rem"
+                            snb-render="shinobi.render.renderChangeColor"
+                            snb-key="pointDiff"><span
+                                snb-key="pointDiff"></span></span> <span
+                            snb-key="percentDiff"
+                            snb-render="shinobi.render.renderChangePercentColor">(<span
+                                snb-key="percentDiff"></span>)</span>
+                    </p>
+                </div>
+                <div class="level-item">
+                    <p class="sjc-price-container has-text-gold">
+                        Vàng SJC 1L HCM (VND/Lượng): Mua <span
+                            snb-key="buyPrice"></span>
+                        - Bán:
+                        <span snb-key="sellPrice"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="level-right" snb-key="status"
+                snb-render="shinobi.indexrender.renderMarketStatus">
+            </div>
+        </div>
+    </div>
+    <div class="is-touch">
+        <div class="level is-mobile" style="
+        font-size: 0.95rem;
+    ">
+            <div class="level-left  has-text-gold" snb-key="mobileDate">
+
+            </div>
+            <div class="level-right" snb-key="status"
+                snb-render="shinobi.indexrender.renderMarketStatus">
+
+            </div>
+        </div>
+        <div class="marquee">
+            <div class="level is-mobile">
+                <div class="level-item">
+                    <div class="  has-text-gold has-margin-right-1-rem">
+                        <p
+                            class=" gold-spot-container has-text-gold has-margin-right-2-rem">
+                            Gold spot (USD/Oz): <span snb-key="price"></span>
+                            <span class="has-margin-left-0_5-rem"
+                                snb-render="shinobi.render.renderChangeColor"
+                                snb-key="pointDiff"><span
+                                    snb-key="pointDiff"></span></span> <span
+                                snb-key="percentDiff"
+                                snb-render="shinobi.render.renderChangePercentColor">(<span
+                                    snb-key="percentDiff"></span>)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="level-item">
+                    <div class=" has-text-gold">
+                        <p class="sjc-price-container has-text-gold">
+                            Vàng SJC 1L HCM (VND/Lượng): Mua <span
+                                snb-key="buyPrice"></span>
+                            - Bán:
+                            <span snb-key="sellPrice"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

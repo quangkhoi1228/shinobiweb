@@ -1,0 +1,42 @@
+<div id="confirmhistory" class="modal is-full-screen confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Lịch sử nạp rút của kho</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <table id="dataContainerModal" class="table is-bordered is-hoverable is-striped is-fullwidth">
+                        <thead>
+                            <tr>
+                                <th snb-colname="storageid" snb-header-control="1,2 ">
+                                    Mã kho chứa</th>
+                                <th snb-colname="lastmodifieddate" snb-header-control="1">
+                                    Ngày thao tác</th>
+                                <th snb-colname="lastmodifieduser" snb-header-control="1,2 ">
+                                    Người thực hiện</th>
+                                <th snb-colname="transtype" snb-render="shinobi.adminwithdrawgoldhistoryrender.translateStatusGoldTable">Thao tác
+                                </th>
+                                <th snb-colname="note" snb-render="shinobi.adminwithdrawgoldhistoryrender.renderNoteDealid">Ghi chú
+                                </th>
+                                <th snb-colname="productname" snb-header-control="1,2 ">Sản phẩm</th>
+                                <th snb-colname="amount" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Số lượng (lượng)</th>
+                                <th snb-colname="widthdrawalfee" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Phí rút vàng(VND)</th>
+                                <th snb-colname="overnightfee" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Phí giữ vàng qua đêm tạm tính(VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div record-num="10">
+                        #{{/fragment/tablepagination}}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

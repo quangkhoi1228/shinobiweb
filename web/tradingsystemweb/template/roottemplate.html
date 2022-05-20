@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>#{{/fragment/header}}
+</head>
+
+<body>
+
+	<div class="menu-left">
+		#{{/fragment/menuleft}}
+	</div>
+	#{{/fragment/navbarheader}}
+
+
+
+	<main class="main-section">
+
+		#{{/fragment/fragmentpageloading}}
+
+		<section class="hero">
+			<div class="hero-body py-5">
+				<!-- <section class="hero"> -->
+				@{{content}}
+			</div>
+		</section>
+		<!--  -->
+		<!-- </section> -->
+
+	</main>
+
+	#{{/fragment/footer}}
+	<!--  -->
+	#{{/fragment/fragmentlogin}}
+	<!--  -->
+	#{{/fragment/fragmentsignup}}
+	<!--  -->
+	#{{/fragment/fragmentchangepassword}}
+	<!--  -->
+	#{{/fragment/fragmentforgotpassword}}
+	<!--  -->
+	#{{/fragment/roottemplatefragmentextend}}
+	<!-- -->
+	#{{/fragment/fragmentorderplacing}}
+	#{{/fragment/fragmentselectaccountmodel}}
+
+	<script>
+		window.addEventListener('load', function () {
+			document.querySelector('.pageloader-aladin').classList.add('animate__animated', 'animate__fadeOut', 'animate__faster');
+			setTimeout(function () {
+				document.querySelector('.pageloader-aladin').classList.add('is-hidden');
+			}, 500);
+
+		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+			shinobi.initbulma.build();
+			shinobi.roottemplaterender.init();
+			shinobi.fragmentlogin.init();
+			shinobi.fragmentchangepassword.init();
+			/* 
+			shinobi.fragmentlogin.init();
+			showLoginSignUpButton();
+			shinobi.fragmentsignup.init();
+			shinobi.fragmentchangepassword.init();
+			shinobi.placebetbuttonrender.init();
+			shinobi.shoppingcartrender.addEventBagdeButton();
+			shinobi.fragmentforgotpassword.init();
+			shinobi.selectbetnumberrender.init();	
+			addEventNavbarBurger();
+			addEventModal(); */
+		});
+	</script>
+
+	@{{script}}
+
+
+</body>
+
+</html>

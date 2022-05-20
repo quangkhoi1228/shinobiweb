@@ -1,0 +1,38 @@
+<div id="confirmhistory" class="modal is-full-screen confirm-panel">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Lịch sử xuất nhập vàng</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <table id="dataContainerModel" class="table is-fullwidth is-hoverable is-striped is-bordered">
+                        <thead>
+                            <tr>
+                                <th snb-colname="storageid" snb-header-control="1" class="has-width-10-rem">Mã kho</th>
+                                <th snb-colname="createddate" snb-header-control="1" snb-datatype="date">Ngày phát sinh</th>
+                                <th snb-colname="productid" snb-render="shinobi.userorderplacinghistoryrender.renderProductName" snb-header-control="1" snb-datatype="number">Sản phẩm</th>
+
+                                <th snb-colname="transtype" snb-render="shinobi.adminwithdrawgoldhistoryrender.translateStatusGoldTable" snb-header-control="1">Thao tác</th>
+                                <th snb-colname="note" snb-render="shinobi.adminwithdrawgoldhistoryrender.renderNoteDealid">Ghi chú
+                                </th>
+                                <th snb-colname="amount" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Số lượng (lượng)</th>
+                                <th snb-colname="widthdrawalfee" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Phí rút vàng(VND)</th>
+                                <th snb-colname="overnightfee" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Phí giữ vàng qua đêm tạm tính(VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div record-num="10">#{{/fragment/tablepagination}}</div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

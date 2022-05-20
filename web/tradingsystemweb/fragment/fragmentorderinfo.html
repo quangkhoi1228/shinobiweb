@@ -1,0 +1,83 @@
+<div class="content-card">
+	<h2 class="title">Thông tin thanh toán</h2>
+	<table class="table is-fullwidth has-border-dashed ">
+		<tbody class="order-detail-info">
+			<tr class="is-hidden">
+				<td>Mã đơn hàng</td>
+				<td snb-key="orderid"
+					snb-render="shinobi.render.showParentNode"></td>
+			</tr>
+			<tr class="is-hidden">
+				<td>Ngày đơn hàng</td>
+				<td snb-key="createddate"
+					snb-render="shinobi.render.showParentNode"></td>
+			</tr>
+		</tbody>
+		<tbody class="user-info">
+			<tr>
+				<td>Họ tên</td>
+				<td><span snb-key="lastname"></span> <span
+						snb-key="firstname"></span></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td snb-key="email"></td>
+			</tr>
+			<tr>
+				<td>SĐT</td>
+				<td>(+<span snb-key="phonereligion"></span>) <span
+						snb-key="phonenumber"></span></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<p class="title section-title has-text-left is-4">Sản phẩm</p>
+	<div class="table-container">
+		<table id="shoppingCartPaymentTable"
+			class="table is-fullwidth is-bordered is-hoverable is-striped is-header-centered is-body-right">
+			<thead>
+				<tr>
+					<th>Số đã chọn</th>
+					<th>Ngày xổ</th>
+					<th>Đợt xổ</th>
+					<th>Số lượng</th>
+					<th>Đơn giá</th>
+					<th>Thành tiền</th>
+				</tr>
+			</thead>
+			<tbody id="shoppingCartProductDatalist"
+				snb-datalist-node="shoppingCartProductDatalist">
+				<tr snb-datalist-parent="shoppingCartProductDatalist">
+					<td snb-key="itemvalue"></td>
+					<td snb-key="lotterydate"
+						snb-render="shinobi.render.renderFormatDate"></td>
+					<td snb-key="phasenumber"></td>
+					<td snb-key="quantity"
+						snb-render="shinobi.render.renderFormatNumber"></td>
+					<td snb-key="price"
+						snb-render="shinobi.render.renderFormatNumber"></td>
+					<td snb-key="quantity"
+						snb-render="shinobi.render.renderTotalPrice"></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr class="is-hidden">
+					<td>#{{/fragment/tablepagination}}</td>
+				</tr>
+				<tr>
+					<td colspan="6" class="has-text-left has-text-weight-bold">
+						Tổng:
+						<span snb-key="totalvalue"
+							snb-render="shinobi.render.renderFormatNumber"></span>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="buttons">
+		<a
+			class="submit-button button is-hidden is-danger is-medium is-fullwidth"><span>ĐẶT
+				MUA</span> <span class="icon"><i
+					class="fa fa-chevron-right"></i> </span></a>
+	</div>
+</div>

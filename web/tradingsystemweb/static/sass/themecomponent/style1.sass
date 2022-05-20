@@ -1,0 +1,381 @@
+$background-color: #f2f3f8
+
+$up-value: #067711
+$down-value: #df0201
+$ceiling-value: #d714d0
+$reference-value: #e8aa3e
+$floor-value: #22ccd3
+$padding-item-menu-left: 1.25rem 0.25rem 1.25rem 0.25rem
+
+$color-line-div: #dddddd
+
+$background-active-buy: #D3FFD8 !default
+$background-active-sell: #FFE3F1 !default
+$secondary: #f16311
+$static-content-page: white !default
+$width-menu-left: 5rem
+$border-outline-button: 1px solid $up-value
+$border-outline-button-sell: 1px solid $down-value
+$border-outline-button-buy: 1px solid $up-value
+
+$transition-button-hover: 0.5s
+
+$scale-button-hover: scale(1.08)
+$custom-width-autocomplete: 20rem
+
+body,
+button,
+input,
+select,
+option,
+textarea
+    background: $background-color
+    font-size: 1rem
+    font-weight: 400
+    color: #293340
+
+.line-div
+    border-right: 2px solid $color-line-div !important
+    & + &
+        border-left: 2px solid $color-line-div !important
+        border-right: none !important
+
+.border-hero
+    border: $border-outline-button
+
+.up-value
+    color: $up-value
+.unchange-value
+    color: $reference-value
+.down-value
+    color: $down-value
+.format-image
+    width: 15rem
+    height: 10rem
+.container-with-header
+    .is-rounded
+        padding: 0.75rem
+        +mobile
+            padding: 0
+.scroll-set
+    height: 20rem
+    overflow: scroll
+.body-container
+    padding-left: 4rem
+    padding-right: 4rem
+    +mobile
+        padding-left: 0
+        padding-right: 0
+.contact-address-min
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    font-weight: $weight-normal
+.static-main-content-container
+    background-color: $static-content-page
+    strong
+        color: $primary-color
+.has-text-underline
+    text-decoration: underline
+
+//custom header with logged navigator bar
+$navbar-custom-height: 3rem
+.navbar
+    .navbar-brand
+        +touch
+            margin-top: 0.5rem !important
+            max-height: 3rem !important
+            height: 3rem !important
+            .mobile-header-navigator-navbar
+                margin-top: 1rem
+                padding: 0
+                .button
+                    font-size: 0.75rem
+                    &+.button
+                        margin-left: 0.25rem
+                    &.is-icon
+                        width: 2.5em
+                        height: 2.5em
+                    >span
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+        .navbar-burger
+            margin-top: 0.75rem
+            height: 2.5rem
+            width: 2.5rem
+        .navbar-label
+            display: none
+            +touch
+                display: block
+                position: fixed
+                left: 0
+                top: 0
+                width: 100%
+                height: 2rem
+                padding-left: 6rem
+                text-transform: uppercase
+                font-size: 0.5rem
+                color: #A88422
+                line-height: 1.75rem
+
+.navbar.is-fixed-top.is-spaced
+    .navbar-brand
+        height: $navbar-custom-height !important
+    &+ .main-section
+        margin-top: 5.25rem !important
+        min-height: calc(100vh - 5.25rem)
+
+.user-navbar-header-menu
+    max-height: 80vh
+    overflow: auto
+    +mobile
+        max-height: 100vh
+    .shinobimenu
+        padding: 0
+        width: calc(100% - 0.75rem)
+        +desktop
+            ul
+                .shinobimenu
+                    white-space: nowrap
+                .shinobi menu-item
+                    padding: 0.375rem 1rem
+                    &.has-submenu
+                        padding-right: 1.5rem
+                &.ul-submenu
+                    .shinobimenu-item
+                        margin-right: 0.5rem
+        +touch
+            ul
+                width: 100%
+                li >.shinobimenu-item
+                    padding-left: 1.5rem
+.fixed-bottom-right
+    position: absolute
+    bottom: -1px
+    right: 0
+.has-border-bottom-black
+    border-bottom: 1px solid black !important
+    border-top: none !important
+    border-left: none !important
+    border-right: none !important
+    border-radius: 0px !important
+    box-shadow: 0px
+    outline: none
+    border-radius: 0px
+
+.has-border-black
+    border: 1px solid black !important
+    outline: none
+    box-shadow: 0px
+
+.button-outline
+    padding-top: 0.75rem
+    padding-left: 0.75rem
+    padding-right: 0.75rem
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    border-bottom: none
+    padding-bottom: 0.25rem
+    &.is-active-buy
+        border-top: $border-outline-button-buy
+        border-right: $border-outline-button-buy
+        border-left: $border-outline-button-buy
+    &.is-active-sell
+        border-top: $border-outline-button-sell
+        border-right: $border-outline-button-sell
+        border-left: $border-outline-button-sell
+
+    & .button
+        border: none
+    // border: 1px solid white
+    &.is-active-buy
+        background-color: $background-active-buy
+        border-top: $border-outline-button-buy
+        border-left: $border-outline-button-buy
+    &.is-active-sell
+        background-color: $background-active-sell
+        border-top: $border-outline-button-sell
+        border-right: $border-outline-button-sell
+    & .button
+        padding-left: 1.5rem
+        padding-right: 1.5rem
+        // border-bottom-left-radius: 0px
+        // border-bottom-right-radius: 0px
+        font-weight: 700
+        color: white
+        &.buy
+            background-color: $up-value
+        &.sell
+            background-color: $down-value
+.button
+    &.buy
+        background-color: $up-value
+    &.sell
+        background-color: $down-value
+#containertrading
+    &.is-active-buy
+        background-color: $background-active-buy
+        border: $border-outline-button-buy
+    &.is-active-sell
+        background-color: $background-active-sell
+        border: $border-outline-button-sell
+.value
+    font-weight: 700
+    &.up-value
+        color: $up-value
+    &.down-value
+        color: $down-value
+    &.ceiling-value
+        color: $ceiling-value
+    &.reference-value
+        color: $reference-value
+    &.floor-value
+        color: $floor-value
+.custom-column-width-large
+    width: 15% !important
+.custom-column-width-medium
+    width: 11% !important
+.custom-column-width-small
+    width: 10% !important
+.navbar-item
+    & img
+        max-height: 4rem
+.menu-left
+    .main-section
+        margin-left: $width-menu-left
+.is-borderless
+    border: none !important
+.is-paddingless
+    padding: none !important
+.is-marginless
+    margin: 0 !important
+.fieldset-input
+    & fieldset
+        border: 1px solid black !important
+        border-radius: 5px
+        &.has-button-right
+            position: relative
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+
+    & .field
+        margin: 0 !important
+    & input
+        border: none !important
+        outline: none !important
+        box-shadow: none !important
+        background-color: transparent
+        text-align: center
+        height: 1rem
+        position: relative
+        top: 0.5rem
+        font-size: 1rem !important
+        &:focus
+            border: none !important
+            outline: none !important
+            box-shadow: none !important
+.set-button-after
+    position: absolute
+    bottom: 0
+.after-fieldset
+    position: relative
+    // top: 8px
+    height: 39px
+    border: 1px solid black
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-left: 0
+.w-3-pc
+    width: 3% !important
+.has-padding-top-2-rem
+    margin-top: 2rem
+.has-padding-bottom-2-rem
+    margin-bottom: 2rem
+.font-weight-bold
+    font-weight: 700
+.shinobi-pagination-curpage
+    &:focus
+        border: none
+        outline: none !important
+    &:visited
+        border: none
+        outline: none
+.has-box-shadowless
+    box-shadow: none !important
+.panel
+    &.is-user
+        background-color: #e5e8ee
+.box-user
+    background-color: #f2f3f8 !important
+.is-full-width
+    width: 100%
+
+.is-round-input
+    border-radius: 50px
+.button-relative-top
+    position: relative
+    bottom: 0.7rem
+.is-fullheight
+    height: 100% !important
+.is-fullwidth
+    width: 100%
+.tabs
+    // font-size: 1.25rem
+    & .is-active
+        font-weight: bold
+    &.is-boxed
+        margin-bottom: 0 !important
+        & li
+            &.is-active
+                & a
+                    border: none
+    &#tabsmatchingorder
+        border-bottom: 1px solid #ddd
+        & li
+            & a
+                color: black
+                border-bottom: 0px
+            &.is-active
+                & a
+                    border-bottom: 3px solid $secondary
+                    color: $secondary
+.input-user
+    background-color: #848897
+    color: white
+    &::placeholder
+        color: white
+.has-box-shadow-default
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px
+.button
+    &.has-bsd
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px
+        +animation
+        &:hover
+            transform: scale(1.05)
+.has-text-nowrap
+    white-space: nowrap
+.is-border-radius-top
+    border-collapse: collapse
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+.menu-list
+    & li
+        & a:not(.aria-button)
+            padding: $padding-item-menu-left
+.padding-header-table
+    padding: 0.75em 1em !important
+.hero
+    border-radius: 6px 0px 6px 6px
+    &.is-active-buy
+        border-radius: 6px
+.autocomplete-result-list
+    &.custom-width
+        width: $custom-width-autocomplete !important
+.note-username
+    &::after
+        content: '*'
+        color: red
+.table-container
+    overflow: inherit

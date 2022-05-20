@@ -1,0 +1,62 @@
+<section class="operationsmanagement">
+    <div class="level mb-5">
+        <div class="level-left">
+            <h1 class="title is-3">Phiên hoạt động</h1>
+        </div>
+        <div class="level-right">
+            <div class="mr-4 is-flex has-margin-block-auto">
+                <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                    Tiêu đề: </div>
+                <div class="select is-fullwidth">
+                    <select id="titleoperationsselector" snb-datalist-node="titleoperationsselector">
+                        <option snb-datalist-parent="titleoperationsselector" snb-key="name"
+                            snb-render="shinobi.operationsmanagementrender.renderEachElemSelector">
+                        </option>
+                    </select>
+                    <div class="is-hidden" record-num="50">
+                        #{{/fragment/tablepagination}}</div>
+                </div>
+            </div>
+            <div class="mr-4 has-margin-block-auto">
+                <div class=" has-margin-block-auto">
+                    <div class="is-flex has-margin-block-auto" id="searchinghistory">
+                        <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                            Thời gian: </div>
+                        <input class="is-init-bulma-false" type="date" data-is-range="true" snb-key="date"
+                            snb-preprocess="shinobi.render.getBulmaCalendarValue">
+                    </div>
+                </div>
+            </div>
+            <div class="is-flex">
+                <div class="button has-background-primary has-text-white has-text-weight-bold has-box-shadow-light is-borderless has-margin-block-auto"
+                    id="searchingButton">
+                    Tìm kiếm
+                </div>
+                <div>
+                    <a id="cancelfilter" class="button is-primary has-bsd ml-3 is-hidden">X</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-container has-box-shadow-light has-background-white p-5 has-border-radius-6px">
+        <table id="dataContainer" class="table is-fullwidth is-striped">
+            <thead>
+                <tr>
+                    <th snb-colname="name" snb-render="shinobi.operationsmanagementrender.renderNameOperations" style="width: 15rem">
+                        <p class="">Hoạt động</p>
+                    </th>
+                    <th snb-colname="createddate"  style="width: 15rem">
+                        <p class="">Thời gian</p>
+                    </th>
+                    <th snb-colname="description">
+                        <p class="">Chú thích</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div record-num="10">#{{/fragment/tablepagination}}</div>
+    </div>
+</section>

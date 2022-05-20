@@ -1,0 +1,316 @@
+<section class="history-section">
+    <div class="container-with-header is-large">
+        <div class="header">
+        </div>
+        <div class="body">
+            <div class="columns is-block-touch is-gapless">
+                <div class="column">
+                    <table id="indexMatchedTable"
+                        class="table is-fullwidth is-bordered">
+                        <thead>
+                            <tr class="label-row">
+                                <th colspan="7">
+                                    <div class="level is-mobile">
+                                        <div class="level-left">
+                                            <div id="indexMatchedTableTitle" class="label">Lịch
+                                                sử
+                                                lệnh khớp </div>
+                                        </div>
+                                        <div class="level-item" style="
+                                                justify-content: flex-start;
+                                                margin-left: 2rem;
+                                            ">
+                                            <label class="checkbox">
+                                                <input
+                                                    id="myOrderMatchedCheckbox"
+                                                    type="checkbox">
+                                                Của tôi </label>
+                                        </div>
+                                    </div>
+                                </th>
+
+                            </tr>
+                            <tr>
+                                <th snb-colname="dealid"
+                                    snb-render="shinobi.indexrender.renderDealId">
+                                    Mã lệnh khớp
+                                </th>
+                                <th snb-colname="buyeraccountid"
+                                    snb-render="shinobi.indexrender.renderSplitText">
+                                    B.Mua
+                                </th>
+                                <th snb-colname="dealquantity"
+                                    snb-render="shinobi.render.renderFormatNumberTable">
+                                    KL
+                                </th>
+                                <th snb-colname="dealprice"
+                                    snb-render="shinobi.render.renderFormatNumberTable">
+                                    Giá khớp
+                                </th>
+                                <th snb-colname="selleraccountid"
+                                    snb-render="shinobi.indexrender.renderSplitText">
+                                    B.Bán
+                                </th>
+                                <th snb-colname="productid"
+                                    snb-render="shinobi.reportmatchingrender.renderTextCenterTable"
+                                    snb-header-control="1,2"
+                                    snb-filter-builder="shinobi.indexrender.buildFilterProduct"
+                                    snb-filter-get-value="shinobi.indexrender.getFilterProduct">
+                                    Sản phẩm
+                                </th>
+                                <th snb-colname="dealexecutiondate"
+                                    snb-header-control="1">
+                                    Thời
+                                    gian</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div record-num="10" class="pagination-container">
+                        #{{/fragment/tablepagination}}
+                    </div>
+                </div>
+                <div class="column">
+                    <table id="waitingOrderTable"
+                        class="table is-fullwidth is-bordered">
+                        <thead>
+                            <tr class="label-row">
+                                <th colspan="6">
+                                    <div class="level is-mobile">
+                                        <div class="level-left">
+                                            <div class="label">Lệnh
+                                                chờ
+                                                khớp </div>
+                                        </div>
+                                        <div class="level-item" style="
+                                            justify-content: flex-start;
+                                            margin-left: 2rem;
+                                        ">
+                                            <label class="checkbox">
+                                                <input
+                                                    id="myOrderWaitingCheckbox"
+                                                    type="checkbox">
+                                                Của tôi </label>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th snb-colname="productid"
+                                    snb-render="shinobi.reportmatchingrender.renderTextCenterTable"
+                                    snb-header-control="1,2"
+                                    snb-filter-builder="shinobi.indexrender.buildFilterProduct"
+                                    snb-filter-get-value="shinobi.indexrender.getFilterProduct">
+                                    Sản phẩm
+                                </th>
+                                <th snb-colname="orderside"
+                                    snb-render="shinobi.userorderplacinghistoryrender.renderOrderSide">
+                                    Mua/Bán</th>
+                                <th snb-colname="unmatchedquantity"
+                                    snb-render="shinobi.render.renderFormatNumberTable">
+                                    KL
+                                </th>
+                                <th snb-colname="orderprice"
+                                    snb-render="shinobi.render.renderFormatNumberTable">
+                                    Giá đặt
+                                </th>
+                                <th snb-colname="accountid"
+                                    snb-render="shinobi.indexrender.renderSplitText">
+                                    User ID</th>
+                                <th snb-colname="partiallockedcash"
+                                    snb-render="shinobi.indexrender.renderIsAllNoneInprocessTable">
+                                    Số tiền cọc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div record-num="10" class="pagination-container">
+                        #{{/fragment/tablepagination}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>

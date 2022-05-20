@@ -1,0 +1,35 @@
+.is-admin-page
+    padding-top: 5.25rem !important
+    .navbar
+        padding: 1rem 1.5rem
+        border-bottom: 3px solid $yellow
+        .navbar-item
+            &.logo .title, .icon
+                color: $primary-color
+    .panel,.box
+        border: 1px solid $border
+        box-shadow: none
+        &>.level
+            border-bottom: 1px solid $border
+            .tabs
+                margin-bottom: -1px
+                ul
+                    li
+                        &.is-active
+                            border-bottom: 3px solid
+                            font-weight: $weight-bold
+        .button.export-excel
+            width: 3rem
+        .table
+            thead
+                th,td
+                    background: lighten($primary-color,65%)
+                    color: $primary-color
+            tr
+                td,th
+                    &:first-child
+                        border-left: none
+                    &:last-child
+                        border-right: none
+
+

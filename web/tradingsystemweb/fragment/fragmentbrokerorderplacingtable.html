@@ -1,0 +1,54 @@
+<table id="brokerOrderPlacingTableContainer"
+    class="table is-bordered is-striped  is-hoverable ">
+    <thead>
+        <tr>
+            <th snb-colname="accountid" snb-header-control="1,2">
+                Khách hàng</th>
+            <th snb-colname="productid" snb-header-control="1,2"
+                snb-filter-preprocess="shinobi.userorderplacinghistoryrender.productNameFilterPreprocess"
+                snb-render="shinobi.userorderplacinghistoryrender.renderProductName">
+                Sản phẩm
+            </th>
+            <th snb-colname="orderside" snb-header-control="1,2"
+                snb-filter-preprocess="shinobi.userorderplacinghistoryrender.orderSideFilterPreprocess"
+                snb-render="shinobi.userorderplacinghistoryrender.renderOrderSide">
+                Lệnh
+            </th>
+            <th snb-colname="orderplacedby" snb-header-control="1,2"
+                snb-datatype="date">Người đặt</th>
+            <th snb-colname="orderdate" snb-header-control="1"
+                snb-datatype="date">Ngày tạo</th>
+            <th snb-colname="orderprice" snb-header-control="1"
+                class="has-text-right"
+                snb-render="shinobi.render.renderFormatNumberTable"
+                snb-filter-preprocess="shinobi.render.removeFormatNumber">
+                Giá(VND)
+            </th>
+            <th snb-colname="unmatchedquantity" snb-header-control="1"
+                class="has-text-right"
+                snb-render="shinobi.render.renderFormatNumberTable"
+                snb-filter-preprocess="shinobi.render.removeFormatNumber">
+                KL(lượng)
+            </th>
+            <th snb-colname="isallnone" snb-header-control="1"
+                snb-render="shinobi.userorderplacinghistoryrender.renderIsAllNone">
+                Khớp hết KL
+            </th>
+            <th snb-colname="partialfee" snb-header-control="1" class="has-text-right"
+                snb-render="shinobi.render.renderFormatNumberTable"
+                snb-filter-preprocess="shinobi.render.removeFormatNumber">
+                Phí giao dịch(VND)
+            </th>
+            <th snb-colname="orderstatus"
+                snb-filter-preprocess="shinobi.userorderplacinghistoryrender.orderStatusFilterPreprocess"
+                snb-render="shinobi.userorderplacinghistoryrender.renderOrderStatus"
+                snb-header-control="1,2">Trạng thái</th>
+            <th snb-colname="orderid"
+                snb-render="shinobi.brokerorderplacingrender.renderCommandButton">
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>

@@ -1,0 +1,119 @@
+<section class="section pmmanagement">
+    <div class="title is-3 m-4">Chi tiết khách hàng</div>
+    <!--  -->
+    #{{/fragment/fragmentuserinfotable}}
+    <!--  -->
+    <div class=" table-container  container p-5 has-box-shadow-light has-background-white has-border-radius-6px">
+        <div class="mb-5 mt-2">
+            <span snb-key="accountname" class="title has-text-secondary is-4">PHÂN BỔ PM</span>
+        </div>
+        <table class="table is-fullwidth is-bordered" id="linkedpmaccounttable">
+            <thead>
+                <tr>
+                    <th snb-colname="pm" snb-render="shinobi.accountmanagementdetailrender.checkConfigClientAccount">
+                        <p class="has-text-centered">Tài khoản PM</p>
+                    </th>
+                    <th snb-colname="pmfullname">
+                        <p class="has-text-centered">Họ và Tên PM</p>
+                    </th>
+                    <th snb-colname="startdate">
+                        <p class="has-text-centered">Ngày đầu tư</p>
+                    </th>
+                    <th snb-colname="enddate">
+                        <p class="has-text-centered">Ngày tất toán</p>
+                    </th>
+                    <th snb-colname="profitcommisionratio" snb-render="renderProfitpercent100NoColorTable">
+                        <p class="has-text-centered">Tỷ lệ thỏa thuận KH (%)</p>
+                    </th>
+                    <th snb-colname="managementfeeratio" snb-render="renderProfitpercent100NoColorTable">
+                        <p class="has-text-centered">Phí quản lý TK </p>
+                    </th>
+                    <th snb-colname="allocationratio" snb-render="renderProfitpercent100NoColorTable">
+                        <p class="has-text-centered"> Tỷ lệ theo PM (%)
+                        </p>
+                    </th>
+                    <th snb-colname="allocationamount" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered"> NAV theo lệnh </p>
+                    </th>
+                    <th snb-colname="tradingprofit" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered"> Lợi nhuận KH </p>
+                    </th>
+                    <th snb-colname="aladinprofit" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered"> Lợi nhuận aladin </p>
+                    </th>
+                    <th snb-colname="pm"
+                        snb-render="shinobi.accountmanagementdetailrender.renderOtherOptionsLinkedPMTable">
+                        <p class="has-text-centered"></p>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div record-num="10 ">#{{/fragment/tablepagination}}</div>
+    </div>
+    <div class=" table-container  container p-5 has-box-shadow-light has-background-white has-border-radius-6px">
+        <div class="mb-5 mt-2">
+            <span snb-key="accountname" class="title has-text-secondary is-4">QUẢN LÝ TÀI SẢN</span>
+        </div>
+        <div class="level">
+            <div class="level-left">
+                <div class="columns" id="cashChangeValue">
+                    <div class="column is-flex is-narrow">
+                        <p>Số tiền thay đổi (+/-):&nbsp;</p>
+                        <p class="has-text-success has-text-weight-bold">
+                            <span snb-key="nav" snb-render="shinobi.render.renderFormatNumber">546,978</span>
+                            VNĐ
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <a id="updateAllocationAccountAssetButton" class="button is-primary is-small has-bsd">
+                    <span class="icon"><i class="fal fa-redo"></i></span><span>Cập nhật tài sản</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <table id="tabledividend" class=" table is-fullwidth is-bordered">
+                <thead>
+                    <tr>
+                        <th class=" has-text-centered" snb-colname="fullname">Tên KH </th>
+                        <th class=" has-text-centered" snb-colname="fullname">Mã CP </th>
+                        <th class=" has-text-centered" snb-colname="account">Mã cấu hình </th>
+                        <th class=" has-text-centered" snb-colname="account">Giá điều chỉnh </th>
+                        <th class=" has-text-centered" snb-colname="startdate">Ngày phát sinh </th>
+                        <th class=" has-text-centered" snb-colname="purchasingpower"
+                            snb-render="shinobi.render.renderFormatNumberTable">Tổng KL</th>
+                        <th class=" has-text-centered" snb-colname="managementfeeratio">Chia cổ tức bằng tiền </th>
+                        <th class=" has-text-centered" snb-colname="managementfeeratio"> Chia cổ tức bằng CK</th>
+                        <th class=" has-text-centered" snb-colname="managementfeeratio"> Chia cổ tức bằng quyền mua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KH1</td>
+                        <td>AAA</td>
+                        <td>123123</td>
+                        <td class=" has-text-right">12.3</td>
+                        <td>20-11-2022 23:59:20</td>
+                        <td class=" has-text-right">1,000</td>
+                        <td class=" has-text-centered">
+                            <div class="button is-small is-link">Xác nhận tiền về</div>
+                        </td>
+                        <td class=" has-text-centered">
+                            <div class="button is-small is-link">Xác nhận cổ phiếu về</div>
+                        </td>
+                        <td class=" has-text-centered">
+                            <div class="button is-small is-link">Xác nhận quyền mua về</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div record-num="10">
+                #{{/fragment/tablepagination}}
+            </div>
+        </div>
+</section>

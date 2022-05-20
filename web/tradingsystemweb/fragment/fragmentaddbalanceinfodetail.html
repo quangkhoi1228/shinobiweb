@@ -1,0 +1,90 @@
+<div class=" order-detail-container">
+
+    <p class="title section-title is-4">Chi tiết yêu cầu nạp tiền</p>
+    <div class="columns is-multiline form-container">
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Họ người gửi</label>
+                <div class="control ">
+                    <input class="input firstname-input" type="text" placeholder="Họ" snb-key="lastname">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Tên người gửi</label>
+                <div class="control ">
+                    <input class="input lastname-input" type="text" placeholder="Tên" snb-key="firstname">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">CMND/CCCD/Passport người gửi</label>
+                <div class="control ">
+                    <input class="input email-input" type="text" placeholder="CMND/CCCD/Passport" snb-key="identitynumber">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Sđt người gửi</label>
+                <div class="control ">
+                    <input class="input" type="text" placeholder="Sđt người gửi" snb-key="phonenumber">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Email người gửi</label>
+                <div class="control ">
+                    <input class="input" type="text" placeholder="Email người gửi" snb-key="email">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Số tiền</label>
+                <div class="control ">
+                    <input class="input" type="text" placeholder="Số tiền" snb-key="amount" snb-render="shinobi.render.renderFormatNumber" snb-preprocess="shinobi.render.getNumberCleaveInput">
+                </div>
+            </div>
+        </div>
+        <div class="column is-12">
+            <div class="field ">
+                <label class="label">Loại hình thực hiện</label>
+                <div class="control ">
+                    <input class="input" type="text" placeholder="Loại hình thực hiện" snb-key="location">
+                </div>
+            </div>
+        </div>
+        <div class="column is-12">
+            <p class="help is-italic is-danger">* Không bắt buộc</p>
+            <div class="field is-grouped">
+                <div class="control">
+                    <div class="file is-sliver-dark has-name">
+                        <label class="file-label"> <input snb-key="listimage"
+								snb-render="shinobi.render.renderImageFileInput"
+								class="file-input" type="file" name="resume">
+							<span class="file-cta is-gradient"> <span
+									class="file-icon"><i
+										class="fas fa-upload"></i>
+								</span> <span class="file-label">Chọn
+									file</span>
+							</span> <span class="file-name">Ảnh
+								liên quan</span>
+						</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-12">
+            <div class="field">
+                <div class="control  ">
+                    <a class="submit-add-balance-button button is-primary is-hidden"><span>XÁC
+							NHẬN</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

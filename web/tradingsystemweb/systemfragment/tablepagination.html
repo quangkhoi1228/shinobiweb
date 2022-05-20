@@ -1,0 +1,41 @@
+<div class="table-pagination">
+
+	<div class="field has-addons">
+
+		<label class="has-padding-right shinobi-pagination-show-label">Hiện
+		</label>
+		<div class="select is-rounded is-info is-small has-padding-right">
+			<select class="shinobi-recordperpage">
+				<option value=10 selected="selected">10</option>
+				<option value=20>20</option>
+				<option value=50>50</option>
+			</select>
+		</div>
+		<label
+			class="has-padding-right has-padding-left shinobi-pagination-row-in-page">
+			dòng mỗi trang </label>
+		<div class="has-margin-left-05rem field has-addons">
+			<p class="control">
+				<a
+					class="button is-rounded is-small is-info shinobi-pagination-prev"><span
+					class="icon"><i class="fa fa-arrow-left"></i></span> </a>
+			</p>
+			<p class="control">
+				<input class="input  is-info  is-small  shinobi-pagination-curpage"
+					snb-key="currentpage" value="" />
+			</p>
+			<p class="control">
+				<a
+					class="button is-rounded is-small  is-info shinobi-pagination-next">
+					<span class="icon"><i class="fa fa-arrow-right"></i></span>
+				</a>
+			</p>
+		</div>
+		<label class="has-padding-left has-padding-right"> trong <span
+			class="shinobi-page-total" snb-key="pageTotal">1</span> trang
+		</label> <span class="shinobi-pagination-sum-row">(tổng số bản ghi: <span
+			snb-key="rowTotal"></span>)
+		</span>
+	</div>
+
+</div>

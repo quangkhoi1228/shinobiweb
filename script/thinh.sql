@@ -1,0 +1,34 @@
+
+	
+	INSERT INTO public.tboriginalsignalhistory (createduser,createddate,lastmodifieddate,lastmodifieduser,originalsignalid,allocationaccount,placedby,stockcode,volume,price,side,ordertype,signaltype,proportion,status,additionaldata) VALUES
+	 ('84','2022-03-22 13:20:56.819','2022-03-22 13:20:56.819','84','79_DNN_1003447718113','VPS_699279_N_5','84','DNN',100,'0.2','BUY','LO','COPYTRADE',0.0087666765,'EXECUTED','{}'),
+	 ('84','2022-03-22 13:27:41.784','2022-03-22 13:27:41.784','84','79_DNN_1408412718009','VPS_699279_N_5','84','DNN',100,'0.2','BUY','LO','COPYTRADE',0.0087666765,'EXECUTED','{}'),
+	 ('84','2022-03-22 13:52:23.415','2022-03-22 13:52:23.415','84','79_DNN_2890044410402','VPS_699279_N_2','84','DNN',100,'0.1','BUY','LO','COPYTRADE',0.0005265388,'EXECUTED','{}'),
+	 ('84','2022-03-22 14:45:19.314','2022-03-22 14:45:19.314','84','79__6065943831664','VPS_699279_N_2','84','',NULL,NULL,'','CANCEL','COPYTRADE',1,'EXECUTED','{"orderlist":"[\"467492\"]"}'),
+	 ('aladinadmin','2022-03-23 13:53:53.922','2022-03-23 13:53:53.922','aladinadmin','aladinadmin_DNN_2474244726221','VPS_699279_N_2','aladinadmin','DNN',100,'0.1','BUY','LO','DIRECT',0.0005270938,'EXECUTED','{}'),
+	 ('aladinadmin','2022-03-23 14:05:47.921','2022-03-23 14:05:47.921','aladinadmin','aladinadmin_DNN_3188242961991','VPS_634214_N_2','aladinadmin','DNN',100,'0.1','BUY','LO','DIRECT',0.0193548761,'EXECUTED','{}'),
+	 ('84','2022-03-23 14:05:47.921','2022-03-23 14:05:47.921','84','79_DNN_1408412718010','VPS_634214_N_2','84','FLC',200,'15','BUY','LO','COPYTRADE',0.0193548761,'EXECUTED','{}'),
+	 ('84','2022-03-23 16:12:08.760','2022-03-23 16:12:08.760','84','79__10731145489594','VPS_699279_N_2','84','',NULL,NULL,'','CANCEL','COPYTRADE',1,'EXECUTED','{"orderlist":"[]"}'),
+	 ('84','2022-03-23 14:05:47.921','2022-03-23 14:05:47.921','84','79_KLF_1408412717979','VPS_634214_N_2','84','KLF',100,'10','SELL','LO','COPYTRADE',0.0193548761,'EXECUTED','{}');
+
+	
+	INSERT INTO public.tbsignal (createduser,createddate,lastmodifieddate,lastmodifieduser,originalsignalid,signalid,allocationaccount,placedby,stockcode,volume,price,ordertype,side,proportion,status,additionaldata,description,orderid,signalvalue,systemorderid) VALUES
+	 ('system','2022-03-22 13:27:42.028','2022-03-22 13:27:42.028','system','79_DNN_1408412718009','VPS_699279_N_5_1408655846463','VPS_699279_N_2','84','DNN',100,'0.2','LO','BUY',0.0087491781,'ERROR',NULL,'PLACE_VPS_NORMAL_ORDER_FAILURE',' ',NULL,' '),
+	 ('system','2022-03-23 14:05:52.641','2022-03-23 14:05:52.641','system','aladinadmin_DNN_3188242961991','VPS_634214_N_2_3192945324733','VPS_634214_N_2','aladinadmin','DNN',100,'0.1','LO','BUY',NULL,'SUCCESS',NULL,NULL,'',10020.0000,NULL),
+	 ('system','2022-03-23 13:59:02.966','2022-03-23 13:59:02.966','system','aladinadmin_DNN_2474244726221','VPS_699279_N_2_2783286336915','VPS_699279_N_2','aladinadmin','DNN',100,'0.1','LO','BUY',NULL,'ERROR',NULL,NULL,'',10020.0000,NULL),
+	 ('system','2022-03-22 13:27:42.028','2022-03-22 13:27:42.028','system','79_DNN_1408412718009','VPS_699279_N_5_1408655846464','VPS_699279_N_2','84','DNN',100,'0.2','LO','BUY',0.0087491781,'SUCCESS',NULL,'','512499',NULL,'VPS_20220322_512499'),
+	 ('system','2022-03-22 13:52:23.832','2022-03-22 13:52:23.832','system','79_DNN_2890044410402','VPS_634214_N_2_2890442392360','VPS_634214_N_2','84','DNN',0,'0.1','LO','BUY',0.0000000000,'ERROR',NULL,'ORDER_VOLUME_MUST_BE_GREATER_THAN_MIN_VOLUME','',NULL,NULL),
+	 ('system','2022-03-22 13:27:42.028','2022-03-22 13:27:42.028','system','79_DNN_1408412718010','VPS_699279_N_5_1408655846422','VPS_699279_N_2','84','FLC',200,'15','LO','BUY',0.0087491781,'CANCELED',NULL,'','012345',NULL,'VPS_20220323_012345'),
+	 ('system','2022-03-22 13:27:42.028','2022-03-22 13:27:42.028','system','79_DNN_1408412718010','VPS_699279_N_5_1408655846411','VPS_699279_N_2','84','FLC',200,'15','LO','BUY',0.0087491781,'SUCCESS',NULL,'','123456',20040.0000,'VPS_20220323_123456'),
+	 ('system','2022-03-22 13:27:42.028','2022-03-22 13:27:42.028','system','79_KLF_1408412717979','VPS_699279_N_5_1408655841234','VPS_699279_N_2','84','KLF',100,'10','LO','SELL',0.0087491781,'SUCCESS',NULL,'','797979',1002000,'VPS_20220323_797979'),
+	 ('system','2022-03-22 13:52:23.832','2022-03-22 13:52:23.832','system','79_DNN_2890044410402','VPS_634214_N_2_2890442392361','VPS_634214_N_2','84','DNN',0,'0.1','LO','BUY',0.0000000000,'ERROR',NULL,'SIGNAL_VALUE_MORE_THAN_PURCHASING_POWER','',NULL,NULL),
+	 ('system','2022-03-23 13:59:02.690','2022-03-22 13:20:59.314','system','79_DNN_1003447718113','VPS_699279_N_5_1005942591875','VPS_699279_N_2','84','DNN',100,'0.2','CANCEL','BUY',0.0087491781,'ERROR',NULL,'CANCEL_VPS_ORDER_FAILURE','467492',NULL,'VPS_20220323_467492');
+INSERT INTO public.tbsignal (createduser,createddate,lastmodifieddate,lastmodifieduser,originalsignalid,signalid,allocationaccount,placedby,stockcode,volume,price,ordertype,side,proportion,status,additionaldata,description,orderid,signalvalue,systemorderid) VALUES
+	 ('system','2022-03-23 17:12:02.129','2022-03-23 17:12:02.129','system','79_KLF_1408412717979','VPS_634214_N_2_14362434251141','VPS_634214_N_2','84','KLF',100,'15','LO','SELL',1,'ERROR',NULL,'STOCK_CODE_NOT_IN_PORTFOLIO','',NULL,NULL);
+
+	 INSERT INTO public.tborder (systemorderid,orderid,stockcode,volume,price,matchprice,"type",side,status,additionaldata,stockcom,subaccount,matchvolume,matchvalue,feetax,systemsubaccount,canceltime,ordertime,createduser,createddate,lastmodifieddate,lastmodifieduser) VALUES
+	 ('VPS_20220322_123456','123456','FLC',200,15000,NULL,NULL,'BUY','PARTIAL_MATCHED_REST_CANCELLED','{"subaccount":"6992791","pkOrderid":"143535928"}','VPS','6992791',14900,10000,20,'VPS_699279_N','','14:03:09','system','2022-03-22 14:26:02.037','2022-03-22 15:34:06.472','system'),
+	 ('VPS_20220322_012345','012345','FLC',200,15000,NULL,NULL,'BUY','PARTIAL_MATCHED','{"subaccount":"6992791","pkOrderid":"143535928"}','VPS','6992791',15000,10000,20,'VPS_699279_N','','14:03:09','system','2022-03-22 14:26:02.037','2022-03-22 15:34:06.472','system'),
+	 ('VPS_20220322_512499','512499','DNN',100,200,NULL,NULL,'BUY','CANCELED','{"subaccount":"6992791","pkOrderid":"143581968"}','VPS','6992791',0,0,0.000,'VPS_699279_N','15:03:55','14:26:01','system','2022-03-22 15:32:38.100','2022-03-22 15:34:06.426','system'),
+	 ('VPS_20220322_797979','797979','KLF',100,10000,NULL,NULL,'SELL','MATCHED','{"subaccount":"6992791","pkOrderid":"143581968"}','VPS','6992791',100,1000000,0.000,'VPS_699279_N','','14:26:01','system','2022-03-22 15:32:38.100','2022-03-22 15:34:06.426','system'),
+	 ('VPS_20220322_467492','467492','DNN',100,200,NULL,NULL,'BUY','PENDING','{"subaccount":"6992791","pkOrderid":"143535928"}','VPS','6992791',0,0,0.000,'VPS_699279_N','','14:03:09','system','2022-03-22 14:26:02.037','2022-03-22 15:34:06.472','system');

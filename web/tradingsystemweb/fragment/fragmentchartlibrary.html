@@ -1,0 +1,265 @@
+<style>
+    .highcharts-title {
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+    #chartContainer .highcharts-container {
+        margin: auto;
+    }
+</style>
+
+<div id="chartContainer" style="margin-bottom: 1.5rem;">
+</div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+<script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    Number.prototype.format = function (n, x, s, c) {
+        var re = "\\d(?=(\\d{" + (x || 3) + "})+" + (n > 0 ? "\\D" : "$") + ")",
+            num = this.toFixed(Math.max(0, ~~n));
+
+        return (c ? num.replace(".", c) : num).replace(new RegExp(re, "g"), "$&" + (s || ","));
+    };
+    function getStackColor(index) {
+        var colors = ['rgb(218 202 0)', 'rgb(34 210 51)', 'rgb(255 78 23)', '#c5ff00', '#009eff', '#e87c00', '#f500cd', 'red', 'blue', 'green', 'yellow', 'purple', 'cyan'];
+        if (index == 'allColor') {
+            return colors;
+        }
+        return colors[index];
+    }
+    function fillPartern(color) {
+        return {
+            path: {
+                d: 'M 2 0 L 2 5 M 4 0 L 4 5',
+                strokeWidth: 2,
+            },
+            width: 5,
+            height: 5,
+            color: color,
+            patternTransform: "scale(1.4 1.4)"
+        };
+    }
+
+    function reportChartRender(data) {
+        var plotOptions;
+        var legend = {
+            itemStyle: {
+                // color: "#939090",
+            },
+        };
+        if (data.hasOwnProperty('stack') && data.stack == true) {
+            plotOptions = {
+                series: {},
+                column: {
+                    stacking: 'normal'
+                }
+            }
+            // data.series = [
+            //     {
+            //         "name": "Vàng 24K ký quỹ",
+            //         "data": [93, 93, 77],
+            //         "stack": "Vàng 24K"
+            //     },
+            //     {
+
+            //         "name": "Vàng 24K giữ để thanh toán",
+            //         "data": [50, 25, 50],
+            //         "stack": "Vàng 24K"
+            //     },
+            //     {
+            //         "name": "Vàng 18K ký quỹ",
+            //         "data": [103, 103, 95],
+            //         "stack": "Vàng 18K"
+            //     },
+            //     {
+
+            //         "name": "Vàng 18K giữ để thanh toán",
+            //         "data": [15, 95, 30],
+            //         "stack": "Vàng 18K"
+            //     },
+            //     {
+            //         "name": "Vàng 14K ký quỹ",
+            //         "data": [107, 107, 107],
+            //         "stack": "Vàng 14K"
+            //     },
+            //     {
+
+            //         "name": "Vàng 14K giữ để thanh toán",
+            //         "data": [30, 50, 20],
+            //         "stack": "Vàng 14K"
+            //     }
+            // ];
+            var colorIndex = 0;
+            var series = data.series;
+            var stackList = {};
+            var availableList = [];
+            var needToSettleList = [];
+            series.forEach(function (item, index) {
+                if (!stackList.hasOwnProperty(item.stack)) {
+                    stackList[item.stack] = {
+                        color: getStackColor(colorIndex)
+                    }
+                    colorIndex = colorIndex + 1;
+                }
+            });
+            series.forEach(function (item, index) {
+                var color = stackList[item.stack]['color'];
+                if (item.name.toString().toLowerCase().includes('thanh toán')) {
+                    item['color'] = {
+                        pattern: fillPartern(color)
+                    }
+                    availableList.push(item);
+
+                } else {
+                    item['color'] = color;
+                    needToSettleList.push(item);
+                }
+                series[index] = item;
+            });
+            var arrangeList = availableList.concat(needToSettleList);
+            data.series = arrangeList;
+            var maxLegendWidth = 900;
+            var itemLegendWidth = maxLegendWidth / Math.max(availableList.length, needToSettleList.length);
+            legend = {
+                itemStyle: {
+                    // color: "#939090",
+                },
+                width: maxLegendWidth,
+                itemWidth: itemLegendWidth,
+            };
+        }
+        else {
+            plotOptions = {
+                series: {}
+            };
+            legend = {
+                itemStyle: {
+                    // color: "#939090",
+                },
+            };
+        };
+
+
+        Highcharts.setOptions({
+            colors: getStackColor('allColor')
+        });
+
+        let chart = Highcharts.chart(data.containerId, {
+            chart: {
+                type: data.type,
+                borderColor: '#ddd',
+                borderWidth: 1,
+                backgroundColor: "transparent",
+                // margin: [-10, 0, 0, 0],
+                renderTo: {},
+                height: 300,
+                style: {
+                    fontFamily: `"Roboto", sans-serif, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif`,
+                }
+            },
+            title: {
+                text: '',
+                // align: "left",
+                //         useHTML: true,
+                //         text: `<span style="
+                // font-family: 'Roboto'!important;
+                // "><span style="float:left;">Tiêu đề</span><span style="float: right;color: #615c5c;font-size: 0.65em;line-height: 2em;">VND</span></span>`
+            },
+            subtitle: {
+                text: null,
+            },
+            credits: {
+                enabled: false,
+            },
+            legend: legend,
+            xAxis: [
+                {
+                    //   categories: convertData.categories,
+                    categories: data.categories,
+                    type: "category",
+                    tickPixelInterval: 40,
+                    tickWidth: 1,
+                    minorTickLength: 0,
+                    tickLength: 0,
+                    labels: {
+                        // enabled: false,
+                        style: {
+                            // color: "grey",
+                            fontSize: "0.7rem",
+                            // fontWeight: "100",
+                        },
+                    },
+                    index: 0,
+                    isX: true,
+                },
+            ],
+            yAxis: [
+                {
+                    gridLineWidth: 0,
+                    title: {
+                        text: data.unit,
+                    },
+                    labels: {
+                        formatter: function () {
+                            return Number(this.value).format(0, 3, ' ');
+                        }
+                    },
+                    index: 0,
+
+                },
+                {
+                    gridLineWidth: 0,
+                    title: {
+                        text: "",
+                    },
+                    labels: {
+                        enabled: false,
+                    },
+                    index: 1,
+                },
+            ],
+            tooltip: {
+                // borderWidth: 1,
+                // shadow: false,
+                // crosshairs: {
+                //     width: 1,
+                //     color: "red",
+                //     zIndex: 200,
+                // },
+                // shared: true,
+                // style: {
+                //     color: "#333",
+                //     fontFamily: "Tahoma, Verdana, Arial",
+                //     fontSize: "10px",
+                // },
+                // formatter: function () {
+                //     var pointItem = this.points[0];
+                //     var index = pointItem.point.index;
+                //     var tooltip = `${convertData.categories[index]}`;
+                //     this.points.forEach(function (series) {
+                //         tooltip += `<br><b  style="color: ${series.color}">${series.y}</b>`;
+                //     });
+
+                //     return tooltip;
+                // },
+            },
+            plotOptions: plotOptions,
+            series: data.series,
+        });
+
+
+        let resizeObserver = new ResizeObserver(() => {
+            console.log('a');
+            chart.reflow();
+        });
+        var chartContainer = document.getElementById('chartContainer');
+        resizeObserver.observe(chartContainer);
+
+
+    };
+
+    // });
+</script>

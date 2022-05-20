@@ -1,0 +1,31 @@
+<section class="section tablebelowcontainer">
+    <div class="title is-3 m-4">Quản lý tiền</div>
+    <!--  -->
+    <div class="table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px">
+        <table id="tablestockmanagement" class=" table is-fullwidth">
+            <thead>
+                <tr>
+                    <th class="has-width-small has-text-centered" snb-colname="username">Tên KH </th>
+                    <th class="has-width-small has-text-centered" snb-colname="fullname">Ngày phát sinh </th>
+                    <th class="has-width-small has-text-centered" snb-colname="startdate">Tiền thay đổi (+/-) </th>
+                    <th class="has-width-small has-text-centered" snb-colname="username"
+                        snb-render="shinobi.cashmanagementrender.renderOptionsButton"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="has-text-centered">Nguyen Van A</td>
+                    <td class="has-text-centered">05/07/2022</td>
+                    <td class="has-text-right">20,000,000</td>
+                    <td class="has-text-centered">
+                        <div class="button is-secondary has-bsd">Nạp tiền</div>
+                        <div class="button is-primary has-bsd">Cổ tức tiền mặt</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div record-num="10">
+            #{{/fragment/tablepagination}}
+        </div>
+    </div>
+</section>

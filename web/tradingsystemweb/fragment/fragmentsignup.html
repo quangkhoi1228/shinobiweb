@@ -1,0 +1,112 @@
+<div id="fragmentSignUp" class="modal fragment-signup">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<div class="signup-card">
+			<h2 class="title">Đăng ký</h2>
+			<div class="columns is-multiline form-container">
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input class="input firstname-input" type="text"
+								placeholder="Họ" snb-key="lastname" value="">
+						</div>
+					</div>
+				</div>
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input class="input lastname-input" type="text"
+								placeholder="Tên" snb-key="firstname" value="">
+						</div>
+					</div>
+				</div>
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input class="input email-input" type="text"
+								placeholder="Email" snb-key="email" value="">
+						</div>
+					</div>
+				</div>
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input type="tel" class="input phone-number-input"
+								placeholder="Số điện thoại"
+								snb-key="phonenumber" value="">
+						</div>
+						<!-- <div class="control ">
+							<input class="input phone-number-input" type="text"
+								placeholder="Số điện thoại" snb-key="phonenumber">
+						</div> -->
+					</div>
+				</div>
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input class="input password-input" type="password"
+								placeholder="Mật khẩu" snb-key="password"
+								value="">
+						</div>
+					</div>
+				</div>
+				<div class="column is-6">
+					<div class="field ">
+						<div class="control ">
+							<input class="input confirm-password-input"
+								type="password" placeholder="Xác nhận mật khẩu"
+								snb-key="confirmPassword" value="">
+						</div>
+					</div>
+				</div>
+				#{{/fragment/fragmentidentity}}
+				<div class="column is-12">
+					<div class="field">
+						<input class="is-checkradio accept-rule-checkbox"
+							id="acceptRuleSignUp" type="checkbox"
+							name="acceptRuleSignUp" snb-key="acceptRule"> <label
+							for="acceptRuleSignUp">Tôi
+							đồng ý với điều khoản sử dụng sản phẩm dịch vụ của
+							CBV</label>
+					</div>
+				</div>
+				<div class="column is-12">
+					<div class="field">
+						<div class="control  ">
+							<a
+								class="signup-button button is-primary is-fullwidth"><span>TIẾP
+									TỤC</span> <span class="icon"><i
+										class="fa fa-chevron-right"></i></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="is-hidden">
+				<div class="is-divider" data-content="Hoặc đăng ký với"></div>
+				<div class="socical-network-button-container">
+					<button class="button facebook-button">
+						<span class="icon"><i
+								class="fab fa-facebook-f"></i></span><span>Facebook</span>
+					</button>
+					<button class="button google-button">
+						<span class="icon"><i
+								class="fab fa-google"></i></span><span>Google</span>
+					</button>
+				</div>
+			</div>
+			<hr>
+			<div class="field">
+				<div class="control  ">
+					<a
+						class="button is-direction fragment-login-button-control"><span
+							class="icon"><i
+								class="fa fa-caret-right"></i></span>
+						<span>Đã
+							có tài khoản?</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<button class="modal-close is-large" aria-label="close"></button>
+</div>

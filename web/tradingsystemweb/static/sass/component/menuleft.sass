@@ -1,0 +1,42 @@
+$width-menu-left: 3rem
+$background-menu-left: #002366
+.menu-left
+    position: fixed
+    width: $width-menu-left
+    top: 7.5rem
+    background: $background-menu-left
+    border-top-right-radius: 6px
+    border-bottom-right-radius: 6px
+    z-index: 10
+    & .menu-list
+        text-align: center
+        color: white
+        & a
+            // padding-left: 0.5rem
+            // padding-right: 0.5rem
+            width: $width-menu-left
+            height: $width-menu-left
+            border-radius: 0 !important
+            display: flex
+            justify-content: center
+            align-items: center
+            &:hover
+                background: $link
+            &.is-active
+                color: white
+                background: #901bf7
+        li
+            &:first-child
+                a
+                    border-top-right-radius: 6px !important
+            &:last-child
+                a
+                    border-bottom-right-radius: 6px !important
+    & .aria-button
+        background-color: #f16631
+        border-radius: 0px
+.aria-button
+    padding-top: 1.75rem !important
+    padding-bottom: 1.75rem !important
+// .main-section
+//     padding-left: $width-menu-left

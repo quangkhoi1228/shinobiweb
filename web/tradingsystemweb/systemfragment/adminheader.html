@@ -1,0 +1,36 @@
+<header>
+	<nav class="navbar is-fixed-top" role="navigation"
+		aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item is-square" data-show="quickview"
+				data-target="adminMenuLeft"><span class="icon"><i
+					class="fa fa-list-ul"></i></span></a> <a class="navbar-item logo " href=""></a>
+			<a id="toggleMenuLeftButton" role="button"
+				class="navbar-burger burger" aria-label="menu"
+				aria-expanded="false" data-target="navbarBasicExample"> <span
+				aria-hidden="true"></span> <span aria-hidden="true"></span> <span
+				aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start"></div>
+
+			<div class="navbar-end">
+
+				<div id="menuModuleHeader"></div>
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link"><span class="icon"><i
+							class="fal fa-user"></i></span><label snb-key="loggeduser"></label> </a>
+
+					<div class="navbar-dropdown is-right">
+						<a class="navbar-item" href="/system/adminchangepassword"><label>Đổi
+								mật khẩu</label></a> <a class="navbar-item" href="/logout"><label>Đăng
+								xuất</label></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+</header>

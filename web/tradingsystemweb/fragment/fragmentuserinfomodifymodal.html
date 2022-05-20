@@ -1,0 +1,28 @@
+<div id="userinfomodifyModal" class="modal is-medium">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Chi tiết</p>
+			<button class="delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			<div class="columns">
+				<div class="column old-data">
+					#{{/fragment/fragmentuserinfo}}
+				</div>
+				<div class="is-divider-vertical"></div>
+				<div class="column new-data">
+					#{{/fragment/fragmentuserinfo}}
+				</div>
+			</div>
+		</section>
+		<footer class="modal-card-foot is-hidden">
+			<a class="button is-success" snb-key="requestid"
+				snb-render="shinobi.adminuserinfomodifyhistoryrender.renderAcceptButton">Hoàn tất
+				</a><a class="button is-danger" snb-key="requestid"
+				snb-render="shinobi.adminuserinfomodifyhistoryrender.renderRejectButton">Từ
+				chối</a>
+			<button class="button">Đóng</button>
+		</footer>
+	</div>
+</div>

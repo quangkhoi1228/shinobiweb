@@ -1,0 +1,114 @@
+<p class="title section-title is-4">Thông tin cá nhân</p>
+<section id="userInfoSection">
+    <div class="columns is-multiline form-container">
+        <div class="column is-12">
+            <div class="field">
+                <div class="control">
+                    <figure snb-key="id"
+                        snb-render="shinobi.render.renderChangeAvatarImageContainer"
+                        class="image is-avatar is-rounded is-centered">
+                        <img snb-key="avatarlink" snb-key-src="avatarlink"
+                            src="https://image.aladin.finance/aladin.finance.public.file/517da259fc9feb05f65994fb850f09e4/useravatar.jpg">
+                        <div class="file">
+                            <label class="file-label"> <input
+                                    snb-key="avatarlink"
+                                    snb-render="shinobi.render.renderChangeAvatarButton"
+                                    class="file-input" type="file"
+                                    name="resume"> <span
+                                    class="button is-info is-rounded is-small is-icon"><span
+                                        class="icon"><i
+                                            class="fal fa-pen"></i></span></span>
+                            </label>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Họ:</label>
+                <div class="control ">
+                    <input class="input firstname-input" type="text"
+                        placeholder="Họ" snb-key="lastname">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Tên:</label>
+                <div class="control ">
+                    <input class="input lastname-input" type="text"
+                        placeholder="Tên" snb-key="firstname">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Email:</label>
+                <div class="control ">
+                    <input class="input email-input" type="text"
+                        placeholder="Email" snb-key="email" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">CMND/CCCD:</label>
+                <div class="control ">
+                    <input class="input email-input" type="text"
+                        placeholder="CMND/CCCD" snb-key="identitynumber">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <div class="field ">
+                <label class="label">Số điện thoại:</label>
+                <div class="control ">
+                    <input type="tel" class="input phone-number-input"
+                        placeholder="Số điện thoại" snb-key="phonenumber"
+                        render-target="shinobi.userinforender.intlTelInput"
+                        snb-render="shinobi.render.renderPhoneNumberWithPhoneReligion">
+                </div>
+            </div>
+        </div>
+        <div class="column is-6">
+            <label class="label">Giới tính:</label>
+            <div class="field is-grouped">
+
+                <div class="control ">
+                    <input class="is-checkradio gender-input"
+                        id="maleGenderRadio" type="radio" name="gender"
+                        snb-key="gender" radio-value="MR">
+                    <label for="maleGenderRadio">Nam</label>
+                </div>
+                <div class="control ">
+                    <input class="is-checkradio gender-input"
+                        id="femaleGenderRadio" type="radio" name="gender"
+                        snb-key="gender" radio-value="MS">
+                    <label for="femaleGenderRadio">Nữ</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="column is-12">
+            <div class="field ">
+                <label class="label">Địa chỉ:</label>
+                <div class="control ">
+                    <input class="input email-input" type="text"
+                        placeholder="Địa chỉ" snb-key="address">
+                </div>
+            </div>
+        </div>
+
+        #{{/fragment/fragmentidentity}}
+        <div class="column is-12">
+            <div class="field">
+                <div class="control has-text-centered-mobile ">
+                    <a
+                        class="submit-button button is-primary is-rounded is-hidden"><span>GỬI
+                            YÊU CẦU</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,44 @@
+<div class="column is-4">
+    <div class="field ">
+        <label class="label">Ngày bắt đầu</label>
+        <div class="control">
+            <input class="input date-filter" snb-key="start"
+                snb-preprocess="shinobi.render.getBulmaCalendarValueFormat"
+                data-label-from="Ngày bắt đầu" type="date" snb-date-filter>
+        </div>
+    </div>
+    <div class="field ">
+        <label class="label">Đợt bắt đầu</label>
+        <div class="control">
+            <div class="select is-fullwidth">
+                <select snb-key="startphasenumber">
+                    <option value="1" selected>Đợt 1</option>
+                    <option value="2">Đợt 2</option>
+                    <option value="3">Đợt 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="column is-4">
+    <div class="field ">
+        <label class="label">Ngày kết thúc</label>
+        <div class="control">
+            <input class="input date-filter" snb-key="end"
+                snb-preprocess="shinobi.render.getBulmaCalendarValueFormat"
+                data-label-from="Ngày kết thúc" type="date" snb-date-filter>
+        </div>
+    </div>
+    <div class="field ">
+        <label class="label">Đợt kết thúc</label>
+        <div class="control">
+            <div class="select is-fullwidth">
+                <select snb-key="endphasenumber">
+                    <option value="1">Đợt 1</option>
+                    <option value="2">Đợt 2</option>
+                    <option value="3" selected>Đợt 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

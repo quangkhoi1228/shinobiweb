@@ -1,0 +1,77 @@
+<style>
+	html,
+	body {
+		font-family: 'Roboto', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	.hero.is-success {
+		background: #F2F6FA !important;
+	}
+
+	.hero .nav,
+	.hero.is-success .nav {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	.box {
+		margin-top: 6rem;
+	}
+
+	.avatar {
+		max-width: 10rem;
+		height: 10rem;
+		margin: auto;
+		margin-bottom: 1rem;
+		margin-top: -6rem;
+	}
+
+	.avatar img {
+		padding: 5px;
+		background: #fff;
+		border-radius: 50%;
+		-webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+		box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+		object-fit: cover;
+		width: 10rem;
+		height: 10rem;
+		width: 10rem;
+	}
+
+	input {
+		font-weight: 300;
+	}
+
+	p {
+		font-weight: 700;
+	}
+
+	p.subtitle {
+		padding-top: 1rem;
+	}
+
+	.main-background-hero {
+		background-size: cover;
+		position: fixed;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-o-filter: blur(2px);
+		-ms-filter: blur(2px);
+		filter: blur(2px);
+		background-image: url(/static/image/mainbackground2.png);
+	}
+
+	.main-background-hero+.hero.is-fullheight {
+
+		z-index: 10;
+		position: relative;
+	}
+</style>

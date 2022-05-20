@@ -1,0 +1,167 @@
+<div id="modalOverNightFeeGoldPanel"
+    class="modal is-full-screen confirm-panel ">
+    <div class="modal-background"></div>
+    <div class="padding-intro modal-card  is-small">
+        <header class="modal-card-head header">
+            <p
+                class="modal-card-title title has-text-centered  has-text-primary is-marginless">
+                Chi tiết phí giữ vàng qua đêm</p>
+            <button class="delete " aria-label="close"></button>
+        </header>
+
+        <section class="modal-card-body">
+            <div class="columns">
+                <div class="column">
+                    <div class="table-container">
+                        <table class="table is-fullwidth is-marginless">
+                            <thead class="is-hidden">
+                                <tr>
+                                    <th snb-colname="debtid"
+                                        snb-header-control="1,2">
+                                        Mã khoản nợ</th>
+                                    <th snb-colname="storageid"
+                                        snb-header-control="1,2">
+                                        Mã kho chứa</th>
+                                    <th snb-colname="moveindate"
+                                        snb-header-control="1">
+                                        Ngày nhập kho</th>
+                                    <th snb-colname="moveoutdate"
+                                        snb-header-control="1">
+                                        Ngày xuất kho</th>
+                                    <th snb-colname="startdate"
+                                        snb-header-control="1">
+                                        Ngày phát sinh nợ</th>
+                                    <th class=" has-width-10-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="goldnightover"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Số đêm giữ vàng
+                                    </th>
+                                    <th class=" has-width-10-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="amount"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Số lượng vàng rút
+                                        (Lượng)
+                                    </th>
+                                    <th class=" has-width-10-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="totalovernightfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Phí giữ vàng qua
+                                        đêm (VND)
+                                    </th>
+                                    <th class=" has-width-10-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="totalwidthdrawalfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Phí rút vàng
+                                        (VND)
+                                    </th>
+                                    <th class=" has-width-10-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="totalfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Tổng phí (VND)
+                                    </th>
+                                    <th class=" has-width-7-vw has-padding-0-rem  has-text-right"
+                                        snb-colname="dealid"
+                                        snb-header-control="1,2">
+                                        Mã lệnh khớp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modalOverNightFeeGoldPanelSummary">
+                                <tr>
+                                    <td>
+                                        <p class="has-text-left">Tên khách hàng:
+                                            <b snb-key="accountid"></b>
+                                        </p>
+
+                                    </td>
+
+                                    <td></td>
+                                    <td class="has-text-right"><b>Tổng phí giữ
+                                            vàng qua đêm</b></td>
+                                    <td snb-key="overnightfee"
+                                        snb-render="shinobi.render.renderFormatNumber"
+                                        class=" has-width-10-vw has-padding-0-rem  has-text-left">
+                                    </td>
+                                    <!-- <td snb-key="totalovernightfee"
+                                        snb-render="shinobi.render.renderFormatNumber"
+                                        class="has-width-10-vw has-padding-0-rem  has-text-right">
+                                    </td> -->
+                                    <td snb-key="totalwidthdrawalfee"
+                                        snb-render="shinobi.render.renderFormatNumber"
+                                        class="has-width-10-vw has-padding-0-rem  has-text-right">
+                                    </td>
+                                    <td snb-key="totalfee"
+                                        snb-render="shinobi.render.renderFormatNumber"
+                                        class=" has-width-10-vw has-padding-0-rem  has-text-right">
+                                    </td>
+                                    <td
+                                        class=" has-width-7-vw has-padding-0-rem  has-text-right">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table id="modalOverNightFeeGoldPanelTable"
+                            class="table is-fullwidth is-striped has-padding-bottom-0_5-rem is-bordered">
+                            <thead>
+                                <tr>
+                                    <th snb-colname="debtid"
+                                        snb-header-control="1,2">
+                                        Mã khoản nợ</th>
+                                    <th snb-colname="storageid"
+                                        snb-header-control="1,2">
+                                        Mã kho chứa</th>
+                                    <th snb-colname="moveindate"
+                                        snb-header-control="1">
+                                        Ngày nhập kho</th>
+                                    <th snb-colname="moveoutdate"
+                                        snb-header-control="1">
+                                        Ngày xuất kho</th>
+                                    <th snb-colname="startdate"
+                                        snb-header-control="1">
+                                        Ngày phát sinh nợ</th>
+                                    <th class="  has-text-right"
+                                        snb-colname="goldnightover"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Số đêm giữ vàng
+                                    </th>
+                                    <th class=" has-min-width-10-vw   has-text-right"
+                                        snb-colname="amount"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Số lượng vàng rút
+                                        (Lượng)
+                                    </th>
+                                    <th class=" has-min-width-10-vw has-text-right"
+                                        snb-colname="totalovernightfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Phí giữ vàng qua
+                                        đêm (VND)
+                                    </th>
+                                    <th class=" has-min-width-10-vw   has-text-right"
+                                        snb-colname="totalwidthdrawalfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Phí rút vàng
+                                        (VND)
+                                    </th>
+                                    <th class=" has-min-width-10-vw   has-text-right"
+                                        snb-colname="totalfee"
+                                        snb-render="shinobi.render.renderFormatNumberTable"
+                                        snb-header-control="1">Tổng phí (VND)
+                                    </th>
+                                    <th class=" has-min-width-7-vw  has-text-right"
+                                        snb-colname="dealid"
+                                        snb-header-control="1,2">
+                                        Mã lệnh khớp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        </table>
+                        <div class="" record-num="10">
+                            #{{/fragment/tablepagination}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>

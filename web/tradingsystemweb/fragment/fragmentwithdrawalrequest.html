@@ -1,0 +1,66 @@
+<!--  -->
+<p class="title section-title is-4">Thông tin cá nhân</p>
+<div class="columns is-multiline form-container">
+    <div class="column is-6">
+        <div class="field ">
+            <label class="label">Họ</label>
+            <div class="control ">
+                <input class="input firstname-input" type="text" placeholder="Họ" snb-key="lastname">
+            </div>
+        </div>
+    </div>
+    <div class="column is-6">
+        <div class="field ">
+            <label class="label">Tên</label>
+            <div class="control ">
+                <input class="input lastname-input" type="text" placeholder="Tên" snb-key="firstname">
+            </div>
+        </div>
+    </div>
+    <div class="column is-6">
+        <div class="field ">
+            <label class="label">Email</label>
+            <div class="control ">
+                <input class="input email-input" type="text" placeholder="Email" snb-key="email" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="column is-6">
+        <div class="field ">
+            <label class="label">Số điện thoại</label>
+            <div class="control ">
+                <input type="tel" class="input phone-number-input" placeholder="Số điện thoại" snb-key="phonenumber" render-target="shinobi.userinforender.intlTelInput" snb-render="shinobi.render.renderPhoneNumberWithPhoneReligion">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-12">
+        <div class="field ">
+            <label class="label">CMND/CCCD</label>
+            <div class="control ">
+                <input class="input email-input" type="text" placeholder="CMND/CCCD" snb-key="identitynumber" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="identitybox is-12">#{{/fragment/fragmentidentity}}</div>
+</div>
+#{{/fragment/fragmentuserbankinfo}}
+<p class="title section-title is-4">Số tiền rút</p>
+<div class="columns">
+    <div class="column is-12">
+        <form autocomplete="off">
+            <div class="field ">
+                <div class="control ">
+                    <input class="input withdawal-input" type="text" placeholder="Số tiền" snb-key="amount" snb-preprocess="shinobi.render.getNumberCleaveInput" snb-render="shinobi.render.renderFormatNumber">
+                </div>
+
+            </div>
+            <div class="field ">
+                <div class="control ">
+                    <a class="submit-button with-drawal-request-button button is-primary is-hidden">Xác
+						nhận</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

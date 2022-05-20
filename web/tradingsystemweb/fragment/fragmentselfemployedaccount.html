@@ -1,0 +1,103 @@
+<section class="section pmmanagement">
+    <div class="title is-3 m-4">Quản lý tài khoản tự doanh</div>
+    <div id="selfEmployedTable" class="is-hidden">
+        <div class=" table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px">
+            <div class="columns is-justify-content-space-between">
+                <div class="column is-2">
+                    <div class="select is-fullwidth">
+                        <select id="selfemplyedaccountselection" snb-datalist-node="selfemplyedaccountselection">
+                            <option snb-datalist-parent="selfemplyedaccountselection" snb-key="systemaccount"
+                                snb-key-value="systemaccount"
+                                snb-render="shinobi.selfemployedaccountrender.renderFullname">
+                            </option>
+                        </select>
+                        <div class="is-hidden" record-num="20">
+                            #{{/fragment/tablepagination}}</div>
+                    </div>
+                </div>
+                <div class="column is-4 has-text-right">
+                    <a class="button is-secondary has-bsd" id="addAccountButton">Thêm TK tự doanh</a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        #{{/fragment/fragmentuserinfotable}}
+        <!--  -->
+        <div class=" table-container is-hidden container p-5 has-box-shadow-light has-background-white has-border-radius-6px"
+            id="allotmentTable">
+            <div class="is-flex is-justify-content-space-between mb-4">
+                <p class=" has-margin-block-auto has-text-weight-bold is-size-5 has-text-secondary">
+                    PHÂN BỔ PM</p>
+                <a class="button is-primary has-bsd" id="allocateAccount">Thêm
+                    PM quản lý tài khoản</a>
+            </div>
+            <table class="table is-fullwidth is-bordered" id="linkedpmaccounttable">
+                <thead>
+                    <tr>
+                        <th snb-colname="pm" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Tài khoản PM</p>
+                        </th>
+                        <th snb-colname="firstname" snb-render="shinobi.roottemplate.renderFirstNameLastName">
+                            <p class="has-text-centered">Họ và Tên</p>
+                        </th>
+                        <th snb-colname="startdate" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Ngày đầu tư</p>
+                        </th>
+                        <th snb-colname="enddate" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Ngày tất toán</p>
+                        </th>
+                        <th snb-colname="allocationratio" snb-render="shinobi.roottemplate.renderProfitPercent">
+                            <p class="has-text-centered">% phân bổ</p>
+                        </th>
+                        <th snb-colname="allocationamount" snb-render="shinobi.render.renderFormatNumberTable">
+                            <p class="has-text-centered">NAV phân bổ</p>
+                        </th>
+
+                        <th snb-colname="managementfeeratio" snb-render="
+                            shinobi.roottemplate.renderProfitPercent">
+                            <p class="has-text-centered">% Phí quản lý TK
+                            </p>
+                        </th>
+                        <th snb-colname="profitcommisionratio" snb-render="
+                        shinobi.roottemplate.renderProfitPercent">
+                            <p class="has-text-centered">% Phí hoa đồng PM</p>
+                        </th>
+                        <th snb-colname="" snb-render="shinobi.render.renderFormatNumberTable">
+                            <p class="has-text-centered">Lợi nhuận</p>
+                        </th>
+                        <th snb-colname="profitcommision" snb-render="shinobi.render.renderFormatNumberTable">
+                            <p class="has-text-centered">Hoa hồng PM</p>
+                        </th>
+                        <th snb-colname="allocationaccount"
+                            snb-render="shinobi.selfemployedaccountrender.renderMoreButton">
+                            <p class="has-text-centered"></p>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+            <div record-num="10 ">#{{/fragment/tablepagination}}</div>
+        </div>
+    </div>
+    <div class="table-container is-fullwidth is-hidden container p-4 has-box-shadow-light has-background-white has-border-radius-6px has-text-centered"
+        id="noAccountPMTable">
+        <img src="/static/image/Icon_NothingHere-03.png" class="has-width-20rem has-filter-grayscale">
+        <p class="has-text-grey is-size-5">Chưa có PM nào được phân bổ!</p>
+        <div class="mt-5 mb-5">
+            <a class="button is-primary has-bsd" id="allocateFirstAccount">Thêm
+                PM quản lý tài khoản</a>
+        </div>
+    </div>
+
+    <div class="table-container is-fullwidth is-hidden container p-4 has-box-shadow-light has-background-white has-border-radius-6px has-text-centered"
+        id="noSelfEmployedAccount">
+        <img src="/static/image/Icon_NothingHere-03.png" class="has-width-20rem has-filter-grayscale">
+        <p class="has-text-grey is-size-5">Không có tài khoản tự doanh nào!</p>
+        <div class="mt-5 mb-5">
+            <a class="button is-secondary has-bsd" id="addFirstAccountButton">Thêm TK tự doanh</a>
+
+        </div>
+    </div>
+</section>

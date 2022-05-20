@@ -1,0 +1,98 @@
+<div id="dataContainer"
+	class="lottery-result-content-container columns is-multiline"
+	snb-datalist-node="dataContainer">
+	<div snb-datalist-parent="dataContainer" class="column is-12 ">
+		<a snb-key="lotterydate" target="_blank"
+			snb-render="shinobi.lotteryresultrender.renderDetailRedirect">
+			<div
+				class="notification is-small is-white has-border-top-primary is-radiusless box">
+				<div class="level has-text-centered">
+					<div class="level-left ">
+						<div class="buttons is-centered" snb-key="result"
+							snb-render="shinobi.lotteryresultrender.renderNumberBallList">
+						</div>
+					</div>
+
+					<div class="level-item is-block">
+						<div class="columns is-mobile">
+							<div class="column">
+								<p class="heading has-text-grey">Ngày xổ</p>
+								<p snb-key="lotterydate"
+									class="has-text-weight-bold"
+									snb-render="shinobi.render.renderFormatDate">
+								</p>
+							</div>
+							<div class="column">
+								<p class="heading has-text-grey">Đợt xổ</p>
+								<p snb-key="phasenumber"
+									class="has-text-weight-bold"></p>
+							</div>
+						</div>
+					</div>
+					<div class="level-item is-block">
+						<div class="columns is-mobile">
+							<div class="column">
+								<p class="heading has-text-grey">Giải thưởng</p>
+								<p snb-key="winningvalue"
+									class="has-text-weight-bold"
+									snb-render="shinobi.render.renderFormatNumber">
+								</p>
+							</div>
+							<div class="column">
+								<p class="heading has-text-grey">Số người trúng
+								</p>
+								<p snb-key="winningcount"
+									class="has-text-weight-bold"
+									snb-render="shinobi.render.renderFormatNumber">
+								</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="level-right">
+						<div class="column">
+							<p class="heading has-text-grey">Trạng thái</p>
+							<p snb-key="lotterystatus"
+								class="has-text-weight-bold"
+								snb-render="shinobi.render.renderLotteryResultStatus">
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+<div record-num="10" class="is-hidden">
+	#{{/fragment/tablepagination}}</div>
+
+
+<!-- 
+<table class="table is-striped is-full-width">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Đợt xổ</th>
+			<th>Giải thưởng</th>
+			<th>Số người trúng</th>
+			<th>Trạng thái</th>
+		</tr>
+	</thead>
+	<tbody id="dataContainer" snb-datalist-node="dataContainer">
+		<tr snb-datalist-parent="dataContainer">
+			<td>
+				<div class="buttons is-centered" snb-key="result"
+					snb-render="shinobi.lotteryresultrender.renderNumberBallList">
+				</div>
+			</td>
+		</tr>
+	</tbody>
+	<tfoot class="is-hidden">
+		<tr>
+			<td>
+				<div record-num="10" class="is-hidden">
+					#{{/fragment/tablepagination}}</div>
+			</td>
+		</tr>
+	</tfoot>
+</table> -->

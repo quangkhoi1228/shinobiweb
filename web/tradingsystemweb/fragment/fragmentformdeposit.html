@@ -1,0 +1,100 @@
+<div class="field">
+    <div class="has-text-centered title form-body-title is-size-4" id="todayrender"></div>
+</div>
+
+
+<div class="box margin-top-1rem is-box-shadow-less" id="bankInfoContainer">
+    <p class="has-text-centered">Quý khách vui lòng chuyển khoản đến địa chỉ</p>
+    #{{/fragment/fragmentformbankinfo}}
+</div>
+
+<div id="mt5AccountInfoInfoContainer">
+    <!-- <div class="margin-top-1rem field">
+		<h1 class="title is-4">Thông tin tài khoản hệ thống MT5</h1>
+	</div>
+	#{{/fragment/fragmentusermt5info}} -->
+
+    <div class="columns is-vcentered">
+        <div class="column is-half ">
+            <label class="label">Số tiền nộp (VND) &nbsp;<span> <i
+					class="fad fa-info-circle is-deposit-valid-info"></i>
+			</span></label>
+
+            <div class="control">
+                <input class="input" type="text" placeholder="Số tiền nộp (VND)" snb-key="amount" snb-render="shinobi.render.renderFormatNumber" snb-preprocess="shinobi.render.getNumberCleaveInput">
+            </div>
+        </div>
+        <div class="column is-half">
+            <label class="label">Số tiền bằng chữ</label>
+
+            <div class="control">
+                <span class="is-italic" snb-key="vietnamesemoneyinput">Không
+					đồng</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="margin-top-1rem field">
+    <h1 class="title is-4">
+        Hình ảnh chứng từ <span class="tooltip has-tooltip-right" data-tooltip="Không bắt buộc"><i class="fad fa-info-circle"></i></span>
+    </h1>
+</div>
+<div class="field is-grouped">
+    <div class="control">
+        <div class="file has-name is-sliver-dark">
+            <label class="file-label"> <input snb-key="listimage"
+				snb-render="shinobi.render.renderImageFileInput" class="file-input"
+				type="file" name="resume"> <span
+				class="file-cta is-gradient"> <span class="file-icon"><i
+						class="fas fa-upload"></i> </span> <span class="file-label">Chọn
+						file</span>
+			</span> <span class="file-name ">Hình ảnh chứng từ</span>
+			</label>
+        </div>
+    </div>
+</div>
+
+<div class="field">
+    <div class="control">
+        <p class="help is-italic is-size-6">
+            <b>* Lưu ý: </b>Khách hàng điền đầy đủ thông tin và chính xác, phía trung tâm sẽ dựa trên thông tin khách hàng để xác nhận cho việc thanh toán này. Trường hợp có thay đổi gì về thông tin vui lòng cập nhật lại để tránh rủi ro trong việc Nộp,
+            Rút tài khoản
+        </p>
+    </div>
+</div>
+
+
+<div class="margin-top-1rem has-text-centered is-margin-top-1rem">
+    <button class="button is-primary is-large is-rounded" id='submit-button'>Gửi
+		yêu cầu nạp tiền</button>
+</div>
+
+<!-- popup deposit success start -->
+<div class="modal" id='checkMailNoti'>
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+        <div class="box">
+            <div class="modal-card-body text-center">
+                <div class="field">
+                    <label class="title has-text-primary is-size-3">Thông báo</label>
+                </div>
+                <div class="field">
+                    <label class="subtitle is-size-5">Chúng tôi đã gửi 1 thông
+						báo xác nhận về email của bạn, vui lòng làm theo hướng dẫn trong
+						mail xác nhận để hoàn tất thủ tục nạp tiền.</label>
+                </div>
+                <div class="field">
+                    <label class="is-italic has-text-weight-bold"><Strong>Email
+							xác thực có thời hạn 10 phút.</label>
+                </div>
+                <div class="field">
+                    <img src="/static/image/index-payment-5.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+<!-- popup deposit success end -->

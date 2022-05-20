@@ -1,0 +1,36 @@
+<div class=" table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px"
+    id="searchingByFilter" style="z-index: 1; overflow: inherit;">
+    <div class="field is-grouped is-justify-content-space-between">
+        <div>
+            <div class="has-margin-block-auto" id="stockListSearch">
+                <div class="is-flex">
+                    <div class="has-text-weight-bold has-margin-block-auto pr-2" style="width:8rem;">
+                        Cổ phiếu: </div>
+                    <input id="autocomplete" snb-key="stocksymbol" class="input has-bsd" placeholder="Tìm kiếm">
+                </div>
+            </div>
+        </div>
+        <div class=" has-margin-block-auto">
+            <div class="is-flex has-margin-block-auto" id="searchinghistory">
+                <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                    Thời gian: </div>
+                <input class="is-init-bulma-false input" type="date" data-is-range="true" snb-key="date"
+                    snb-preprocess="shinobi.render.getBulmaCalendarValue">
+            </div>
+        </div>
+        <div class="is-hidden" id="searchByAccount">
+            <div class="is-flex has-margin-block-auto">
+                <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                    Tài khoản:
+                </div>
+                <div class=" is-fullwidth  has-width-12rem">
+                    <input snb-key="account" type="text" class="input">
+                </div>
+            </div>
+        </div>
+        <div class="is-flex">
+            <a id="searchOrderCommand" class="button is-primary has-bsd">Tìm kiếm</a>
+            <a id="cancelfilter" class="button is-primary has-bsd ml-3 is-hidden">X</a>
+        </div>
+    </div>
+</div>

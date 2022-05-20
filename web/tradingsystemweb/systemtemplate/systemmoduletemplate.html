@@ -1,0 +1,22 @@
+template=systemtemplate/systemtemplate.html
+<!-- panel content -->
+${{admin_menu}}
+<!--  -->
+
+<!--  -->
+${{admin_content}}
+<!--  -->
+@{{admin_content}}
+<!--  -->
+${{admin_footer_content}}
+<!--  -->
+@{{admin_footer_content}}
+<!--  -->
+${{footer_script}}
+<!--  -->
+@{{footer_script}}
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		shinobi.systemmoduletemplaterender.init();
+	});
+</script>

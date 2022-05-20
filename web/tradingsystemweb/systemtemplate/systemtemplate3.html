@@ -1,0 +1,46 @@
+template=systemtemplate/systemmoduletemplate.html
+
+<!--  -->
+${{admin_content}}
+<div class="column is-4 ">
+
+	<nav class="panel">
+		<p class="panel-heading">Chi tiết</p>
+		<div class="panel-block is-block has-background-white">
+
+			<div id="detailpanel">
+				<!--  -->
+				@{{detail_panel_content}}
+
+				<!--  -->
+			</div>
+
+			<hr>
+			@{{button_group}}
+
+		</div>
+	</nav>
+
+</div>
+
+<div class="column is-8 ">
+
+	<nav class="panel">
+		<p class="panel-heading">Danh sách</p>
+		<div class="panel-block is-block has-background-white">
+			<div class=" table-container">
+				@{{table_content}}
+				<div record-num="5">#{{/fragment/tablepagination}}</div>
+			</div>
+		</div>
+	</nav>
+
+</div>
+<!--  -->
+${{admin_footer_content}}
+<!--  -->
+<div></div>
+${{footer_script}}
+<!--  -->
+@{{footer_script}}
+

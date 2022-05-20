@@ -1,0 +1,55 @@
+<div id="selectBetNumberModal"
+    class="modal is-large select-bet-number-container">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Chọn số</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="tabs is-init is-centered">
+                <ul>
+                    <li class="is-active"
+                        tab-container-id="selectBetNumberListContainer">
+                        <a>
+                            <span class="icon is-small"><i
+                                    class="fal fa-grip-horizontal"
+                                    aria-hidden="true"></i></span>
+                            <span>Danh sách</span>
+                        </a>
+                    </li>
+                    <li tab-container-id="selectBetNumberTagsContainer">
+                        <a>
+                            <span class="icon is-small"><i class="fal fa-tags"
+                                    aria-hidden="true"></i></span>
+                            <span>Chọn số</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="selectBetNumberListContainer"
+                class="list-number-select buttons index-intraday-statistic-result-list">
+            </div>
+            <div id="selectBetNumberTagsContainer"
+                class="place-bet-button-container is-hidden">
+                <div class="field">
+                    <p class="content is-small has-text-info is-marginless">
+                        Nhập số từ 0 <span class="icon"><i
+                                class="fal fa-arrow-right fa-sm"></i></span>
+                        99
+                    </p>
+                    <div class="control">
+                        <input class="input place-bet-input" type="tags"
+                            placeholder="Chọn số (00 > 99)">
+                    </div>
+                </div>
+                <p class="help is-danger is-hidden">Chưa nhập số</p>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-primary payment-button">Thanh toán
+                ngay</button>
+            <button class="button is-secondary is-light">Hủy</button>
+        </footer>
+    </div>
+</div>

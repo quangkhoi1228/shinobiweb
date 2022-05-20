@@ -1,0 +1,46 @@
+.table
+  thead
+    tr
+      th
+        &[snb-key]
+          position: relative
+        &[snb-colname]
+          position: relative
+          &[snb-header-control]
+            padding-right: 2.25rem
+        [snb-sort]
+          cursor: ns-resize
+          position: absolute
+          right: 0.5rem
+          transform: translateX(50%)
+          top: 0.5rem
+          .fa-sort-up, .fa-sort-down
+            display: none
+          .fa-sort-up
+            bottom: -0.5rem
+            position: relative
+        [snb-sort="up"], [snb-sort="asc"]
+          .fa-sort-up
+            display: block
+        [snb-sort="down"], [snb-sort="desc"]
+          .fa-sort-down
+            display: block
+        [snb-filter]
+          position: absolute
+          right: 1rem
+          cursor: pointer
+          top: 0.5rem
+        .table-filter
+          margin-right: -2rem
+          .control:last-child
+            width: 100%
+          .input
+            min-width: 3rem
+
+
+
+
+
+
+
+

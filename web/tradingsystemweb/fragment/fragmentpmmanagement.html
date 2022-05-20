@@ -1,0 +1,46 @@
+<section class="section pmmanagement">
+    <div class="title is-3 m-4">Quản lý tài khoản</div>
+    <!--  -->
+    #{{/fragment/fragmenttabsportfolio}}
+    <!--  -->
+
+    <div class=" table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px">
+        <!--  -->
+        #{{/fragment/fragmentfindandaddaccountpmmanagement}}
+
+        <table class="table is-fullwidth is-bordered" id="pmmanagementboard">
+            <thead>
+                <tr>
+                    <th snb-colname="loginusername">
+                        <p class="has-text-centered">Email/Tên đăng nhập</p>
+                    </th>
+                    <th snb-colname="firstname" snb-render="shinobi.pmmanagementrender.renderFullname">
+                        <p class="has-text-centered">Họ và Tên</p>
+                    </th>
+                    <th snb-colname="createddate">
+                        <p class="has-text-centered">Ngày tạo</p>
+                    </th>
+                    <th snb-colname="createduser">
+                        <p class="has-text-centered">Người tạo</p>
+                    </th>
+                    <th snb-colname="invitedby">
+                        <p class="has-text-centered">Người giới thiệu</p>
+                    </th>
+                    <!-- <th snb-colname="">
+                        <p class="has-text-centered">NAV</p>
+                    </th>
+                    <th snb-colname="">
+                        <p class="has-text-centered">Lợi nhuận PM</p>
+                    </th> -->
+                    <th snb-colname="username" snb-render="shinobi.pmmanagementrender.renderMoreButton">
+                        <p class="has-text-centered"></p>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+        <div record-num="5">#{{/fragment/tablepagination}}</div>
+    </div>
+</section>

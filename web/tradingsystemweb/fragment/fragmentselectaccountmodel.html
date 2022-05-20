@@ -1,0 +1,55 @@
+<div id="confirmDealAccountModal" class="modal is-large has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-fullname has-text-white has-text-weight-bold">Cấu hình tài khoản</p>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="title ml-3 mb-1 is-5">Cấu hình các loại tài khoản:</div>
+
+                <div class="ml-4 mb-5">
+                    <p class="mb-1 has-fullname has-text-danger">*Xác định tài khoản giao dịch của tài khoản.</p>
+                    <p class="mb-1 has-fullname has-text-danger">*Nhập "Phí giao dịch" và "Thuế giao dịch" cho TỪNG TÀI KHOẢN.</p>
+                </div>
+                <table class="table is-fullwidth is-bordered" id="checkAccountUserModal">
+                    <thead>
+                        <tr>
+                            <th snb-colname="systemsubaccount"
+                                snb-render="shinobi.selfemployedaccountrender.chooseDealAccount">
+                                <p class="has-text-centered"></p>
+                            </th>
+                            <th snb-colname="subaccount" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                                <p class="has-text-centered">Mã tài khoản</p>
+                            </th>
+                            <th snb-colname="subaccountname">
+                                <p class="has-text-centered">Loại tài khoản</p>
+                            </th>
+                            <th snb-colname="fee" snb-render="shinobi.selfemployedaccountrender.inputFeeForDealAccount"
+                                style="width: 15rem;">
+                                <p class="has-text-centered">Phí giao dịch(%)</p>
+                            </th>
+                            <th snb-colname="tax" snb-render="shinobi.selfemployedaccountrender.inputTaxForDealAccount"
+                                style="width: 15rem;">
+                                <p class="has-text-centered">Thuế giao dịch(%)</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="is-hidden" record-num="10">#{{/fragment/tablepagination}}</div>
+            </div>
+
+            <div>
+                <div class="title ml-3 mb-1 is-5">Danh sách mã không giao dịch:</div>
+                <input snb-key="bancode" snb-preprocess="shinobi.selfemployedaccountrender.getStockList"
+                    snb-render="shinobi.selfemployedaccountrender.renderListInput">
+            </div>
+        </section>
+        <footer class="modal-card-foot has-text-right">
+            <button class="button is-success" id="confirmDealAccount">Xác nhận</button>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<div>
+    <h1 class="title is-4 has-padding-bottom-1-rem">
+        Thông tin Ngân hàng
+    </h1>
+</div>
+<section id="userBankInfoSection">
+    <div class="columns">
+        <div class="column is-half">
+            <label class="label">Tên chủ tài khoản</label>
+            <div class="control">
+                <input snb-key="bankaccountholder" class="input" type="text"
+                    placeholder="Tên chủ tài khoản" disabled>
+            </div>
+        </div>
+        <div class="column is-half">
+            <label class="label">Số tài khoản</label>
+            <div class="control">
+                <input snb-key="bankaccountid" class="input" type="text"
+                    placeholder="Số tài khoản" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-half">
+            <label class="label">Ngân hàng</label>
+            <div class="control">
+                <input snb-key="bankname" class="input" type="text"
+                    placeholder="Ngân hàng" disabled>
+            </div>
+        </div>
+        <div class="column is-half">
+            <label class="label">Chi nhánh</label>
+            <div class="control">
+                <input snb-key="bankbranch" class="input" type="text"
+                    placeholder="Chi nhánh" disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column is-half">
+            <label class="label">Thành phố tỉnh</label>
+            <div class="control">
+                <input snb-key="banklocation" class="input" type="text"
+                    placeholder="Thành phố tỉnh" disabled>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<section id="withdrawalinfo">
+    <h1 class="title is-4">Số tiền rút</h1>
+    <div class="columns is-vcentered">
+        <div class="column is-half ">
+            <label class="label">Số tiền rút (VND) &nbsp;<span> <i
+                        class="fad fa-info-circle is-withdrawal-valid-info"></i></span></label>
+
+            <div class="control">
+                <input class="input" type="text" placeholder="Số tiền rút (VND)"
+                    snb-key="amount"
+                    snb-render="shinobi.render.renderFormatNumber"
+                    snb-preprocess="shinobi.render.getNumberCleaveInput">
+            </div>
+        </div>
+        <div class="column is-half">
+            <label class="label">Số tiền bằng chữ</label>
+
+            <div class="control">
+                <span class="is-italic" snb-key="vietnamesemoneyinput">Không
+                    đồng</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="columns">
+    <div class="column is-12">
+        <form autocomplete="off">
+            <div class="field ">
+                <div class="control ">
+                    <a
+                        class="submit-button with-drawal-request-button button is-primary is-hidden">Xác
+                        nhận</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

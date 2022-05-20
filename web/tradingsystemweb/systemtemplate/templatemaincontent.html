@@ -1,0 +1,159 @@
+template=systemtemplate/systemroottemplate.html
+<!-- panel content -->
+${{template_content}}
+<div class="columns is-multiline no-margin-bottom-important">
+	<div id="menuLeft" class="column is-2 menu-container"
+		style="display: block">@{{admin_menu}}</div>
+	<div id="mainContentContainer" class="column is-10 shinobicontainer">
+		<div class="columns is-relative">@{{admin_content}}</div>
+
+	</div>
+</div>
+<div class="pageloader is-link">
+	<span class="title">Đang xử lý yêu cầu</span>
+</div>
+#{{/fragment/fragmentconfirmdownloadexcelfilemodal}}
+
+<!--  -->
+${{footer_script}}
+<!--  -->
+<script>
+	window
+			.addEventListener(
+					'DOMContentLoaded',
+					function() {
+
+						window.onscroll = function() {
+							scrollFunction()
+						};
+
+						function scrollFunction() {
+							if (document.body.scrollTop > 20
+									|| document.documentElement.scrollTop > 20) {
+								document.getElementById("goToTopButton").style.display = "block";
+							} else {
+								document.getElementById("goToTopButton").style.display = "none";
+							}
+						}
+
+						document.getElementById("goToTopButton").onclick = function() {
+							document.body.scrollTop = 0;
+							document.documentElement.scrollTop = 0;
+						};
+
+						var listModal = document
+								.getElementsByClassName('modal');
+
+						for (var i = 0; i < listModal.length; i++) {
+
+							shinobi.aladinUtil.modalEventListener(listModal[i]);
+						}
+
+						var tableContainerAll = document
+								.querySelectorAll('.table-fixed-header');
+
+						for (var q = 0; q < tableContainerAll.length; q++) {
+
+							var tableContainer = tableContainerAll[q];
+
+							if (tableContainer) {
+
+								var thList = tableContainer
+										.getElementsByTagName('thead')[0]
+										.getElementsByTagName('th');
+
+								var pagination = tableContainer
+										.getElementsByClassName('table-pagination')[0];
+
+								tableContainer.onscroll = function() {
+
+									for (var i = 0; i < thList.length; i++) {
+
+										thList[i].style.transform = 'translateY('
+												+ this.scrollTop + 'px)';
+
+									}
+								};
+
+								setInterval(
+										function() {
+
+											var table = tableContainer
+													.getElementsByTagName('table')[0];
+
+											var compStyles = window
+													.getComputedStyle(table);
+
+											var fontSize = Number(compStyles.fontSize
+													.replace('px', ''));
+
+											var defaultRemHeight = 30 * fontSize;
+
+											if (Number(compStyles.height
+													.replace('px', '')) > defaultRemHeight) {
+
+												tableContainer.style.height = defaultRemHeight
+														+ 'px';
+											} else {
+
+												tableContainer.style.height = Math
+														.trunc((Number(compStyles.height
+																.replace('px',
+																		'')) + 2 * fontSize))
+														+ 'px';
+											}
+
+											var pagination = tableContainer
+													.getElementsByClassName('table-pagination')[0];
+
+											if (pagination) {
+												pagination.style.top = 'calc( '
+														+ table.offsetTop
+														+ 'px + '
+														+ tableContainer.style.height
+														+ ')';
+
+											}
+										}, 1000);
+							}
+						}
+
+						var startDate = new Date();
+						var fechaFin = new Date();
+						var FromEndDate = new Date();
+						var ToEndDate = new Date();
+
+						var reportPeriodlist = [ '#reportPeriod',
+								'#reportPeriodEnd' ];
+
+						for (var j = 0; j < reportPeriodlist.length; j++) {
+
+							if (document.querySelectorAll(reportPeriodlist[j])[0]) {
+
+								$(reportPeriodlist[j])
+										.datepicker({
+											autoclose : true,
+											minViewMode : 1,
+											format : 'mm-yyyy'
+										})
+										.on(
+												'changeDate',
+												function(selected) {
+													startDate = new Date(
+															selected.date
+																	.valueOf());
+													startDate
+															.setDate(startDate
+																	.getDate(new Date(
+																			selected.date
+																					.valueOf())));
+													$('.to').datepicker(
+															'setStartDate',
+															startDate);
+												});
+							}
+						}
+
+					});
+</script>
+@{{footer_script}}

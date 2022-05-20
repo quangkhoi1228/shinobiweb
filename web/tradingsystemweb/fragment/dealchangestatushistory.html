@@ -1,0 +1,28 @@
+<div id="dealStatusHistoryModal" class="modal is-large ">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Chi tiết</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <table id="dealStatusHistoryTable" class="table is-bordered is-striped  is-hoverable ">
+                <thead>
+                    <tr>
+                        <th snb-colname="lastmodifieddate">Thời gian</th>
+                        <th snb-colname="lastmodifieduser">Người cập nhật
+                        </th>
+                        <th snb-colname="dealstatus" snb-render="shinobi.listtransectionsettleorderrender.renderDealStatusTable">
+                            Trạng thái
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="is-hidden">#{{/fragment/tablepagination}}</div>
+        </section>
+    </div>
+</div>

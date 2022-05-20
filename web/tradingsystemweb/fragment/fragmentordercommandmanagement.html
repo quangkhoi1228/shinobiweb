@@ -1,0 +1,101 @@
+<section class="section tablebelowcontainer">
+    <div class="title is-3 m-4">Quản lý lệnh</div>
+    <div id="selfEmployedTable">
+        <div class=" table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px"
+            style="z-index: 1; overflow: inherit;">
+            <div class="field is-grouped is-justify-content-space-between">
+                <div class="has-margin-block-auto" id="pmListSearch">
+                    <div class="is-flex">
+                        <div class="has-text-weight-bold has-margin-block-auto pr-2">
+                            PM: </div>
+                        <input id="autocomplete" class="input has-bsd" placeholder="Tìm kiếm">
+                    </div>
+                </div>
+                <div class=" has-margin-block-auto">
+                    <div class="is-flex has-margin-block-auto" id="searchinghistory">
+                        <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                            Thời gian: </div>
+                        <input class="is-init-bulma-false" type="date" data-is-range="true" snb-key="date"
+                            snb-preprocess="shinobi.render.getBulmaCalendarValue">
+                    </div>
+                </div>
+                <div>
+                    <div class="is-flex has-margin-block-auto">
+                        <!-- LẤY DANH SÁCH TK TỰ DOANH TRÊN TRANG QUẢN LÝ TK TỰ DOANH -->
+                        <div class="has-text-weight-bold has-margin-block-auto pr-2 has-text-no-wrap">
+                            TK tự doanh:
+                        </div>
+                        <div class="select is-fullwidth  has-width-12rem">
+                            <select id="selfemplyedaccountselection" snb-datalist-node="selfemplyedaccountselection">
+                                <option snb-datalist-parent="selfemplyedaccountselection" snb-key="systemaccount"
+                                    snb-key-value="systemaccount"
+                                    snb-render="shinobi.ordercommandmanagementrender.renderFullname">
+                                </option>
+                            </select>
+                            <div class="is-hidden" record-num="20">
+                                #{{/fragment/tablepagination}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="is-flex">
+                    <a id="searchOrderCommand" class="button is-primary has-bsd">Tìm kiếm</a>
+                    <a id="cancelfilter" class="button is-primary has-bsd ml-3 is-hidden">X</a>
+                </div>
+            </div>
+        </div>
+
+        <div class=" table-container container p-6 has-box-shadow-light has-background-white has-border-radius-6px"
+            id="allotmentTable">
+            <table class="table is-fullwidth is-bordered order-detail-table" id="linkedpmaccounttable">
+                <thead>
+                    <tr>
+                        <th snb-colname="placedby"
+                            snb-render="shinobi.ordercommandmanagementrender.renderChildOrderCommand">
+                            <p class="has-text-centered">Người đặt</p>
+                        </th>
+                        <th snb-colname="createddate" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">TG tín hiệu</p>
+                        </th>
+                        <!-- <th snb-colname="originalsignalid">
+                            <p class="has-text-centered">Mã tín hiệu</p>
+                        </th> -->
+                        <th snb-colname="allocationaccount" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Tài khoản</p>
+                        </th>
+                        <th snb-colname="allocationratio" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">TG đặt</p>
+                        </th>
+                        <th snb-colname="orderid" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Mã lệnh</p>
+                        </th>
+                        <th snb-colname="stockcode" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Mã</p>
+                        </th>
+                        <th snb-colname="price" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Giá</p>
+                        </th>
+                        <th snb-colname="volume" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">KL</p>
+                        </th>
+                        <th snb-colname="status" snb-render="shinobi.ordercommandmanagementrender.renderStatusSetting">
+                            <p class="has-text-centered">Trạng thái</p>
+                        </th>
+                        <!-- <th snb-colname="commandstatus" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Trạng  thái lệnh</p>
+                        </th> -->
+                        <th snb-colname="description" style="width: 10rem !important;">
+                            <p class="has-text-centered">Ghi chú</p>
+                        </th>
+                        <th snb-colname="allocationaccount"
+                            snb-render="shinobi.ordercommandmanagementrender.renderMoreButton">
+                            <p class="has-text-centered"></p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div record-num="10">#{{/fragment/tablepagination}}</div>
+        </div>
+    </div>
+</section>

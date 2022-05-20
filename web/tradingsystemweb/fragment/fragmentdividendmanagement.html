@@ -1,0 +1,92 @@
+<section class="section tablebelowcontainer">
+    <div class="title is-3 m-4">Quản lý chia cổ tức</div>
+    <!--  -->
+    #{{/fragment/fragmenttabsdividendmanagement}}
+    <!--  -->
+    <div id="dividendConfig">
+        <!--  -->
+        #{{/fragment/fragmentsearchingbyfilter}}
+        <!--  -->
+        <div class=" table-container container p-6 has-box-shadow-light has-background-white has-border-radius-6px"
+            id="dividendNotConfigContainer">
+            <div class="mb-5">
+                <span snb-key="accountname" class="title has-text-primary is-4">Danh sách cổ phiếu chưa cấu hình</span>
+            </div>
+            <table class="table is-fullwidth" id="dividendNotConfigTable">
+                <thead>
+                    <tr>
+                        <th snb-colname="stockcode" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Mã cổ phiếu</p>
+                        </th>
+                        <th snb-colname="detectdate" class=""
+                            snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Ngày phát sinh</p>
+                        </th>
+                        <th snb-colname="stockcode" class=""
+                            snb-render="shinobi.dividendmanagementrender.renderConfigButtonForNotConfigTable">
+                            <p class="has-text-centered"></p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div record-num="5">#{{/fragment/tablepagination}}</div>
+        </div>
+
+        <div class=" table-container container p-6 has-box-shadow-light has-background-white has-border-radius-6px mt-4"
+            id="dividendConfiggedContainer">
+            <div class="mb-5">
+                <span snb-key="accountname" class="title has-text-primary is-4">Danh sách cổ phiếu đã cấu hình</span>
+            </div>
+            <table class="table is-fullwidth is-bordered" id="dividendConfiggedTable">
+                <thead>
+                    <tr>
+                        <th snb-colname="stockcode" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Mã cổ phiếu</p>
+                        </th>
+                        <th snb-colname="id" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Mã cấu hình</p>
+                        </th>
+                        <th snb-colname="referenceprice" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextRight">
+                            <p class="has-text-centered">Giá điều chỉnh</p>
+                        </th>
+                        <th snb-colname="detectdate" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextCentered">
+                            <p class="has-text-centered">Ngày phát sinh</p>
+                        </th>
+                        <th snb-colname="cashdividenddescription" class="has-width-small"
+                            snb-render="shinobi.dividendmanagementrender.renderCashDividendDescription">
+                            <p class="has-text-centered">Chia cổ tức bằng tiền</p>
+                        </th>
+                        <th snb-colname="stockdividenddescription" class="has-width-small"
+                            snb-render="shinobi.dividendmanagementrender.renderStockdividendDescription">
+                            <p class="has-text-centered">Chia cổ tức bằng CK</p>
+                        </th>
+                        <th snb-colname="calloptiondescription" class="has-width-small"
+                            snb-render="shinobi.dividendmanagementrender.renderCallOptiondDescription">
+                            <p class="has-text-centered">Chia cổ tức bằng quyền mua</p>
+                        </th>
+                        <th snb-colname="priorclosedprice" class="has-width-small"
+                            snb-render="shinobi.roottemplate.renderCellTextRight">
+                            <p class="has-text-centered">Tổng KL</p>
+                        </th>
+                        <th snb-colname="stockcode" class="has-width-small"
+                            snb-render="shinobi.dividendmanagementrender.renderConfigButtonForConfiggedTable">
+                            <p class="has-text-centered"></p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div record-num="5">#{{/fragment/tablepagination}}</div>
+        </div>
+    </div>
+</section>

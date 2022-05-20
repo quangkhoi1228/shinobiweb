@@ -1,0 +1,72 @@
+<div id="addbalanceinfoModal" class="modal is-medium">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Chi tiết</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            #{{/fragment/fragmentaddbalanceinfodetail}}</section>
+        <footer class="modal-card-foot is-hidden">
+            <a class="button is-success" snb-key="requestid" snb-render="shinobi.adminwithdrawalrequestrender.renderAcceptButton">Đồng
+                ý</a><a class="button is-danger" snb-key="requestid" snb-render="shinobi.adminwithdrawalrequestrender.renderRejectButton">Từ
+                chối</a>
+            <button class="button">Đóng</button>
+        </footer>
+    </div>
+</div>
+
+<div id="addbalanceinfoByUserModal" class="modal is-medium">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Chi tiết</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            #{{/fragment/fragmentaddbalancerequestinfo}}</section>
+        <footer class="modal-card-foot is-hidden">
+            <a class="button is-success" snb-key="requestid" snb-render="shinobi.adminwithdrawalrequestrender.renderAcceptButton">Đồng
+                ý</a><a class="button is-danger" snb-key="requestid" snb-render="shinobi.adminwithdrawalrequestrender.renderRejectButton">Từ
+                chối</a>
+            <button class="button">Đóng</button>
+        </footer>
+    </div>
+</div>
+<div id="popuptransactiondetail" class="modal is-full-screen">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-centered">Chi tiết</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <table id="dataTransactionContainer" class="table is-bordered is-hoverable is-striped is-fullwidth">
+                <thead>
+                    <tr>
+                        <th snb-colname="lastmodifieddate" snb-header-control="1,2 ">
+                            Ngày thao tác</th>
+                        <th snb-colname="lastmodifieduser" snb-header-control="1,2 ">
+                            Người thực hiện</th>
+                        <th snb-colname="actiontype" snb-render="shinobi.adminwithdrawcashhistoryrender.renderActionType" snb-header-control="1,2">Trạng thái </th>
+                        <th snb-colname="requesttype" snb-render="shinobi.adminwithdrawcashhistoryrender.renderActionType">Loại yêu cầu
+                        </th>
+
+                        <th snb-colname="requestid">Mã yêu cầu
+                        </th>
+                        <th snb-colname="amount" snb-render="shinobi.render.renderFormatNumberTable" snb-header-control="1" snb-datatype="number">Số tiền (VND)
+                        </th>
+
+
+                        <th snb-colname="id" snb-render="shinobi.adminwithdrawcashhistoryrender.renderContent">
+                            Nội dung</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div record-num="10 ">#{{/fragment/tablepagination}}</div>
+
+        </section>
+
+    </div>
+</div>

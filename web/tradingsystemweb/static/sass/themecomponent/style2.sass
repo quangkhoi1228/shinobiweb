@@ -1,0 +1,69 @@
+$header-nav-button-size: 2.5rem
+
+.button
+    &:hover
+        opacity: 0.8
+    +animation
+
+.head-navbar-button
+    width: $header-nav-button-size
+    height: $header-nav-button-size
+    &:hover
+        color: $secondary
+
+.table
+    tr
+        +animation
+        &:hover
+            background: #dbdbdbb5
+    th
+        background: #dbdbdbb5
+    th,td
+        vertical-align: middle !important
+        padding: 0.5em
+
+.main-section
+    > .hero .hero-body,> .section
+        padding: 3rem 4rem
+
+.datetimepicker-dummy-wrapper
+    border-radius: 4px
+
+.a.dropdown-item, button.dropdown-item
+    padding: 0.5rem
+
+
+.button,a
+    &:hover
+        .fa,.fas,.fal,.fab
+            +scale
+
+.order-detail-table
+    font-size: 0.9rem
+    white-space: nowrap
+    th
+        white-space: nowrap
+
+.order-side
+    text-align: center !important
+    font-weight: bold
+    &.buy-side
+        color: $green
+    &.sell-side
+        color: $red
+
+
+.hero
+    .operationsmanagement
+        padding: 0.75rem 3rem
+        .datalist-container
+            padding: 1rem !important
+            background: white
+            border-radius: 6px !important
+            border: 1px solid #dddddd8a
+            .date
+                font-weight: bold
+            .name
+                color: $secondary
+            .description
+                color: $grey

@@ -1,0 +1,32 @@
+template=systemtemplate/systemroottemplate.html
+<!-- panel content -->
+${{template_content}}
+<div id="adminMenuLeft" class="quickview is-left">
+	<header class="quickview-header is-primary">
+		<span class="delete" data-dismiss="quickview"></span>
+	</header>
+	<div class="quickview-body">
+		<div class="quickview-block">
+			<div id="menuLeft" class="shinobimenu">@{{admin_menu}}</div>
+		</div>
+	</div>
+</div>
+<div class="">
+	<div id="mainContentContainer" class=" shinobicontainer">
+		<div class="columns">@{{admin_content}}</div>
+
+	</div>
+</div>
+<div class="pageloader is-link is-hidden">
+	<span class="title">Đang xử lý yêu cầu</span>
+</div>
+
+<!--  -->
+${{footer_script}}
+<!--  -->
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		shinobi.systemtemplaterender.init();
+	});
+</script>
+@{{footer_script}}

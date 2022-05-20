@@ -1,0 +1,189 @@
+<div id="modalOrderDate" class="modal is-large has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold" snb-key="canceltime"
+            snb-render="shinobi.tradingsystemrender.titleDetailOrder">Chi tiết lệnh</p>
+            <div style="margin-block: auto;">
+                <button class="delete" aria-label="close"></button>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <!-- <div class="table-container">
+                <table id="modalOrderDateTable" class="table is-fullwidth is-bordered order-detail-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <p class="has-text-centered">Mã lệnh</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">TG đặt</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Tài khoản</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Người đặt</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">M/B</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Mã</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">KL đặt</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Giá đặt</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Giá khớp</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">KL khớp</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">GT khớp</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">TG hủy</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Trạng thái</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">Nhóm lệnh</p>
+                            </th>
+                            <th>
+                                <p class="has-text-centered">TG Tín hiệu</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td snb-key="systemorderid" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                            <td snb-key="ordertime" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                            <td snb-key="fullname" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                            <td snb-key="placedby" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                            <td snb-key="side" snb-render="shinobi.tradingsystemrender.renderOrderSideDataList"></td>
+                            <td snb-key="stockcode" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                            <td snb-key="volume" snb-render="shinobi.render.renderFormatNumber"></td>
+                            <td snb-key="price" snb-render="shinobi.render.renderFormatNumber"></td>
+                            <td snb-key="matchprice" snb-render="shinobi.render.renderFormatNumber"></td>
+                            <td snb-key="matchvolume" snb-render="shinobi.render.renderFormatNumber"></td>
+                            <td snb-key="matchvalue" snb-render="shinobi.render.renderFormatNumber"></td>
+                            <td snb-key="canceltime" snb-render="shinobi.render.renderTextCenterDatalist"></td>
+                            <td snb-key="status" snb-render="shinobi.tradingsystemrender.renderOrderTypeStatusDatalist"></td>
+                            <td snb-key="ordertype" snb-render="renderOrderTypeDatalist"></td>
+                            <td snb-key="createddate" snb-render="shinobi.roottemplate.renderElemTextCentered"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> -->
+
+            <div class="content-modal-cotainer">
+                <div class="columns">
+                    <div class="column is-4">
+                        <h1 class="title is-5">Thông tin lệnh:</h1>
+                        <div class="columns">
+                            <div class="column">
+                                <span class="content-title">Mã lệnh:</span>
+                                <span class="has-text-weight-bold" snb-key="systemorderid"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">TG đặt:</span>
+                                <span class="has-text-weight-bold" snb-key="ordertime"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">Người đặt:</span>
+                                <span class="has-text-weight-bold" snb-key="placedby"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">Tài khoản:</span>
+                                <span class="has-text-weight-bold" snb-key="fullname"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-flex pt-0">
+                                <span class="content-title">Trạng thái: </span>
+                                <span class="has-text-weight-bold" snb-key="status"
+                                    snb-render="shinobi.tradingsystemrender.renderOrderTypeStatusDatalist"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h1 class="title is-5">Chi tiết đặt:</h1>
+                        <div class="columns">
+                            <div class="column">
+                                <span class="content-title">Bên M/B:</span>
+                                <span class="has-text-weight-bold" snb-key="side"
+                                snb-render="shinobi.tradingsystemrender.renderOrderSideDataList"></span>
+                            </div>
+                            <div class="column">
+                                <span class="content-title">Giá đặt:</span>
+                                <span class="has-text-weight-bold" snb-key="price"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">Mã:</span>
+                                <span class="has-text-weight-bold" snb-key="stockcode"></span>
+                            </div>
+                            <div class="column pt-0">
+                                <span class="content-title">KL đặt:</span>
+                                <span class="has-text-weight-bold" snb-key="volume"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">Giá khớp:</span>
+                                <span class="has-text-weight-bold" snb-key="matchprice"></span>
+                            </div>
+                            <div class="column pt-0">
+                                <span class="content-title">Nhóm lệnh:</span>
+                                <span class="has-text-weight-bold" snb-key="ordertype"
+                                    snb-render="renderOrderTypeDatalist"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">GT khớp:</span>
+                                <span class="has-text-weight-bold" snb-key="matchvalue"></span>
+                            </div>
+                            <div class="column pt-0">
+                                <span class="content-title">TG Tín hiệu:</span>
+                                <span class="has-text-weight-bold" snb-key="createddate"></span>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column pt-0">
+                                <span class="content-title">KL khớp:</span>
+                                <span class="has-text-weight-bold" snb-key="matchvolume"></span>
+                            </div>
+                            <div class="column pt-0">
+                                <span class="content-title">TG hủy:</span>
+                                <span class="has-text-weight-bold" snb-key="canceltime"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="is-hidden" record-num="10">
+            #{{/fragment/tablepagination}}
+        </div>
+        <footer class="modal-card-foot is-justify-content-right">
+            <!-- <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button> -->
+        </footer>
+    </div>
+</div>

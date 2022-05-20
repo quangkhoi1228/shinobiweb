@@ -1,0 +1,61 @@
+<div id="orderCommandConfirmModal" class="modal is-medium has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Xác nhận lệnh</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="is-size-5">
+                <div class="field">
+                    <span class="has-text-grey">Tài khoản:</span>
+                    <span snb-key="allocationaccount" snb-render="shinobi.tradingsystemrender.renderAccountName"></span>
+                </div>
+                <div class="field">
+                    <span class="has-text-grey">Đặt lệnh:</span>
+                    <span class="has-text-weight-bold" snb-key="side"
+                        snb-render="shinobi.tradingsystemrender.renderSideColor"></span>
+                </div>
+                <div class="field">
+                    <span class="has-text-grey">Giá:</span>
+                    <span snb-key="price" snb-render="shinobi.tradingsystemrender.showPriceConfirm"></span>
+                </div>
+                <div class="field">
+                    <span class="has-text-grey">Khối lượng:</span>
+                    <span snb-key="volume"></span>
+                </div>
+                <div class="field">
+                    <span class="has-text-grey">Giá trị:</span>
+                    <span snb-key="volume" snb-render="shinobi.tradingsystemrender.showVolumeConfirm"></span>
+                </div>
+                <div class="field is-flex">
+                    <span class="has-text-grey">Nguồn:</span>
+                    &nbsp;
+                    <span class="has-margin-block-auto">
+                        <div class="control is-flex" id="otherOptionSourceContainer">
+                            <label class="radio has-margin-block-auto">
+                                <input snb-key="typeModal" type="radio" name="source" radio-value="PM" checked> PM quản
+                                lý
+                                <span snb-key="allocationaccount"
+                                    snb-render="shinobi.tradingsystemrender.renderPMAcountName"></span>
+                            </label>
+                            <label class="radio has-margin-block-auto">
+                                <input snb-key="typeModal" type="radio" name="source" radio-value="PMALADIN"> PM Aladin
+                            </label>
+                            <label class="radio has-margin-block-auto">
+                                <input snb-key="typeModal" type="radio" name="source" radio-value="OTHER"> Khác
+                            </label>
+                            <label class="radio has-margin-block-auto is-hidden">
+                                <input snb-key="orthervalue" class="input has-background-transparent is-fullwidth"
+                                    id="otherOptionInput">
+                            </label>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button has-background-primary has-text-white" id="confirmOrderModal">Đặt lệnh</button>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<section class="tradingview-section  has-margin-bottom-3-rem">
+    <div class="tabs">
+        <ul>
+            <li class="is-active cfv-tab" tabs="cfv-tab">
+                <a>
+                    <span>VÀNG SJC 1L</span>
+                </a>
+            </li>
+            <li class="24k-tab" tabs="24k-tab">
+                <a>
+                    <span>VÀNG 24K QUY ĐỔI</span>
+                </a>
+            </li>
+            <li class="18k-tab" tabs="18k-tab">
+                <a>
+                    <span>VÀNG 18K QUY ĐỔI</span>
+                </a>
+            </li>
+            <li class="14k-tab" tabs="14k-tab">
+                <a>
+                    <span>VÀNG 14K QUY ĐỔI</span>
+                </a>
+            </li>
+            <li class="gold-tab" tabs="gold-tab">
+                <a>
+                    <span>GOLD SPOT</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cfv-tab trading-view-container">
+        <iframe src="/page/tradingviewindex/?language=vi&theme=dark&tab=cfv"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+    <div class="24k-tab  is-hidden trading-view-container">
+        <iframe src="/page/tradingviewindex/?language=vi&theme=dark&tab=24k-tab"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+    <div class="18k-tab  is-hidden trading-view-container">
+        <iframe src="/page/tradingviewindex/?language=vi&theme=dark&tab=18k-tab"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+    <div class="14k-tab  is-hidden trading-view-container">
+        <iframe src="/page/tradingviewindex/?language=vi&theme=dark&tab=14k-tab"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+    <div class="gold-tab is-hidden trading-view-container">
+        <iframe id="goldTradingView"
+            src="/page/tradingviewgold/?language=en&theme=dark&tab=cfv&interval=5"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+    <div
+        class="gold-tab trading-view-container is-hidden-tradingview-container is-hidden">
+        <iframe id="goldTradingViewDate" class=""
+            src="/page/tradingviewgold/?language=en&theme=dark&tab=cfv&interval=D"
+            frameborder="0" height="100%" width="100%"></iframe>
+    </div>
+</section>

@@ -1,0 +1,202 @@
+<div id="addChildOrderCommand" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Thêm lệnh</p>
+            <div style="margin-block: auto;">
+                <button class="delete" aria-label="close"></button>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Khách hàng:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Khách hàng" snb-key="account">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mã lệnh:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Mã lệnh" snb-key="account">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mã giá:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Mã giá" snb-key="account">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Khối lượng:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Khối lượng" snb-key="account">
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-hidden is-success" id="saveModal">Lưu</button>
+            <button class="button is-success" id="createModal">Thêm</button>
+            <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button>
+        </footer>
+    </div>
+</div>
+
+<div id="modifyChildOrderCommand" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Chỉnh sửa</p>
+            <div style="margin-block: auto;">
+                <button class="delete" aria-label="close"></button>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mã lệnh:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Mã lệnh" snb-key="account">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Mã giá:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Mã giá" snb-key="account">
+                </div>
+            </div>
+            <div class="content-modal-cotainer">
+                <div class="content-title">Khối lượng:</div>
+                <div>
+                    <input type="text" class="input" placeholder="Khối lượng" snb-key="account">
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="saveModal">Chỉnh sửa</button>
+            <button class="button is-hidden is-success" id="createModal">Thêm</button>
+            <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button>
+        </footer>
+    </div>
+</div>
+
+<div id="seeDetailOrderModal" class="modal is-medium has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Chi tiết lệnh</p>
+            <div style="margin-block: auto;">
+                <button class="delete" aria-label="close"></button>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Tên:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="fullname"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Người tạo:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="createduser"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Tài khoản:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="allocationaccount"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Ngày tạo:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="createddate"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Người đặt:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="placedby"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Người chỉnh sửa:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="lastmodifieduser"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Bên M/B:</span> &nbsp;
+                            <span class=" has-text-weight-bold" snb-key="side"
+                                snb-render="shinobi.ordercommandmanagementrender.subSideLeftDetailOrder"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Ngày chỉnh sửa:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="lastmodifieddate"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Loại lệnh:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="ordertype"
+                                snb-render="renderOrderTypeDatalist"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Tỷ lệ:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="proportion"
+                                snb-render="renderProfitpercent100"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Mã:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="stockcode"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Trạng thái:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="status"
+                                snb-render="shinobi.ordercommandmanagementrender.renderStatusChildSetting"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Giá:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="price"></span>
+                        </div>
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Trạng thái lệnh:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="orderstatus"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>KL:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="volume"></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>Mô tả:</span> &nbsp;
+                            <span class=" has-text-weight-bold" snb-key="description"
+                                snb-render="shinobi.ordercommandmanagementrender.formatDescription"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>ID tín hiệu:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="signalid"></span>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column is-flex p-0 pl-5 pr-5 ">
+                            <span>ID tín hiệu gốc:</span>&nbsp;
+                            <span class=" has-text-weight-bold" snb-key="originalsignalid"></span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer class="modal-card-foot">
+        </footer>
+    </div>
+</div>

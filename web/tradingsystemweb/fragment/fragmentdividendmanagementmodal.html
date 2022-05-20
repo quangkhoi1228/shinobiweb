@@ -1,0 +1,142 @@
+<div id="configStockModal" class="modal has-modal-title-background">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title has-text-white has-text-weight-bold">Cấu hình mã cổ phiếu</p>
+            <div style="margin-block: auto;">
+                <button class="delete" aria-label="close"></button>
+            </div>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="content-modal-cotainer">
+                <div class="content-title">Loại sự kiện:</div>
+                <div>
+                    <div class="columns m-2 cashdividend">
+                        <div class="column is-5 p-2">
+                            <div class=" has-margin-block-auto">
+                                <label class="checkbox configdividend">
+                                    <input type="checkbox" value="cashdividend">
+                                    Chia cổ tức bằng tiền
+                                </label>
+                            </div>
+                        </div>
+                        <div class="column is-flex p-2 inputcashdividend is-hidden">
+                            <div class=" has-margin-block-auto">
+                                <div class="ml-3 mr-3">
+                                    <input type="text" class="input is-small valueConfig" placeholder="Cổ"
+                                        snb-key="cashdividendbasis" style="width: 5rem;">
+                                </div>
+                            </div>
+                            <div class="has-margin-block-auto">Cổ</div>
+                            <div class=" has-margin-block-auto">
+                                <div class="ml-3 mr-3">
+                                    <input type="text" class="input is-small valueConfig" placeholder="Đồng"
+                                        snb-key="cashdividendreward" style="width: 5rem;">
+                                </div>
+                            </div>
+                            <div class="has-margin-block-auto">Đồng</div>
+                        </div>
+                    </div>
+                    <div class="columns m-2 stockdividend">
+                        <div class="column is-5 p-2">
+                            <div class=" has-margin-block-auto">
+                                <label class="checkbox configdividend">
+                                    <input type="checkbox" value="stockdividend">
+                                    Chia cổ tức bằng chứng khoán
+                                </label>
+                            </div>
+                        </div>
+                        <div class="column is-flex p-2 inputstockdividend is-hidden">
+                            <div class=" has-margin-block-auto">
+                                <div class="ml-3 mr-3">
+                                    <input type="text" class="input is-small valueConfig" placeholder="Cổ"
+                                        snb-key="stockdividendbasis" style="width: 5rem;">
+                                </div>
+                            </div>
+                            <div class="has-margin-block-auto">Cổ</div>
+                            <div class=" has-margin-block-auto">
+                                <div class="ml-3 mr-3">
+                                    <input type="text" class="input is-small valueConfig" placeholder="Cổ"
+                                        snb-key="stockdividendreward" style="width: 5rem;">
+                                </div>
+                            </div>
+                            <div class="has-margin-block-auto">Cổ</div>
+                        </div>
+                    </div>
+                    <div class="container calloptions">
+                        <div class="columns m-2">
+                            <div class="column is-5 p-2">
+                                <div class=" has-margin-block-auto">
+                                    <label class="checkbox configdividend">
+                                        <input type="checkbox" value="calloptions">
+                                        Chia cổ tức bằng quyền mua
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="column is-flex p-2 inputcalloptions is-hidden">
+                                <div class=" has-margin-block-auto">
+                                    <div class="ml-3 mr-3">
+                                        <input type="text" class="input is-small valueConfig" placeholder="Cổ"
+                                            snb-key="calloptionbasis" style="width: 5rem;">
+                                    </div>
+                                </div>
+                                <div class="has-margin-block-auto">Cổ</div>
+                                <div class=" has-margin-block-auto">
+                                    <div class="ml-3 mr-3">
+                                        <input type="text" class="input is-small valueConfig" placeholder="Cổ"
+                                            snb-key="calloptionreward" style="width: 5rem;">
+                                    </div>
+                                </div>
+                                <div class="has-margin-block-auto">Cổ</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="columns p-0 inputcalloptions is-hidden">
+                                <div class="column ml-4 is-5 is-flex">
+                                    <div class="has-margin-block-auto">Giá thực hiện</div>
+                                    <div class=" has-margin-block-auto" style="width: 55%;">
+                                        <div class="ml-3 is-fullwidth mr-3">
+                                            <input type="text" class="input is-small is-fullwidth valueConfig"
+                                                placeholder="Giá thực hiện" snb-key="strikeprice">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column is-5 is-flex">
+                                    <div class="has-margin-block-auto">Ngày đáo hạn</div>
+                                    <div class=" has-margin-block-auto" style="width: 55%;">
+                                        <div class="ml-3 is-fullwidth mr-3">
+                                            <input type="date"
+                                                class="input is-init-bulma-false is-small is-fullwidth valueConfig"
+                                                placeholder="Ngày thực hiện" snb-key="calloptionsexpirationdate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="requiredContent">
+                <div class="content-modal-cotainer">
+                    <div class="content-title">Giá sau khi chia cổ tức:</div>
+                    <div>
+                        <input type="text" class="input" placeholder="Giá sau khi chia cổ tức"
+                            snb-key="referenceprice">
+                    </div>
+                </div>
+                <div class="content-modal-cotainer">
+                    <div class="content-title">Ngày giao dịch không hưởng quyền:</div>
+                    <div>
+                        <input class="input is-init-bulma-false" type="date"
+                            placeholder="Ngày giao dịch không hưởng quyền" snb-key="recorddate">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="saveConfigModal">Cấu hình</button>
+            <button class="button has-background-grey-lighter" id="cancelModal">Huỷ</button>
+        </footer>
+    </div>
+</div>

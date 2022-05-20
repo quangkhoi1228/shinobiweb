@@ -1,0 +1,175 @@
+<div class="table-container  has-box-shadow-light has-background-white p-5 has-border-radius-6px"
+    style="border-top-left-radius: 0">
+    <table class="table is-hidden" id="tablematchingorder"></table>
+    <div class="level">
+        <div class="level-left">
+            <div class="tabs is-secondary has-border-bottom m-0" id="tabsmatchingorder">
+                <ul>
+                    <li class="is-active" value="tablematchingorderdate">
+                        <a>Trong ngày</a>
+                    </li>
+                    <li value="tablematchingorderhistory">
+                        <a>Lịch sử</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="level-right">
+            <div id="refreshportfolio">
+                <a class="button is-small is-primary has-bsd"> <span class="icon"><i
+                            class="fal fa-redo"></i></span><span>Cập
+                        nhật trạng thái lệnh</span></a>
+            </div>
+            <div class="is-flex is-hidden" id="searchinghistory">
+                <div class="is-size-5 mr-3">Thời gian:</div>
+                <input type="date" data-is-range="true" data-color="">
+                <div class="button has-background-secondary has-text-white ml-4 has-bsd is-borderless">
+                    Tra cứu</div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- DAILY -->
+    <div class=" has-text-right">
+
+    </div>
+    <div class="table-container is-marginless">
+        <table id="tablematchingorderdate" class="table is-fullwidth is-bordered order-detail-table">
+            <thead>
+                <tr>
+                    <th snb-colname="status" snb-render="renderChexbox">
+                        <p class="has-text-centered">
+                            <input id="tickallorder" type="checkbox">
+                        </p>
+                    </th>
+                    <!-- <th snb-colname="systemorderid"
+                        snb-render="shinobi.render.renderTextCenterTable">
+                        <p class="has-text-centered">Mã lệnh</p>
+                    </th> -->
+
+                    <th snb-colname="ordertime" snb-render="shinobi.render.renderTextCenterTable">
+                        <p class="has-text-centered">TG đặt</p>
+                    </th>
+                    <!-- <th snb-colname="fullname">
+                        <p class="has-text-centered">Tài khoản</p>
+                    </th> -->
+                    <th snb-colname="placename" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Người đặt</p>
+                    </th>
+                    <th snb-colname="side" snb-render="shinobi.tradingsystemrender.renderOrderSide">
+                        <p class="has-text-centered">M/B</p>
+                    </th>
+                    <th snb-colname="stockcode" snb-render="shinobi.tradingsystemrender.renderOrderStockCode">
+                        <p class="has-text-centered">Mã</p>
+                    </th>
+                    <th snb-colname="volume" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">KL đặt</p>
+                    </th>
+                    <th snb-colname="price" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Giá đặt</p>
+                    </th>
+                    <!-- <th snb-colname="matchprice" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Giá khớp</p>
+                    </th> -->
+                    <th snb-colname="matchvolume" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">KL khớp</p>
+                    </th>
+                    <th snb-colname="matchvalue" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">GT khớp</p>
+                    </th>
+                    <!-- <th snb-colname="canceltime"
+                        snb-render="shinobi.render.renderTextCenterTable">
+                        <p class="has-text-centered">TG hủy</p>
+                    </th> -->
+                    <th snb-colname="status" snb-render="shinobi.tradingsystemrender.renderOrderTypeStatus">
+                        <p class="has-text-centered">Trạng thái</p>
+                    </th>
+                    <th snb-colname="ordertype" snb-render="renderOrderType">
+                        <p class="has-text-centered">Nhóm lệnh</p>
+                    </th>
+                    <!-- <th snb-colname="createddate"
+                        snb-render="shinobi.render.renderTextCenterTable">
+                        <p class="has-text-centered">TG Tín hiệu</p>
+                    </th> -->
+                    <th snb-colname="signalid" snb-render="shinobi.portfoliouserrender.snbRenderButton">
+                        <p class="has-text-centered"></p>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="17">
+                        <a id="cancelorderbutton"
+                            class="button has-background-light font-weight-bold has-text-danger">Hủy
+                            lệnh
+                            đã chọn</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="is-hidden" record-num="10">
+            #{{/fragment/tablepagination}}
+        </div>
+    </div>
+    <!-- HISTORY -->
+    <div class="table-container mt-5">
+        <table id="tablematchingorderhistory" class="table is-fullwidth is-bordered">
+            <thead>
+                <tr>
+                    <th snb-colname="allocationaccount" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Số hiệu TK</p>
+                    </th>
+                    <th snb-colname="createddate" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Thời gian</p>
+                    </th>
+                    <th snb-colname="placedby" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Tài khoản</p>
+                    </th>
+                    <th snb-colname="ordertype" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Loại lệnh</p>
+                    </th>
+                    <th snb-colname="stockcode" snb-render="shinobi.roottemplate.renderCellTextCentered">
+                        <p class="has-text-centered">Mã CK</p>
+                    </th>
+                    <th snb-colname="volume" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">KL đặt</p>
+                    </th>
+                    <th snb-colname="price" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Giá đặt</p>
+                    </th>
+                    <!-- <th snb-colname="matchprice" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Giá khớp</p>
+                    </th> -->
+                    <th snb-colname="matchvolume" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">KL khớp</p>
+                    </th>
+                    <th snb-colname="matchvalue" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Giá trị khớp</p>
+                    </th>
+                    <th snb-colname="status" snb-render="shinobi.tradingsystemrender.renderOrderTypeStatus">
+                        <p class="has-text-centered">Trạng thái</p>
+                    </th>
+                    <th snb-colname="ordertime" snb-render="shinobi.tradingsystemrender.renderOrderTypeStatus">
+                        <p class="has-text-centered">TG đặt</p>
+                    </th>
+                    <th snb-colname="canceltime" snb-render="shinobi.tradingsystemrender.renderOrderTypeStatus">
+                        <p class="has-text-centered">TG huỷ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div record-num="10">
+            #{{/fragment/tablepagination}}
+        </div>
+    </div>
+</div>
+
+#{{/fragment/fragmentmodaldetailorderdate}}

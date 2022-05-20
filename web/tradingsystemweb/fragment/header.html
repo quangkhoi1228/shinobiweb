@@ -1,0 +1,44 @@
+<script>var shinobiversion = 2022022110;</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+<title>A.Trading</title>
+<link rel="shortcut icon" type="image/png" href="/static/image/aladin.svg" sizes="256x256">
+<script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+<script type="text/javascript" src="datafeeds/udf/dist/polyfills.js"></script>
+<script type="text/javascript" src="datafeeds/udf/dist/bundle.js"></script>
+<script>
+	var shinobi = {};
+</script>
+<script>
+	document.write('<link rel = "stylesheet"href = "/static/production/shinobi_2.css?v=' + shinobiversion + '">');
+	document.write('<script defer type="text/javascript" src="/static/production/shinobi_2.js?v=' + shinobiversion + '"><\/script>');
+	function loadJS(jsurl) {
+
+		document.write("<script defer type='text/javascript' src=" + jsurl +
+			"?v=" + shinobiversion + "><\/script>");
+	}
+
+</script>
+
+<!--  -->
+#{{/fragment/pageloading}}
+<!--  -->
+
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" defer></script>
+<style>
+	body,
+	button,
+	input,
+	select,
+	option,
+	textarea {
+		font-family: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont,
+			"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+			"Droid Sans", "Helvetica Neue", sans-serif;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	html {
+		font-size: 14px !important;
+	}
+</style>

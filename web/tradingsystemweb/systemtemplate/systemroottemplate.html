@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>#{{/systemfragment/header}}
+
+
+</head>
+
+<body class="has-navbar-fixed-top is-admin-page">
+	#{{/systemfragment/adminheader}}
+	<main class="shinobi-admin-container hero is-small">
+		<div class="hero-body">@{{template_content}}</div>
+	</main>
+
+	<footer> #{{/fragment/footer}} </footer>
+	#{{/systemfragment/adminfooterscript}}
+	<!--  -->
+	#{{/fragment/roottemplatefragmentextend}}
+
+	<!--  -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			shinobi.roottemplate.renderFooter();
+			shinobi.roottemplate.renderAddress(function (configvalue) {
+				shinobi.roottemplate.renderHelpDesk(configvalue);
+			});
+			shinobi.roottemplate.renderSocialNetwork();
+
+		});
+	</script>
+	@{{footer_script}}
+
+</body>
+
+</html>

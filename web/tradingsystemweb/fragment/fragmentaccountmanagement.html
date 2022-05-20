@@ -1,0 +1,70 @@
+<section class="section accountmanagement">
+    <div class="title is-3 m-4">Quản lý tài khoản</div>
+    <!--  -->
+    #{{/fragment/fragmenttabsportfolio}}
+    <!--  -->
+
+    <div class="table-container container p-5 has-box-shadow-light has-background-white has-border-radius-6px"
+        style="border-top-left-radius: 0">
+        <div class="searching-bar is-flex is-justify-content-right">
+            <div class="has-text-grey" style="margin-block: auto;">Cập nhật 15:32 ngày 08/02/2022</div>
+            <input id="searchpmuser" class="input has-bsd" placeholder="Tìm kiếm">
+            <!-- <div id="searchpmuser" class="autocomplete is-marginless">
+                <div class="field">
+                    <p class="control has-icons-right">
+                        <input id="searchpmuser" class="input has-bsd" placeholder="Tìm kiếm" type="text"
+                            snb-key="search" autocomplete="off">
+
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                </div>
+            </div> -->
+            <div class="button has-background-secondary has-text-white has-text-weight-bold has-box-shadow-light is-borderless"
+                id="addAccountButton">Thêm tài khoản</div>
+        </div>
+        <!--  -->
+        <table class="table is-fullwidth is-bordered is-mobile" id="dataCustomerTable">
+            <thead>
+                <tr>
+                    <th snb-colname="account">
+                        <p class="has-text-centered">Tên đăng nhập</p>
+                    </th>
+                    <th snb-colname="fullname" class="" data-tooltip="Tên được đặt trên hệ thống A.Trading, không phải tên từ tài khoản CTCK">
+                        <p class="has-text-centered note-username">Họ và Tên</p>
+                    </th>
+                    <th snb-colname="startdate">
+                        <p class="has-text-centered">Ngày đầu tư</p>
+                    </th>
+                    <th snb-colname="enddate">
+                        <p class="has-text-centered">Ngày tất toán</p>
+                    </th>
+                    <th snb-colname="nav" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">NAV</p>
+                    </th>
+                    <th snb-colname="purchasingpower" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Sức mua</p>
+                    </th>
+                    <th snb-colname="tradingprofit" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Lợi nhuận KH</p>
+                    </th>
+                    <th snb-colname="aladinprofit" snb-render="shinobi.render.renderFormatNumberTable">
+                        <p class="has-text-centered">Lợi nhuận Aladin</p>
+                    </th>
+                    <th snb-colname="systemsubaccount"
+                        snb-render="shinobi.accountmanagementrender.checkConfigClientAccount">
+                        <p class="has-text-centered">Trạng thái TK</p>
+                    </th>
+                    <th snb-colname="systemsubaccount" snb-render="shinobi.accountmanagementrender.renderMoreButton">
+                        <p class="has-text-centered"></p>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+        </table>
+        <div record-num="10 ">#{{/fragment/tablepagination}}</div>
+    </div>
+</section>
